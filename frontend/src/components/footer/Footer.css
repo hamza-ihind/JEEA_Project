@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+
+.footer-clean {
+    padding:50px 0;
+    background-color: var(--dark-color);
+    color:var(--light-color);
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-clean ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-clean .item.social {
+    width: auto;
+    text-align:center;
+   
+  }
+  
+  .footer-clean .item.social i {
+    margin: 0 20px;
+    font-size: 40px;
+    color: white;
+  }
+  
+  .footer-clean .item.social i:hover {
+   color: var(--primary-color);
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    
+  }
