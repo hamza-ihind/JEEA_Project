@@ -1,0 +1,62 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap";
+:root {
+	--primary-color: #047aed;
+	--secondary-color: #1c3fa8;
+	--dark-color: #002240;
+	--light-color: #f4f4f4;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+$color_1: var(--light-color);
+$color_2: inherit;
+$color_3: white;
+$color_4: var(--primary-color);
+$background-color_1: var(--dark-color);
+
+
+.footer-clean {
+	padding: 50px 0;
+	background-color: #002240;
+	color: $color_1;
+    .container {
+        background-color: #002240;
+        width: 100%;
+    }
+	h3 {
+		margin-top: 0;
+		margin-bottom: 12px;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+		line-height: 1.6;
+		font-size: 14px;
+		margin-bottom: 0;
+		a {
+			color: $color_2;
+			text-decoration: none;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.item.social {
+		width: auto;
+		text-align: center;
+		i {
+			margin: 0 20px;
+			font-size: 40px;
+			color: $color_3;
+			&:hover {
+				color: $color_4;
+			}
+		}
+	}
+}
+.copyright {
+	margin-top: 20px;
+}

@@ -1,9 +1,8 @@
 import React from "react";
-import "./Footer.css"
+import "./Footer.scss"
 const Footer = () => {
   return (
     <div className="footer-clean">
-    <footer>
         <div className="container ">
             <div className="row justify-content-center">
                 <div className="col-sm-4 col-md-3 item">
@@ -40,7 +39,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </footer>
+   
 </div>);
 };
 export default Footer;
