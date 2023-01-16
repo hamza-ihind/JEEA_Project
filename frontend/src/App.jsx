@@ -8,6 +8,9 @@ import 'aos/dist/aos.css';
 
 //Components
 import JeeaPresentation from './components/jeeapresentation';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer' ;
+import Contact from './components/Contact/Contact' ;
 
 
 function App() {
