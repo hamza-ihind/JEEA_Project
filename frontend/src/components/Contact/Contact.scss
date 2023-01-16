@@ -1,21 +1,7 @@
 $color_1: #3e2093;
 $color_2: #afafb6;
 $color_3: #fff;
-$font-family_1: "Poppins" , sans-serif;
 
-/* Google Font CDN Link */
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
-:root {
-	--primary-color: #e79a26;
-	--secondary-color: #1c3fa8;
-	--dark-color: #002240;
-	--light-color: #f4f4f4;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
-}
-* {
-	font-family: $font-family_1;
-}
 .container {
 	width: 100%;
 	background: #fff;
