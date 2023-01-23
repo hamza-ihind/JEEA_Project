@@ -20,17 +20,27 @@
 
 .button{
   &-main{
-    font-size: 1.1rem;
-    font-weight: 700;
-    height: 3.5rem;
-    width: 10rem;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 3.2rem;
+    width: 17rem;
+    border-radius: 1rem;
+    border: 0;
+    //colors
+    background: linear-gradient(0deg, rgba(0,34,64,1) 59%, rgba(28,63,168,1) 100%);
+    color: white;
   }
   
   &-stroke{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    height: 3.5rem;
-    width: 10rem;
-  }
+    height: 3.2rem;
+    width: 17rem;
+    border-radius: 1rem;
 
+    //colors
+    background: transparent;
+    border-color: var(--dark-color);
+    color: var(--dark-color);
+  }
 }

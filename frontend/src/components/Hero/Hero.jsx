@@ -8,14 +8,13 @@ const Hero = () => {
     <div className='hero'>
         <div className='hero__content'>
             <div className='hero__content-text'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                <span style={{fontSize: 120}}>JEEA</span> <br /> Votre compagnon de confiance
             </div>
             <div className='hero__content-buttons'>
-                <button className='button-main'> Let's Begin </button>
-                <button className='button-stroke'> Learn more </button>
+                <button className='button-main'> Contact us </button>
+                <button className='button-stroke'> Watch a video </button>
             </div>
         </div>
-        <img src={Photo} alt="photo" className='hero__img'/>
     </div>
   )
 }

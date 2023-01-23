@@ -3,43 +3,55 @@ import "./Footer.scss"
 const Footer = () => {
   return (
     <div className="footer-clean">
-        <div className="container ">
-            <div className="row justify-content-center">
-                <div className="col-sm-4 col-md-3 item">
-                    <h3>Services</h3>
+        <div className="content ">
+
+        <div className="content_flex">
+            <div className="left_side" >
+
+                <div className="footer_nav top">
                     <ul>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
-                    </ul>
-                </div>
-                <div className="col-sm-4 col-md-3 item">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Jeea</a></li>
+                       <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
                         <li><a href="#">Team</a></li>
-                        <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
-                <div className="col-sm-4 col-md-3 item">
-                    <h3>Careers</h3>
+
+                <div className="middle">
+                   <div className="logo">
+                    <h1>JEEA</h1>
+                   </div>
+                   <div class=" item_social">
+                       <a href=""><i className="fa fa-linkedin"></i></a>
+                       <a href="#"><i className="fa fa-instagram"></i></a>
+                       <a href="#"><i className="fa fa-twitter "></i></a>
+                       <a href="#"><i className="fa fa-facebook "></i></a>
+                       
+                       
+                   </div>
+                </div>
+                
+                <div className="footer_nav buttom">
                     <ul>
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Benefits</a></li>
+                       <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Report</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 item social">
-                    <a href="#"><i className="fa fa-github"></i></a>
-                    <a href="#"><i className="fa fa-linkedin"></i></a>
-                    <a href="#"><i className="fa fa-facebook "></i></a>
-                    <a href="#"><i className="fa fa-twitter "></i></a>
-                    <a href="#"><i className="fa fa-instagram"></i></a>
-                    <p className="copyright"><b>ENSA AGADIR : </b> JEEA © 2022</p>
-                </div>
+              
             </div>
+
+            <div className="right_side " >
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting . </p>
+            <span>contact@JEEA.com</span>
+            <span>(+212) 645-987-756</span>   
+            </div>
+
         </div>
-   
+
+        </div>
+   <hr></hr>
+   <p className="copyright">Copyright © JEEA | ENSA AGADIR </p>
 </div>);
 };
 export default Footer;

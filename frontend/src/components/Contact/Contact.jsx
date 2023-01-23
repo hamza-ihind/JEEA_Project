@@ -5,43 +5,34 @@ const Footer = () => {
     
     <div className="container">
     <div className="content">
-      <div className="left-side">
-        <div className="address details">
-          <i className="fa fa-map-marker"></i>
-          <div className="topic">Address</div>
-          <div className="text-one">Surkhet, NP12</div>
-          <div className="text-two">Birendranagar 06</div>
+      <div >
+		<div className="contact-text">
+            <h1 className="Contact_us"> CONTACT US </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed, iusto harum et officiis  </p>
         </div>
-        <div className="phone details">
-          <i className="fa fa-phone"></i>
-          <div className="topic">Phone</div>
-          <div className="text-one">+0098 9893 5647</div>
-          <div className="text-two">+0096 3434 5678</div>
-        </div>
-        <div className="email details">
-          <i className="fa fa-envelope"></i>
-          <div className="topic">Email</div>
-          <div className="text-one">codinglab@gmail.com</div>
-          <div className="text-two">info.codinglab@gmail.com</div>
-        </div>
-      </div>
-      <div className="right-side">
-        <div className="topic-text">Send us a message</div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed, iusto harum et officiis pariatur nesciunt </p>
-      <form action="#">
-        <div className="input-box">
-          <input type="text" placeholder="Enter your name" />
-        </div>
-        <div className="input-box">
-          <input type="email" placeholder="Enter your email" />
-        </div>
-        <div className="input-box message-box">
-        <input type="textarea" placeholder="Enter your message" />
-        </div>
-        <div className="button">
-          <input type="button" value="Send Now" />
-        </div>
-      </form>
+        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+				<div >
+                    <div className="Name_Area input">
+					    <div className="name_input"> <input type="text" class="form-control" name="name" id="Firstname" placeholder="Your Firstname" /> </div>
+						<div className="name_input"> <input type="text" class="form-control" name="text" id="Lastname" placeholder="Your Lastname" /> </div>
+                    </div>
+
+                    <div className="input"> 
+						<div > <input type="email" class="form-control" name="email" id="email" placeholder="Email" /> </div>
+					</div>
+
+					<div className="input" >
+						<div > <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" /> </div>
+					</div>
+
+					<div className="input ">
+						<div ><textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Your message"></textarea></div>
+					</div>
+
+						<div className="submit_btn"> <input type="submit" value="SUBMIT"  /></div>					
+				</div>
+		</form>
+
     </div>
     </div>
   </div>
