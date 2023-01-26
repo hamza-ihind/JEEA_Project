@@ -1,10 +1,6 @@
 .cards{
-
     padding-top: 10px;
-   
     background-color: #FFBD5B;
-    
-
     
     &__container{
         width: 80%;
@@ -15,36 +11,31 @@
         align-items: center;
         gap: 40px;
        
-        
-.title__container{
-    position: relative;
-    .title{
-        background-color: rgba(255, 255, 255, 0.90);
-        box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(24px);
-        border-radius: 20px;  
-        padding: 10px 16px;
-        width: fit-content;  
-        text-align: center;
-        border: 1px solid white;
-        background: radial-gradient(51.72% 61.73% at 50% 50%, #4358FF 0%, #1F2656 63.85%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        .title__container{
+            position: relative;
 
-    }
-
-    .starImg{
-     position: absolute;
-     bottom: -13px;
-     right: -31px;
-     width: 63.85px;
-     height: 56.42px;
-    }
-    
-}
-
-
+            .title{
+                background-color: rgba(255, 255, 255, 0.90);
+                box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+                backdrop-filter: blur(24px);
+                border-radius: 20px;  
+                padding: 10px 16px;
+                width: fit-content;  
+                text-align: center;
+                border: 1px solid white;
+                background: radial-gradient(51.72% 61.73% at 50% 50%, #4358FF 0%, #1F2656 63.85%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .starImg{
+            position: absolute;
+            bottom: -13px;
+            left: -31px;
+            width: 63.85px;
+            height: 56.42px;
+            }
+        }
         .content {
             display:flex;
             justify-content: center;
@@ -53,13 +44,23 @@
             gap:60px;
             flex-wrap: wrap;
             padding-bottom: 10px;
-            .jeeaImg{
-                width: 398px;
-                height: 302px;
-            }
-        }
 
-        
-     }
-   
+            .card {
+                width: 415px;
+                border-radius: 15px;
+                background: linear-gradient(to top, white 70%, transparent 0);
+                border: none;
+            }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .button-main {
+                    width: 100px;
+                }
+            }
+        }                
+    }
 }
