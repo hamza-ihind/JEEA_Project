@@ -12,6 +12,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer/Footer";
 import Cjem from "./components/Section1/Cjem";
 import Jeea from "./components/section2/Jeea";
+import Cards from "./components/section3/cards";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
       <Hero />
       <Cjem />
       <Jeea />
+      <Cards />
       <Contact />
       <Footer />
     </div>
