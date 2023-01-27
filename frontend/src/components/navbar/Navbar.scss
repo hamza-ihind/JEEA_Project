@@ -41,18 +41,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 3.5rem;
+    padding: 1rem 1vw;
     position: fixed;
     width: 100%;
+    z-index: 1;
 
     &__container{
         display: flex;
         justify-content: space-between;
-        width: 80%;
         padding: 1.2rem 2rem;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.418) 50%, rgba(255, 255, 255, 0.075) 100%);
         backdrop-filter: blur(8px);
         border-radius: 1.1rem;
+        gap: 1vw;
     }
 
     &__img{
@@ -67,7 +68,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        gap: 3em;
+        gap: 2vw;
         li, a{
             font-size: 1.2rem;
             font-weight: 600;
