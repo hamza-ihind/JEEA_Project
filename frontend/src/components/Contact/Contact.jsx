@@ -1,16 +1,19 @@
 import React from "react";
 import "./Contact.scss";
+import star from "../../assets/star.svg";
 const Footer = () => {
   return (
     <div className="container">
       <div className="content">
-        <div>
           <div className="contact-text">
-            <h1 className="Contact_us"> CONTACT US </h1>
-            <p>
+              <div className="title__container">
+                <h1 className="title">CONTACT US</h1>
+                <img src={star} alt="star" className="starImg" />
+              </div>
+              <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
               sed, iusto harum et officiis{" "}
-            </p>
+              </p>
           </div>
           <form
             method="POST"
@@ -87,7 +90,6 @@ const Footer = () => {
               </div>
             </div>
           </form>
-        </div>
       </div>
     </div>
   );
