@@ -9,13 +9,10 @@
   );
 
   &__container {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    justify-content: space-around;
 
     .title__container {
       position: relative;
@@ -50,25 +47,23 @@
 
     .content {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      gap: 60px;
-      flex-wrap: wrap;
+
       .paragraph {
-        max-width: 350px;
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
         background: radial-gradient(
-            38.44% 68.39% at 50% 50%,
-            #0621fe 0%,
-            #1f2656 100%
-          )
-          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+          38.44% 68.39% at 50% 50%,
+          #0621fe 0%,
+          #1f2656 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+
       .cjemImg {
         width: 398px;
         height: 302px;

@@ -10,7 +10,7 @@ const Hero = () => {
       <img src={Decoration} alt="decoration" className="hero__decoration" />
       <div className="hero__content">
         <div className="hero__content-text">
-          <span style={{ fontSize: 180 }}>JEEA</span> <br /> VOTRE COMPAGNON DE
+          <span style={{ fontSize: 120 }}>JEEA</span> <br /> VOTRE COMPAGNON DE
           CONFIANCE
         </div>
         <div className="hero__content-buttons">
