@@ -20,12 +20,13 @@
 
 .button {
   &-main {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    height: 3.2rem;
-    width: 17rem;
+    height: 2.75rem;
+    width: 15rem;
     border-radius: 1rem;
     border: 0;
+
     //colors
     background: linear-gradient(
       0deg,
@@ -36,10 +37,10 @@
   }
 
   &-stroke {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
-    height: 3.2rem;
-    width: 17rem;
+    height: 2.75rem;
+    width: 15rem;
     border-radius: 1rem;
 
     //colors
