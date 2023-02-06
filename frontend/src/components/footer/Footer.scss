@@ -5,6 +5,7 @@ $color_4: var(--primary-color);
 $background-color_1: var(--dark-color);
 
 .footer-clean {
+  margin-top: 80px;
   padding: 10px 0;
   background: linear-gradient(
     180deg,
@@ -15,7 +16,6 @@ $background-color_1: var(--dark-color);
   .content {
     width: 100%;
     height: auto;
-    padding: 20px;
   }
   h3 {
     margin-top: 0;

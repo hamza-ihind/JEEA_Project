@@ -1,12 +1,19 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: -1;
   width: 100%;
-  height: 651px;
   align-items: center;
-  padding: 20px 60px 30px 40px;
+  padding: 80px;
   backdrop-filter: blur(24px);
   border-radius: 10px;
-}
+  height: 100vh;
+  .content {
+    width: 90%;
+    height: 100%;
+  }
+
 
 .contact-text {
   text-align: center;
@@ -35,22 +42,22 @@
     }
   }
   .input {
-    margin: 10px;
+    margin: 8px;
     input {
-      height: 3.6rem;
+      height: 3rem;
       border-radius: 10px;
     }
     textarea {
-      max-height: 13.323rem;
-      min-height: 13.323rem;
+      max-height: 13rem;
+      min-height: 13rem;
       border-radius: 10px;
       white-space: pre;
     }
   }
   .submit_btn {
     margin: 15px auto;
-    width: 19.5rem;
-    height: 3.5rem;
+    width: 13rem;
+    height: 3rem;
     background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
     border-radius: 10px;
     text-align: center;
@@ -66,4 +73,5 @@
       cursor: pointer;
     }
   }
+}
 }
