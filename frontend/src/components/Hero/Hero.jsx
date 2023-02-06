@@ -1,22 +1,26 @@
-import React from 'react'
+import React from "react";
 
-import Photo from '../../assets/photo.jpg'
-import './Hero.scss'
+import Line from "../../assets/line.svg";
+import Decoration from "../../assets/decoration.svg";
+import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <div className='hero'>
-        <div className='hero__content'>
-            <div className='hero__content-text'>
-                <span style={{fontSize: 120}}>JEEA</span> <br /> Votre compagnon de confiance
-            </div>
-            <div className='hero__content-buttons'>
-                <button className='button-main'> Contact us </button>
-                <button className='button-stroke'> Watch a video </button>
-            </div>
+    <div className="hero" id="hero">
+      <img src={Decoration} alt="decoration" className="hero__decoration" />
+      <div className="hero__content">
+        <div className="hero__content-text">
+          <span style={{ fontSize: 180 }}>JEEA</span> <br /> VOTRE COMPAGNON DE
+          CONFIANCE
         </div>
+        <div className="hero__content-buttons">
+          <button className="button-main"> Contact us </button>
+          <button className="button-stroke"> Watch a video </button>
+        </div>
+      </div>
+      <img src={Line} alt="line" className="hero__line" />
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

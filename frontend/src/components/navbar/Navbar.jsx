@@ -21,13 +21,13 @@ const Navbar = () => {
         <img src={LOGO} alt="ENSA" className="navbar__img" />
         <ul className="navbar__links">
           <li>
-            <a href="#">Home</a>
+            <a href="home">Home</a>
+          </li>
+          <li>
+            <a href="about">About</a>
           </li>
           <li>
             <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About</a>
           </li>
           <li>
             <a href="#">Team</a>

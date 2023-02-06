@@ -1,0 +1,78 @@
+.cjem {
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 189, 91, 1) 34%
+  );
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    .title__container {
+      position: relative;
+      .title {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(24px);
+        font-size: 4rem;
+        border-radius: 20px;
+        padding: 1rem 1.2rem;
+        width: fit-content;
+        text-align: center;
+        border: 1px solid white;
+        background: radial-gradient(
+          51.72% 61.73% at 50% 50%,
+          #4358ff 0%,
+          #1f2656 63.85%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .starImg {
+        position: absolute;
+        bottom: -13px;
+        left: -31px;
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      .paragraph {
+        max-width: 350px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        background: radial-gradient(
+            38.44% 68.39% at 50% 50%,
+            #0621fe 0%,
+            #1f2656 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .cjemImg {
+        width: 398px;
+        height: 302px;
+      }
+    }
+  }
+}

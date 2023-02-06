@@ -1,38 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 :root {
-	--primary-color: #e79a26;
+  --primary-color: #ffbd5b;
 
-	--secondary-color: #1c3fa8;
+  --secondary-color: #1f2656;
 
-	--dark-color: #002240;
+  --dark-color: #002240;
 
-	--light-color: #f4f4f4;
+  --light-color: #f4f4f4;
 
-	--success-color: #5cb85c;
+  --success-color: #5cb85c;
 
-	--error-color: #d9534f;
+  --error-color: #d9534f;
 }
 
-.button{
-  &-main{
-    font-size: 1rem;
+.button {
+  &-main {
+    font-size: 1.2rem;
     font-weight: 400;
     height: 3.2rem;
     width: 17rem;
     border-radius: 1rem;
     border: 0;
     //colors
-    background: linear-gradient(0deg, rgba(0,34,64,1) 59%, rgba(28,63,168,1) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 34, 64, 1) 59%,
+      rgba(28, 63, 168, 1) 100%
+    );
     color: white;
   }
-  
-  &-stroke{
-    font-size: 1rem;
+
+  &-stroke {
+    font-size: 1.2rem;
     font-weight: 700;
     height: 3.2rem;
     width: 17rem;
