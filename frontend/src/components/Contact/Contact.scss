@@ -11,90 +11,90 @@
   box-shadow: 0px 1px 7px 4px rgb(0 0 0 / 15%);
   justify-content: center;
   margin-top: 4rem;
+
   .content {
     width: 90%;
   }
-.contact-text {
-  text-align: center;
-  margin: 15px;
-  .title__container {
-    position: relative;
-    width: fit-content;
-    margin: auto;
-    .title {
-      margin: 10px auto;
-      box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
-      backdrop-filter: blur(24px);
-      font-size: 2.5rem;
-      border-radius: 20px;
-      padding: 0.75rem 1.5rem;
-      width: fit-content;
-      text-align: center;
-      border: 1px solid white;
-      background: radial-gradient(
-        51.72% 61.73% at 50% 50%,
-        #4358ff 0%,
-        #1f2656 63.85%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-     
-    }
-    .starImg {
-      position: absolute;
-      bottom: -15px;
-      left: -15px;
-      width: 3rem;
-      height: 3rem;
-    }
-  }
-  p {
-    color: rgba(17, 22, 92, 1);
-  }
-}
-
-.contactForm {
-  .Name_Area {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    .name_input {
-      width: 50%;
-    }
-  }
-  .input {
-    margin: 8px;
-    input {
-      height: 3rem;
-      border-radius: 10px;
-    }
-    textarea {
-      max-height: 10rem;
-      min-height: 10rem;
-      border-radius: 10px;
-      white-space: pre;
-      resize: none;
-    }
-  }
-  .submit_btn {
-    margin: 15px auto;
-    width: 13rem;
-    height: 3rem;
-    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
-    border-radius: 10px;
+  .contact-text {
     text-align: center;
-    line-height: 3.5rem;
-    cursor: pointer;
-    input {
-      border: none;
-      background: transparent;
-      color: rgba(255, 255, 255, 1);
-      font-weight: 700px;
-      line-height: 24px;
-      font-size: 20px;
-      cursor: pointer;
+    margin: 15px;
+    .title__container {
+      position: relative;
+      width: fit-content;
+      margin: auto;
+      .title {
+        margin: 10px auto;
+        box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(24px);
+        font-size: 2.5rem;
+        border-radius: 20px;
+        padding: 0.75rem 1.5rem;
+        width: fit-content;
+        text-align: center;
+        border: 1px solid white;
+        background: radial-gradient(
+          51.72% 61.73% at 50% 50%,
+          #4358ff 0%,
+          #1f2656 63.85%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .starImg {
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+    p {
+      color: rgba(17, 22, 92, 1);
     }
   }
-}
+
+  .contactForm {
+    .Name_Area {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      .name_input {
+        width: 50%;
+      }
+    }
+    .input {
+      margin: 8px;
+      input {
+        height: 3rem;
+        border-radius: 10px;
+      }
+      textarea {
+        max-height: 10rem;
+        min-height: 10rem;
+        border-radius: 10px;
+        white-space: pre;
+        resize: none;
+      }
+    }
+    .submit_btn {
+      margin: 15px auto;
+      width: 13rem;
+      height: 3rem;
+      background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
+      border-radius: 10px;
+      text-align: center;
+      line-height: 3.5rem;
+      cursor: pointer;
+      input {
+        border: none;
+        background: transparent;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 700px;
+        line-height: 24px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
 }
