@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./cards.scss";
+import "./Services.scss";
 
 //assets
 import star from "../../assets/star2.svg";
@@ -9,12 +9,12 @@ import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
 import formation from "../../assets/formation.svg";
 
-const cards = () => {
+const Services = () => {
   return (
     <section id="CARDS" className="cards">
       <div className="cards__container">
         <div className="title__container">
-          <h1 className="title">WHAT WE SERV.</h1>
+          <h1 className="title">WHAT WE SERVE</h1>
           <img src={star} alt="star" className="starImg" />
         </div>
 
@@ -26,7 +26,7 @@ const cards = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">More...</button>
+              <button className="button-main">Learn More...</button>
             </div>
           </div>
 
@@ -37,7 +37,7 @@ const cards = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">More...</button>
+              <button className="button-main">Learn More...</button>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ const cards = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">More...</button>
+              <button className="button-main">Learn More...</button>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const cards = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">More...</button>
+              <button className="button-main">Learn more...</button>
             </div>
           </div>
         </div>
@@ -69,4 +69,4 @@ const cards = () => {
   );
 };
 
-export default cards;
+export default Services;

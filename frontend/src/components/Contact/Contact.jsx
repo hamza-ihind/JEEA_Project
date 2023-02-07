@@ -1,6 +1,30 @@
 import React from "react";
 import "./Contact.scss";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 const Footer = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_g4q2e5n",
+        "template_14eom8v",
+        form.current,
+        "urJJ-zITTzUwicVvq"
+      )
+      .then(
+        (result) => {
+          console.log("success");
+        },
+        (error) => {
+          console.log("failed", error);
+        }
+      );
+  };
+  const form = useRef();
+
   return (
     <div className="container">
       <div className="content">
@@ -9,10 +33,12 @@ const Footer = () => {
             <h1 className="Contact_us"> CONTACT US </h1>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-              sed, iusto harum et officiis{" "}
+              sed, iusto harum et officiis
             </p>
           </div>
           <form
+            ref={form}
+            onSubmit={sendEmail}
             method="POST"
             id="contactForm"
             name="contactForm"
@@ -25,7 +51,7 @@ const Footer = () => {
                   <input
                     type="text"
                     class="form-control"
-                    name="name"
+                    name="Firstname"
                     id="Firstname"
                     placeholder="Your Firstname"
                   />{" "}
@@ -35,7 +61,7 @@ const Footer = () => {
                   <input
                     type="text"
                     class="form-control"
-                    name="text"
+                    name="Lastname"
                     id="Lastname"
                     placeholder="Your Lastname"
                   />{" "}
@@ -82,7 +108,6 @@ const Footer = () => {
               </div>
 
               <div className="submit_btn">
-                {" "}
                 <input type="submit" value="SUBMIT" />
               </div>
             </div>

@@ -8,7 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer/Footer";
 import Cjem from "./components/Cjem/Cjem";
 import Jeea from "./components/Jeea/Jeea";
-import Cards from "./components/section3/cards";
+import Services from "./components/Services/Services";
 
 function App() {
   useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
       <Hero />
       <Cjem />
       <Jeea />
-      <Cards />
+      <Services />
       <Contact />
       <Footer />
     </div>
