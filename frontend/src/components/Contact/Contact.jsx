@@ -1,8 +1,12 @@
 import React from "react";
 import "./Contact.scss";
+<<<<<<< HEAD
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
+=======
+import star from "../../assets/star.svg";
+>>>>>>> e0cc93efc6916af50395e92bbb43ad30f897cf3f
 const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,13 +32,20 @@ const Footer = () => {
   return (
     <div className="container">
       <div className="content">
-        <div>
           <div className="contact-text">
-            <h1 className="Contact_us"> CONTACT US </h1>
-            <p>
+              <div className="title__container">
+                <h1 className="title">CONTACT US</h1>
+                <img src={star} alt="star" className="starImg" />
+              </div>
+              <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+<<<<<<< HEAD
               sed, iusto harum et officiis
             </p>
+=======
+              sed, iusto harum et officiis{" "}
+              </p>
+>>>>>>> e0cc93efc6916af50395e92bbb43ad30f897cf3f
           </div>
           <form
             ref={form}
@@ -112,7 +123,6 @@ const Footer = () => {
               </div>
             </div>
           </form>
-        </div>
       </div>
     </div>
   );

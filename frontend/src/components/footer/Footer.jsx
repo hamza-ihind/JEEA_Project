@@ -1,5 +1,6 @@
 import React from "react";
-import "./Footer.scss"
+import "./Footer.scss" ;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <div className="footer-clean">
@@ -10,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer_nav top">
                     <ul>
-                       <li><a href="#">Home</a></li>
+                       <li><a href="#" className="active">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Team</a></li>
@@ -22,12 +23,10 @@ const Footer = () => {
                     <h1>JEEA</h1>
                    </div>
                    <div class=" item_social">
+                       <a href="#"><i class="fa fa-facebook"></i></a>
+                       <a href="#"><i className="fa fa-twitter "></i></a>
                        <a href=""><i className="fa fa-linkedin"></i></a>
                        <a href="#"><i className="fa fa-instagram"></i></a>
-                       <a href="#"><i className="fa fa-twitter "></i></a>
-                       <a href="#"><i className="fa fa-facebook "></i></a>
-                       
-                       
                    </div>
                 </div>
                 
@@ -50,7 +49,6 @@ const Footer = () => {
         </div>
 
         </div>
-   <hr></hr>
    <p className="copyright">Copyright © JEEA | ENSA AGADIR </p>
 </div>);
 };
