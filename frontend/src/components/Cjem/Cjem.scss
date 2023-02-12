@@ -1,14 +1,24 @@
+.cjem.light {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 169, 41) 34%
+    );
+}
+.cjem.dark {
+  background: linear-gradient(
+    315deg,
+    #010060 0%,
+    #C4CDFF 99.43%
+    );
+}
 .cjem {
   padding: 10px;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 169, 41) 34%
-  );
+
 
   &__container {
     width: 75%;

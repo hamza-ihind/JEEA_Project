@@ -5,14 +5,10 @@ import { useTranslation} from 'react-i18next';
 import { changeLanguage } from "i18next";
 
 
-const Navbar = () => {
-
-
-
-
-
-
-
+const Navbar = (props) => {
+  function toggleMode() {
+    props.toggleMode();
+  }
 
    const {t,i18n} = useTranslation()
 
@@ -38,7 +34,7 @@ const Navbar = () => {
 
         <ul className="navbar__features">
           <li>
-            <button className="navbar__button">L/D</button>
+            <button className="navbar__button" onClick={toggleMode}>L/D</button>
           </li>
           <li>
          

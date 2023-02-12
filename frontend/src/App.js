@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/navbar/Navbar";
@@ -15,15 +15,20 @@ function App() {
     AOS.init();
   }, []);
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Cjem />
-      <Jeea />
-      <Services />
-      <Contact />
-      <Footer />
+    <div className={isDarkMode ? 'App dark' : 'App light'}>
+      <Navbar toggleMode={toggleMode}/>
+      <Hero isDarkMode={isDarkMode}/>
+      <Cjem isDarkMode={isDarkMode}/>
+      <Jeea isDarkMode={isDarkMode}/>
+      <Services isDarkMode={isDarkMode}/>
+      <Contact isDarkMode={isDarkMode}/>
+      <Footer isDarkMode={isDarkMode}/>
     </div>
   );
 }
