@@ -3,6 +3,9 @@ import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 
 const Navbar = (props) => {
+  function toggleMode() {
+    props.toggleMode();
+  }
   return (
     <nav className="navbar">
       <div className="navbar__container">
@@ -25,7 +28,7 @@ const Navbar = (props) => {
 
         <ul className="navbar__features">
           <li>
-            <button className="navbar__button">L/D</button>
+            <button className="navbar__button" onClick={toggleMode}>L/D</button>
           </li>
           <li>
             <button className="navbar__button">FR</button>

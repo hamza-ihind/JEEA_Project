@@ -15,14 +15,14 @@ function App() {
     AOS.init();
   }, []);
 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <div className="App">
-      <Navbar />
+    <div className={isDarkMode ? 'App dark' : 'App light'}>
+      <Navbar toggleMode={toggleMode}/>
       <Hero isDarkMode={isDarkMode}/>
       <Cjem isDarkMode={isDarkMode}/>
       <Jeea isDarkMode={isDarkMode}/>

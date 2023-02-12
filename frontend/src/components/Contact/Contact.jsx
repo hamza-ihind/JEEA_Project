@@ -4,7 +4,7 @@ import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
-const Footer = () => {
+const Footer = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ const Footer = () => {
   const form = useRef();
 
   return (
-    <div className="container">
+    <div className={props.isDarkMode ? 'container dark' : 'container light'}>
       <div className="content">
         <div className="contact-text">
           <div className="title__container">
