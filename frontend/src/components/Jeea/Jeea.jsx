@@ -6,9 +6,9 @@ import "./Jeea.scss";
 import jeea from "../../assets/jeea.svg";
 import star from "../../assets/star.svg";
 
-const Jeea = () => {
+const Jeea = (props) => {
   return (
-    <section id="JEEA" className="jeea">
+    <section id="JEEA" className={props.isDarkMode ? 'jeea dark' : 'jeea light'}>
       <div className="jeea__container">
         <div className="title__container">
           <h1 className="title">WHO ARE WE?</h1>

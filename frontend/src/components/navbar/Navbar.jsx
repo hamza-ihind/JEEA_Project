@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="navbar">
       <div className="navbar__container">

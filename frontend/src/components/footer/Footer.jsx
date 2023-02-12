@@ -30,9 +30,9 @@ const Footer = () => {
               <div className="logo">
                 <h1>JEEA</h1>
               </div>
-              <div class=" item_social">
+              <div className=" item_social">
                 <a href="#">
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </a>
                 <a href="#">
                   <i className="fa fa-twitter "></i>
