@@ -9,6 +9,9 @@ import Footer from "./components/footer/Footer";
 import Cjem from "./components/Cjem/Cjem";
 import Jeea from "./components/Jeea/Jeea";
 import Services from "./components/Services/Services";
+import Error from "./components/Error/Error";
+
+
 
 function App() {
   useEffect(() => {
@@ -17,14 +20,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <Cjem />
-      <Jeea />
-      <Services />
-      <Contact />
-      <Footer />
+      <Navbar/>
+      <Hero/>
+      <Cjem/>
+      <Jeea/>
+      <Services/>
+      <Contact/>
+      <Footer/>
     </div>
+
   );
 }
 

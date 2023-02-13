@@ -5,16 +5,9 @@ import { useTranslation} from 'react-i18next';
 import { changeLanguage } from "i18next";
 
 
+
 const Navbar = () => {
-
-
-
-
-
-
-
-
-   const {t,i18n} = useTranslation()
+const {t,i18n} = useTranslation()
 
   return (
     <nav className="navbar">

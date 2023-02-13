@@ -1,7 +1,13 @@
 import React from "react";
-
 import "./Services.scss";
 
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 //assets
 import star from "../../assets/star2.svg";
 import recrutement from "../../assets/recrutement.svg";
@@ -26,7 +32,7 @@ const Services = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">Learn More...</button>
+                <button className="button-main">Learn More...</button>
             </div>
           </div>
 
@@ -66,6 +72,8 @@ const Services = () => {
         </div>
       </div>
     </section>
+
+  
   );
 };
 
