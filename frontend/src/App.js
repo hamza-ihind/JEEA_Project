@@ -11,7 +11,7 @@ import Jeea from "./components/Jeea/Jeea";
 import Services from "./components/Services/Services";
 import Error from "./components/Error/Error";
 
-
+import { Route,Routes,BrowserRouter } from "react-router-dom";
 
 function App() {
   useEffect(() => {
