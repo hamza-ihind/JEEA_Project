@@ -93,17 +93,20 @@
 .logo_toggle {
   cursor: pointer;
   display: none;
+  background: transparent ;
 }
 .logo_toggle i {
   font-size: 21px;
   border-radius: 5px;
   padding: 0.2rem;
-  background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+  font-size: 28px;
+  
 }
 .close_btn {
   position: absolute;
   top: 5%;
   right: 3%;
+  color: rgb(255 216 158);
 }
 
 /* medium screen */
@@ -143,6 +146,27 @@
     padding: 20px;
     z-index: 1;
     transform: translateY(-100vh);
+    button.navbar__button.light_dark_icon {
+      position: absolute;
+      top: 6%;
+      left: 5%;
+      background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+      color: white;
+      width: 4rem;
+      height: 2rem;
+      border-radius: 11px;
+    }
+    button.navbar__button.fr_eng_icon {
+      position: absolute;
+      bottom: 7%;
+      background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+      color: white;
+      width: 4rem;
+      height: 2rem;
+      border-radius: 11px;
+      right: 3%;
+     font-size: 14px;
+    }
   }
   .navbar__links {
     flex-direction: column;
@@ -154,8 +178,11 @@
   .contact_us_button {
     display: none;
   }
+
+ 
 }
 
 .Responsive_nav {
   transform: none;
 }
+

@@ -42,20 +42,20 @@ const showNavbar = ()=> {
         </ul>
         <ul className="navbar__features">
           <li>
-            <button className="navbar__button">L/D</button>
+            <button className="navbar__button light_dark_icon">L/D</button>
           </li>
           <li>
          
           </li>
           <li>
-            <button className="navbar__button" onClick={()=>changeLanguage(i18n.resolvedLanguage==="en"?"fr":"en")}>{i18n.resolvedLanguage}</button>
+            <button className="navbar__button fr_eng_icon" onClick={()=>changeLanguage(i18n.resolvedLanguage==="en"?"fr":"en")}>{i18n.resolvedLanguage}</button>
           </li>
           <li>
             <button className="navbar__button contact_us_button">{t("labels.ContactUs")}</button>
           </li>
         </ul>
         <div  className="logo_toggle close_btn " onClick={showNavbar}>
-          <i class="fa fa-bars"></i>
+        <i class="fa fa-bars"></i>
           </div>
         </div>
 
