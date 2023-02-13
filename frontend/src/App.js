@@ -3,15 +3,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer/Footer";
-import Cjem from "./components/Cjem/Cjem";
-import Jeea from "./components/Jeea/Jeea";
-import Services from "./components/Services/Services";
 import Error from "./components/Error/Error";
+import Home from "./components/Home/Home";
 
-import { Route,Routes,BrowserRouter } from "react-router-dom";
+import { Route,Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -21,13 +17,14 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Hero/>
-      <Cjem/>
-      <Jeea/>
-      <Services/>
-      <Contact/>
+        <Routes>
+          <Route path="/" element={ <Home />} />
+          <Route path="/Error" element={<Error/>} />
+        </Routes>
       <Footer/>
     </div>
+    
+   
 
   );
 }
