@@ -144,7 +144,7 @@ $background-color_1: var(--dark-color);
   }
 }
 
-@media (max-width : 967px) {
+@media (max-width : 767px) {
   .footer-clean .content {
     padding: 1rem;
   }
@@ -158,9 +158,7 @@ $background-color_1: var(--dark-color);
         justify-content: center;
         padding: 0;
       } 
-      .footer_nav.middle .item_social {
-
-      }
+      
     }
     .right_side {
       p {
