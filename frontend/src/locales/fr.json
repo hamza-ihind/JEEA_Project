@@ -1,11 +1,9 @@
 {
-    "labels": {
-        "Team": "équipe",
-        "Home": "Home",
-        "About": "a propos",
-        "ContactUs": "contactez nos",
-        "Services":"Services"
-    
-    
-    
-        }}
+  "labels": {
+    "Team": "équipe",
+    "Home": "Acceuil",
+    "About": "à propos",
+    "ContactUs": "contactez-nous",
+    "Services": "Services"
+  }
+}

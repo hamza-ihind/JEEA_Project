@@ -3,30 +3,30 @@ import "./Footer.scss";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = (props) => {
   return (
-    <div className={props.isDarkMode ? 'footer-clean dark' : 'footer-clean light'}>
+    <div
+      className={props.isDarkMode ? "footer-clean dark" : "footer-clean light"}
+    >
       <div className="content ">
         <div className="content_flex">
           <div className="left_side">
-            <div className="footer_nav top">
-              <ul>
-                <li>
-                  <a href="#" className="active">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Team</a>
-                </li>
-              </ul>
-            </div>
+            <ul className="footer_nav top">
+              <li>
+                <a href="#" className="active">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Team</a>
+              </li>
+            </ul>
 
-            <div className="middle">
+            <div className="footer_nav middle">
               <div className="logo">
                 <h1>JEEA</h1>
               </div>
@@ -46,27 +46,23 @@ const Footer = (props) => {
               </div>
             </div>
 
-            <div className="footer_nav buttom">
-              <ul>
-                <li>
-                  <a href="#">Terms of service</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-                <li>
-                  <a href="#">Report</a>
-                </li>
-              </ul>
-            </div>
+            <ul className="footer_nav bottom">
+              <li>
+                <a href="#">Terms of service</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Report</a>
+              </li>
+            </ul>
           </div>
 
           <div className="right_side ">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting .{" "}
-            </p>
+            <p>JEEA, Votre compagnon de confiance! </p>
             <span>contact@JEEA.com</span>
-            <span>(+212) 645-987-756</span>
+            <span>+212 645-987-756</span>
           </div>
         </div>
       </div>

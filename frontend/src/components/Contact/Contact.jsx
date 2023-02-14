@@ -34,10 +34,7 @@ const Footer = (props) => {
             <h1 className="title">CONTACT US</h1>
             <img src={star} alt="star" className="starImg" />
           </div>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            sed, iusto harum et officiis
-          </p>
+          <p>Confiez vos projets à nos étudiants</p>
         </div>
         <form
           ref={form}
