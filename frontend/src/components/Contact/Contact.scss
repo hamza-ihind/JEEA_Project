@@ -116,6 +116,10 @@
     textarea {
       height: 100px;
     }
-    
+  } 
+}
+@media (max-width : 350px) {
+  .container .contact-text .title__container .title {
+    font-size: 1.7rem;
   }
 }
