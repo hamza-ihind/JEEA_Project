@@ -111,7 +111,6 @@ $background-color_1: var(--dark-color);
     }
   }
 }
-
 .copyright {
   padding: 18px 0px 1px 0px;
   text-align: center;
@@ -125,4 +124,26 @@ $background-color_1: var(--dark-color);
   p {
     margin: 0;
   }
+}
+
+@media (max-width : 967px) {
+  .footer-clean .content {
+    padding: 1rem;
+  }
+  .content_flex {
+    flex-direction: column;
+    gap: 3rem;
+    .left_side {
+      .footer_nav ul {
+        justify-content: center;
+        padding: 0;
+      }
+    }
+    .right_side {
+      p {
+        text-align: center;
+      }
+    }
+  }
+  
 }

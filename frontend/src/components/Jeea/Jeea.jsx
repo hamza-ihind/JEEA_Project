@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Jeea.scss";
 
 //assets
