@@ -1,14 +1,14 @@
-import "./App.scss";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router";
 import AOS from "aos";
-import "aos/dist/aos.css";
+
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer/Footer";
-import Cjem from "./components/Cjem/Cjem";
-import Jeea from "./components/Jeea/Jeea";
-import Services from "./components/Services/Services";
+import Home from "./components/Home/Home";
+import Error from "./components/Error/Error";
+
+import "./App.scss";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
@@ -21,14 +21,13 @@ function App() {
   };
 
   return (
-    <div className={isDarkMode ? 'App dark' : 'App light'}>
-      <Navbar toggleMode={toggleMode}/>
-      <Hero isDarkMode={isDarkMode}/>
-      <Cjem isDarkMode={isDarkMode}/>
-      <Jeea isDarkMode={isDarkMode}/>
-      <Services isDarkMode={isDarkMode}/>
-      <Contact isDarkMode={isDarkMode}/>
-      <Footer isDarkMode={isDarkMode}/>
+    <div className={isDarkMode ? "App dark" : "App light"}>
+      <Navbar toggleMode={toggleMode} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Error" element={<Error />} />
+      </Routes>
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }
