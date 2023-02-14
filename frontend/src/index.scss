@@ -34,6 +34,12 @@
       rgba(28, 63, 168, 1) 100%
     );
     color: white;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: medium;
+      height: 7vh;
+      width: 20vw;
+    }
   }
 
   &-stroke {
@@ -47,5 +53,11 @@
     background: transparent;
     border-color: var(--dark-color);
     color: var(--dark-color);
+
+    @media only screen and (max-width: 1000px) {
+      font-size: medium;
+      height: 7vh;
+      width: 20vw;
+    }
   }
 }
