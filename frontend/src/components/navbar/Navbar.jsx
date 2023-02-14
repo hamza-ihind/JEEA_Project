@@ -5,12 +5,14 @@ import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
+
 import { useRef } from "react";
 
 const Navbar = (props) => {
   function toggleMode() {
     props.toggleMode();
   }
+
 
   const { t, i18n } = useTranslation();
   // toggle navbar :
@@ -25,6 +27,7 @@ const Navbar = (props) => {
       <div className="navbar__container">
         <img src={LOGO} alt="ENSA" className="navbar__img" />
         <div className="navbar__element" ref={navRef}>
+
           <ul className="navbar__links">
             <Link to="localhost:3000/#home">
               <li>

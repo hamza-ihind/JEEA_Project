@@ -19,7 +19,8 @@
 
   &__line {
     position: absolute;
-    right: 15rem;
+    right: 21%;
+    height: 19rem;
   }
 
   &__decoration {
@@ -38,12 +39,21 @@
     flex-direction: column;
     gap: 2rem;
 
+    &-jeea {
+      font-size: 10vw;
+    }
+
     &-text {
       color: var(--dark-color);
-      line-height: 4rem;
-      font-size: 3rem;
+      line-height: 8vh;
+      font-size: 3.5vw;
       font-weight: 1000;
       margin-bottom: 2rem;
+      max-width: 80%;
+
+      @media only screen and (max-width: 1000px) {
+        line-height: 8vh;
+      }
     }
 
     &-buttons {

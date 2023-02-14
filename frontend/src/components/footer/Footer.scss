@@ -35,6 +35,7 @@ $background-color_1: var(--dark-color);
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 0;
+    padding: 0;
     a {
       padding: 12px;
       color: $color_2;
@@ -53,7 +54,7 @@ $background-color_1: var(--dark-color);
     width: auto;
     text-align: center;
     i {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: $color_3;
       &:hover {
         color: $color_4;
@@ -70,6 +71,7 @@ $background-color_1: var(--dark-color);
   // LEFT SIDE STYLE :
 
   .left_side {
+
     .footer_nav {
       &.top {
         display: flex;
@@ -95,6 +97,7 @@ $background-color_1: var(--dark-color);
           flex-direction: row;
           justify-content: space-between;
           width: 50%;
+          margin-right: 17px;
         }
       }
 
@@ -104,6 +107,7 @@ $background-color_1: var(--dark-color);
         flex-wrap: wrap;
         gap: 20px;
         padding: 0;
+
       }
     }
   }
@@ -140,18 +144,21 @@ $background-color_1: var(--dark-color);
   }
 }
 
-@media (max-width: 967px) {
+@media (max-width : 767px) {
   .footer-clean .content {
     padding: 1rem;
   }
   .content_flex {
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
     .left_side {
-      .footer_nav ul {
+      .footer_nav.top,
+      .footer_nav.bottom{
         justify-content: center;
         padding: 0;
-      }
+      } 
+      
     }
     .right_side {
       p {
@@ -159,4 +166,6 @@ $background-color_1: var(--dark-color);
       }
     }
   }
+
 }
+
