@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Services.scss";
 
@@ -11,7 +12,10 @@ import formation from "../../assets/formation.svg";
 
 const Services = (props) => {
   return (
-    <section id="CARDS" className={props.isDarkMode ? 'cards dark' : 'cards light'}>
+    <section
+      id="CARDS"
+      className={props.isDarkMode ? "cards dark" : "cards light"}
+    >
       <div className="cards__container">
         <div className="title__container">
           <h1 className="title">WHAT WE SERVE</h1>
@@ -26,7 +30,9 @@ const Services = (props) => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">Learn More...</button>
+              <Link to="/Error">
+                <button className="button-main">Learn More...</button>
+              </Link>
             </div>
           </div>
 

@@ -27,17 +27,14 @@ const Footer = (props) => {
   const form = useRef();
 
   return (
-    <div className={props.isDarkMode ? 'container dark' : 'container light'}>
+    <div className={props.isDarkMode ? "container dark" : "container light"}>
       <div className="content">
         <div className="contact-text">
           <div className="title__container">
             <h1 className="title">CONTACT US</h1>
             <img src={star} alt="star" className="starImg" />
           </div>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            sed, iusto harum et officiis
-          </p>
+          <p>Confiez vos projets à nos étudiants</p>
         </div>
         <form
           ref={form}

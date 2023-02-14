@@ -12,11 +12,7 @@ $background-color_1: var(--dark-color);
   );
 }
 .footer-clean.dark {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 169, 41, 1) 25%,
-    #5b5fa9 100%
-  );
+  background: linear-gradient(0deg, rgba(255, 169, 41, 1) 25%, #5b5fa9 100%);
 }
 
 .footer-clean {
@@ -73,51 +69,59 @@ $background-color_1: var(--dark-color);
   flex-wrap: nowrap;
   justify-content: space-around;
   // LEFT SIDE STYLE :
+
   .left_side {
-    .footer_nav ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .middle {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      margin: 20px 0px 20px 0px;
-      .logo {
-        margin-right: 30px;
-        position: relative;
+
+    .footer_nav {
+      &.top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
       }
-      .logo::after {
-        content: '';
-        content: "";
-        position: absolute;
-        height: 54%;
-        width: 3px;
-        background-color: white;
-        top: 11px;
-        right: -21px;
+
+      &.middle {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 20px 0;
+
+        .logo {
+          margin-left: 11px;
+        }
+        .item_social {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 50%;
+          margin-right: 17px;
+        }
       }
-      .item_social a {
-        padding: 0.5rem;
-        margin: 0 8px;
+
+      &.bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+
       }
     }
   }
+
   // RIGHT SIDE STYLE :
   .right_side {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 0rem;
     p {
       font-size: 1rem;
+      margin: 0;
     }
     span {
       font-size: 1rem;
@@ -140,10 +144,6 @@ $background-color_1: var(--dark-color);
   }
 }
 
-
-
-
-/*_________ those are changes i've made ____________*/
 @media (max-width : 967px) {
   .footer-clean .content {
     padding: 1rem;
@@ -151,10 +151,15 @@ $background-color_1: var(--dark-color);
   .content_flex {
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
     .left_side {
-      .footer_nav ul {
+      .footer_nav.top,
+      .footer_nav.bottom{
         justify-content: center;
         padding: 0;
+      } 
+      .footer_nav.middle .item_social {
+
       }
     }
     .right_side {
@@ -165,3 +170,4 @@ $background-color_1: var(--dark-color);
   }
 
 }
+
