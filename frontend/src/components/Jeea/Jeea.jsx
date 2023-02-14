@@ -3,12 +3,15 @@ import React from "react";
 import "./Jeea.scss";
 
 //assets
-import jeea from "../../assets/jeea.svg";
+import jeea from "../../assets/jeea.png";
 import star from "../../assets/star.svg";
 
 const Jeea = (props) => {
   return (
-    <section id="JEEA" className={props.isDarkMode ? 'jeea dark' : 'jeea light'}>
+    <section
+      id="JEEA"
+      className={props.isDarkMode ? "jeea dark" : "jeea light"}
+    >
       <div className="jeea__container">
         <div className="title__container">
           <h1 className="title">WHO ARE WE?</h1>

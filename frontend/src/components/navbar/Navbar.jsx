@@ -1,16 +1,15 @@
 import React from "react";
 import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
-import { useTranslation} from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
-
 
 const Navbar = (props) => {
   function toggleMode() {
     props.toggleMode();
   }
 
-   const {t,i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
 
   return (
     <nav className="navbar">
@@ -34,13 +33,20 @@ const Navbar = (props) => {
 
         <ul className="navbar__features">
           <li>
-            <button className="navbar__button" onClick={toggleMode}>L/D</button>
+            <button className="navbar__button" onClick={toggleMode}>
+              L/D
+            </button>
           </li>
+          <li></li>
           <li>
-         
-          </li>
-          <li>
-            <button className="navbar__button" onClick={()=>changeLanguage(i18n.resolvedLanguage==="en"?"fr":"en")}>{i18n.resolvedLanguage}</button>
+            <button
+              className="navbar__button"
+              onClick={() =>
+                changeLanguage(i18n.resolvedLanguage === "en" ? "fr" : "en")
+              }
+            >
+              {i18n.resolvedLanguage}
+            </button>
           </li>
           <li>
             <button className="navbar__button">{t("labels.ContactUs")}</button>

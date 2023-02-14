@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import "./Cjem.scss";
 
 //assets
-import cjem from "../../assets/cjem.svg";
+import cjem from "../../assets/cjem.png";
 import star from "../../assets/star.svg";
-const Cjem = (props) => {
 
+const Cjem = (props) => {
   return (
-    <div id="about" className={props.isDarkMode ? 'cjem dark' : 'cjem light'}>
+    <div id="about" className={props.isDarkMode ? "cjem dark" : "cjem light"}>
       <div className="cjem__container">
         <div className="title__container">
           <h1 className="title">WHAT IS CJEM?</h1>

@@ -2,11 +2,12 @@ import React from "react";
 
 import Line from "../../assets/line.svg";
 import Decoration from "../../assets/decoration.svg";
+
 import "./Hero.scss";
 
 const Hero = (props) => {
   return (
-    <div className={props.isDarkMode ? 'hero dark' : 'hero light'} id="hero">
+    <div className={props.isDarkMode ? "hero dark" : "hero light"} id="hero">
       <img src={Decoration} alt="decoration" className="hero__decoration" />
       <div className="hero__content">
         <div className="hero__content-text">
