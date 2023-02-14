@@ -30,9 +30,7 @@ const Footer = (props) => {
               <div className="logo">
                 <h1>JEEA</h1>
               </div>
-
               <div className=" item_social">
-              <div className="item_social">
                 <a href="#">
                   <i className="fa fa-facebook"></i>
                 </a>
