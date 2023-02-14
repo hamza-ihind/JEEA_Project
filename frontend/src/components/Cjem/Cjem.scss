@@ -10,7 +10,9 @@
 }
 .cjem {
   padding: 10px;
-  height: 100vh;
+  @media screen and (min-width:1200px) {
+    height: 100vh;  
+}
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +61,10 @@
       justify-content: space-around;
       align-items: center;
       gap: 5rem;
+      
+      @media screen and (max-width:1200px) {
+                 flex-wrap: wrap;    
+      }
 
       .paragraph {
         font-weight: 400;
@@ -79,3 +85,4 @@
     width: 25rem;
   }
 }
+

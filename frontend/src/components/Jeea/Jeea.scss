@@ -14,11 +14,12 @@
 
 .jeea {
   padding: 10px;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  @media screen and (min-width:1200px) {
+    height: 100vh;  
+}
   &__container {
     width: 75%;
     display: flex;
@@ -64,7 +65,9 @@
       justify-content: space-around;
       align-items: center;
       gap: 5rem;
-
+      @media screen and (max-width:1200px) {
+        flex-wrap: wrap;    
+}
       .paragraph {
         font-weight: 400;
         font-size: 1.3rem;
