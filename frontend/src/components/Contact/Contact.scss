@@ -34,7 +34,7 @@
         margin: 10px auto;
         box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
         backdrop-filter: blur(24px);
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         border-radius: 20px;
         padding: 0.75rem 1.5rem;
         width: fit-content;
@@ -78,6 +78,7 @@
         border-radius: 10px;
       }
       textarea {
+        max-height: 10rem;
         min-height: 10rem;
         border-radius: 10px;
         white-space: pre;
@@ -102,19 +103,6 @@
         font-size: 20px;
         cursor: pointer;
       }
-    }
-  }
-}
-
-
-@media (max-width : 764px) {
-  .container {
-    height: 100vh;
-    padding: 0;
-  }
-  .contactForm {
-    textarea {
-      height: 100px;
     }
   }
 }
