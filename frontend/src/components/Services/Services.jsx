@@ -10,9 +10,9 @@ import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
 import formation from "../../assets/formation.svg";
 
-const Services = () => {
+const Services = (props) => {
   return (
-    <section id="CARDS" className="cards">
+    <section id="CARDS" className={props.isDarkMode ? 'cards dark' : 'cards light'}>
       <div className="cards__container">
         <div className="title__container">
           <h1 className="title">WHAT WE SERVE</h1>

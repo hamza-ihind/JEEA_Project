@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div className="footer-clean">
+    <div className={props.isDarkMode ? 'footer-clean dark' : 'footer-clean light'}>
       <div className="content ">
         <div className="content_flex">
           <div className="left_side">
@@ -30,6 +30,8 @@ const Footer = () => {
               <div className="logo">
                 <h1>JEEA</h1>
               </div>
+
+              <div className=" item_social">
               <div className="item_social">
                 <a href="#">
                   <i className="fa fa-facebook"></i>

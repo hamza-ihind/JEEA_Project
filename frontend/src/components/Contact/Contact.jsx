@@ -4,7 +4,7 @@ import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
-const Footer = () => {
+const Footer = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ const Footer = () => {
   const form = useRef();
 
   return (
-    <div className="container">
+    <div className={props.isDarkMode ? 'container dark' : 'container light'}>
       <div className="content">
         <div className="contact-text">
           <div className="title__container">
@@ -45,7 +45,7 @@ const Footer = () => {
           method="POST"
           id="contactForm"
           name="contactForm"
-          class="contactForm"
+          className="contactForm"
         >
           <div>
             <div className="Name_Area input">
@@ -53,7 +53,7 @@ const Footer = () => {
                 {" "}
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="Firstname"
                   id="Firstname"
                   placeholder="Your Firstname"
@@ -63,7 +63,7 @@ const Footer = () => {
                 {" "}
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="Lastname"
                   id="Lastname"
                   placeholder="Your Lastname"
@@ -76,7 +76,7 @@ const Footer = () => {
                 {" "}
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   name="email"
                   id="email"
                   placeholder="Email"
@@ -89,7 +89,7 @@ const Footer = () => {
                 {" "}
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="subject"
                   id="subject"
                   placeholder="Subject"
@@ -101,7 +101,7 @@ const Footer = () => {
               <div>
                 <textarea
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   cols="30"
                   rows="4"

@@ -3,6 +3,12 @@ import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 import { useTranslation} from 'react-i18next';
 import { changeLanguage } from "i18next";
+
+
+const Navbar = (props) => {
+  function toggleMode() {
+    props.toggleMode();
+  }
 import {  useRef } from "react";
 
 
@@ -42,6 +48,9 @@ const showNavbar = ()=> {
         </ul>
         <ul className="navbar__features">
           <li>
+
+            <button className="navbar__button" onClick={toggleMode}>L/D</button>
+
             <button className="navbar__button light_dark_icon">L/D</button>
           </li>
           <li>

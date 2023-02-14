@@ -4,15 +4,24 @@ $color_3: white;
 $color_4: var(--primary-color);
 $background-color_1: var(--dark-color);
 
-.footer-clean {
-  margin-top: 80px;
-  padding: 10px 0;
+.footer-clean.light {
   background: linear-gradient(
     0deg,
     rgba(31, 38, 86, 1) 25%,
     rgba(255, 169, 41, 1) 100%
   );
+}
+.footer-clean.dark {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 169, 41, 1) 25%,
+    #5b5fa9 100%
+  );
+}
 
+.footer-clean {
+  margin-top: 80px;
+  padding: 10px 0;
   color: $color_1;
   .content {
     width: 100%;
