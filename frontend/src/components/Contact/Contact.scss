@@ -104,7 +104,12 @@
   }
 }
 
-
+@media (max-width: 1400px){
+.container {
+    padding: 0;
+    height: 100%;
+}
+}
 @media (max-width : 764px) {
   .container {
     padding: 0;
@@ -118,7 +123,7 @@
     }
   } 
 }
-@media (max-width : 350px) {
+@media (max-width : 390px) {
   .container .contact-text .title__container .title {
     font-size: 1.7rem;
   }
