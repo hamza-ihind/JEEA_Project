@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-
+   
     .title__container {
       position: relative;
 
@@ -58,14 +58,19 @@
       flex-direction: row;
       align-items: center;
       gap: 4rem;
-      flex-wrap: wrap;
+      
       padding-bottom: 10px;
-
+      @media screen and (max-width:950px) {
+        flex-direction: column;
+    }
       .card {
         width: 35%;
         border-radius: 20px;
         background: linear-gradient(to top, white 70%, transparent 0);
         border: none;
+        @media screen and (max-width:950px) {
+          width: 90%;
+      }
       }
 
       .card-body {
@@ -74,9 +79,14 @@
         align-items: center;
         justify-content: center;
         padding-top: 0;
-
+        a{
+          width: 100%;
+        }
         .button-main {
           padding: 0.5rem 0.5rem;
+          @media screen and (max-width:950px) {
+            width: 100%;
+        }
         }
       }
     }
