@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import "./Jeea.scss";
 
@@ -6,11 +6,17 @@ import "./Jeea.scss";
 import jeea from "../../assets/jeea.png";
 import star from "../../assets/star.svg";
 
-const Jeea = (props) => {
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+
+const Jeea = () => {
+
+  const {isDarkModeActive} = useContext(ThemeModeContext);
+
+
   return (
     <section
       id="JEEA"
-      className={props.isDarkMode ? "jeea dark" : "jeea light"}
+      className={isDarkModeActive ? "jeea dark" : "jeea light"}
     >
       <div className="jeea__container">
         <div className="title__container">

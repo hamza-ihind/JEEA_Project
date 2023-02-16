@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 
 import "./Services.scss";
@@ -10,11 +10,17 @@ import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
 import formation from "../../assets/formation.svg";
 
-const Services = (props) => {
+//context
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+
+const Services = () => {
+
+  const {isDarkModeActive} = useContext(ThemeModeContext);
+
   return (
     <section
       id="CARDS"
-      className={props.isDarkMode ? "cards dark" : "cards light"}
+      className={isDarkModeActive ? "cards dark" : "cards light"}
     >
       <div className="cards__container">
         <div className="title__container">

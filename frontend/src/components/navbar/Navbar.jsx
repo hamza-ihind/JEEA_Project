@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React,{useContext} from "react";
+>>>>>>> 517b60cccfbbec3e92836a5e651afe42771506f3
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
@@ -11,7 +15,13 @@ import { changeLanguage } from "i18next";
 
 import { useRef } from "react";
 
+//context
+import { ThemeModeContext } from "../../contexts/ThemeModeContext"; 
+
+
+
 const Navbar = (props) => {
+<<<<<<< HEAD
   const [light, setLight] = useState(true);
 
   function toggleMode() {
@@ -19,6 +29,10 @@ const Navbar = (props) => {
     setLight(!light);
   }
 
+=======
+  
+  const {isDarkModeActive,switchToLightMode,switchToDarkMode} = useContext(ThemeModeContext);
+>>>>>>> 517b60cccfbbec3e92836a5e651afe42771506f3
   const { t, i18n } = useTranslation();
 
   // toggle navbar :
@@ -26,6 +40,15 @@ const Navbar = (props) => {
   const showNavbar = () => {
     navRef.current.classList.toggle("Responsive_nav");
   };
+
+  function toggleMode() {
+    if(isDarkModeActive){
+      switchToLightMode()
+      return;
+    }
+
+    switchToDarkMode()
+  }
 
   return (
     <div className="navbar">

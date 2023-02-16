@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Footer.scss";
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const Footer = (props) => {
+const Footer = () => {
+
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+
   return (
     <div
-      className={props.isDarkMode ? "footer-clean dark" : "footer-clean light"}
+      className={isDarkModeActive ? "footer-clean dark" : "footer-clean light"}
     >
       <div className="content ">
         <div className="content_flex">

@@ -1,13 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import Line from "../../assets/line.svg";
 import Decoration from "../../assets/decoration.svg";
 
 import "./Hero.scss";
 
-const Hero = (props) => {
+//contexts
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+
+const Hero = () => {
+  
+  const {isDarkModeActive} = useContext(ThemeModeContext);
+
+
   return (
-    <div className={props.isDarkMode ? "hero dark" : "hero light"} id="hero">
+    <div className={isDarkModeActive ? "hero dark" : "hero light"} id="hero">
       {/* <img src={Decoration} alt="decoration" className="hero__decoration" /> */}
       <div className="hero__content">
         <div className="hero__content-slogan">

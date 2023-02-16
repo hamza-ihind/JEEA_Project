@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Route, Routes } from "react-router";
-import AOS from "aos";
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -9,27 +8,22 @@ import Error from "./components/Error/Error";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 
 import "./App.scss";
-import "aos/dist/aos.css";
+
+//Theme context
+import { ThemeModeContext } from "./contexts/ThemeModeContext";
 
 function App() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div className={isDarkMode ? "App dark" : "App light"}>
-      <Navbar toggleMode={toggleMode} />
+    <div className={isDarkModeActive ? "App dark" : "App light"}>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<ServicesPage />} />
         <Route path="/Error" element={<Error />} />
       </Routes>
-      <Footer isDarkMode={isDarkMode} />
+      <Footer />
     </div>
   );
 }
