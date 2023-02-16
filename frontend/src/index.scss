@@ -40,6 +40,11 @@
       height: 7vh;
       width: 20vw;
     }
+
+    @media only screen and (max-width: 900px) {
+      height: 2.5rem;
+      width: 100%;
+    }
   }
 
   &-stroke {
@@ -58,6 +63,11 @@
       font-size: medium;
       height: 7vh;
       width: 20vw;
+    }
+
+    @media only screen and (max-width: 900px) {
+      height: 2.5rem;
+      width: 100%;
     }
   }
 }

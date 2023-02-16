@@ -1,0 +1,128 @@
+.services-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7rem 5rem;
+}
+
+.Title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+.title__container {
+  position: relative;
+  margin: 1rem 2rem;
+  .title {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(24px);
+    border-radius: 20px;
+    padding: 10px 16px;
+    width: fit-content;
+    text-align: center;
+    border: 1px solid white;
+    background: radial-gradient(
+      51.72% 61.73% at 50% 50%,
+      #4358ff 0%,
+      #1f2656 63.85%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .starImg {
+    position: absolute;
+    bottom: -13px;
+    left: -31px;
+    width: 63.85px;
+    height: 56.42px;
+  }
+}
+
+// Styles: Navigation Bar
+.navbar__services {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 90%;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.418) 50%,
+      rgba(255, 255, 255, 0.075) 100%
+    );
+    backdrop-filter: blur(8px);
+    border-radius: 1.1rem;
+  }
+
+  &-img {
+    height: 100%;
+    width: 80px;
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 3em;
+
+    li,
+    a {
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--dark-color);
+      transition: all 0.3s;
+    }
+
+    li,
+    a:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+// Cards Container
+.cards-container {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 85%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.services__card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem;
+  gap: 2rem;
+  border-radius: 20px;
+  position: relative;
+
+  &-title {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+}

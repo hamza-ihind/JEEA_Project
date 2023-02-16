@@ -1,33 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
+import Light from "../../assets/light.png";
+import Dark from "../../assets/dark.png";
+
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 
 import { useRef } from "react";
 
 const Navbar = (props) => {
+  const [light, setLight] = useState(true);
+
   function toggleMode() {
     props.toggleMode();
+    setLight(!light);
   }
 
-
   const { t, i18n } = useTranslation();
+
   // toggle navbar :
   const navRef = useRef();
   const showNavbar = () => {
     navRef.current.classList.toggle("Responsive_nav");
   };
-  // end toggle navbar :
 
   return (
     <div className="navbar">
       <div className="navbar__container">
         <img src={LOGO} alt="ENSA" className="navbar__img" />
-        <div className="navbar__element" ref={navRef}>
 
+        <div className="navbar__element" ref={navRef}>
           <ul className="navbar__links">
             <Link to="localhost:3000/#home">
               <li>
@@ -53,7 +58,11 @@ const Navbar = (props) => {
                 className="navbar__button light_dark_icon"
                 onClick={toggleMode}
               >
-                L/D
+                {light ? (
+                  <img src={Dark} className="icon__mode" />
+                ) : (
+                  <img src={Light} className="icon__mode" />
+                )}
               </button>
             </li>
             <li></li>

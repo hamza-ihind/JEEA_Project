@@ -86,23 +86,26 @@
     border: 0;
     border-radius: 1rem;
     padding: 0.3em 0.8em;
+    display: flex;
+
+    .icon__mode {
+      width: 1.2rem;
+    }
   }
 }
-
 
 /* _____________________those are changes i have made here__________________*/
 .logo_toggle {
   cursor: pointer;
   display: none;
-  background: transparent ;
+  background: transparent;
 }
 .logo_toggle i {
   font-size: 21px;
   border-radius: 5px;
   padding: 0.2rem;
-  background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+  background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
   font-size: 28px;
-
 }
 .close_btn {
   position: absolute;
@@ -118,7 +121,7 @@
   font-size: 21px;
   border-radius: 5px;
   padding: 0.2rem;
-  background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+  background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
 }
 .close_btn {
   position: absolute;
@@ -127,7 +130,7 @@
 }
 
 /* medium screen */
-@media (max-width : 1024px) {
+@media (max-width: 1024px) {
   .navbar__container {
     width: 100%;
   }
@@ -138,7 +141,7 @@
     .navbar__links {
       gap: 18px;
     }
-  } 
+  }
 }
 
 /* mobile screen */
@@ -157,7 +160,7 @@
     right: 0;
     width: 100%;
     font-size: 12px;
-    background: linear-gradient(180deg, #1614D1 0%, #1F2656 35.94%);
+    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
     transition: 1s;
     border-radius: 12px;
     padding: 20px;
@@ -168,7 +171,7 @@
     position: absolute;
     top: 6%;
     left: 5%;
-    background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+    background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
     color: white;
     width: 4rem;
     height: 2rem;
@@ -177,19 +180,18 @@
   button.navbar__button.fr_eng_icon {
     position: absolute;
     bottom: 7%;
-    background: linear-gradient(180deg, #FFE4BB 0%, #FFAB2E 30%);
+    background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
     color: white;
     width: 4rem;
     height: 2rem;
     border-radius: 11px;
     right: 3%;
-   font-size: 14px;
+    font-size: 14px;
   }
   .navbar__links {
     flex-direction: column;
     a {
       color: rgba(255, 211, 147, 1);
-
     }
   }
   .contact_us_button {

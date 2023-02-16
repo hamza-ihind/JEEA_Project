@@ -66,7 +66,9 @@ const Services = (props) => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard .
               </p>
-              <button className="button-main">Learn more...</button>
+              <Link to="/Services">
+                <button className="button-main">Learn more...</button>
+              </Link>
             </div>
           </div>
         </div>

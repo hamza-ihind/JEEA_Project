@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./components/Home/Home";
 import Error from "./components/Error/Error";
+import ServicesPage from "./components/ServicesPage/ServicesPage";
 
 import "./App.scss";
 import "aos/dist/aos.css";
@@ -25,6 +26,7 @@ function App() {
       <Navbar toggleMode={toggleMode} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Services" element={<ServicesPage />} />
         <Route path="/Error" element={<Error />} />
       </Routes>
       <Footer isDarkMode={isDarkMode} />
