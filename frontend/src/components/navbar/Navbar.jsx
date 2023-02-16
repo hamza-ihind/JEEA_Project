@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
@@ -8,12 +8,14 @@ import { changeLanguage } from "i18next";
 
 import { useRef } from "react";
 
+//context
+import { ThemeModeContext } from "../../contexts/ThemeModeContext"; 
+
+
+
 const Navbar = (props) => {
-  function toggleMode() {
-    props.toggleMode();
-  }
-
-
+  
+  const {isDarkModeActive,switchToLightMode,switchToDarkMode} = useContext(ThemeModeContext);
   const { t, i18n } = useTranslation();
   // toggle navbar :
   const navRef = useRef();
@@ -21,6 +23,15 @@ const Navbar = (props) => {
     navRef.current.classList.toggle("Responsive_nav");
   };
   // end toggle navbar :
+
+  function toggleMode() {
+    if(isDarkModeActive){
+      switchToLightMode()
+      return;
+    }
+
+    switchToDarkMode()
+  }
 
   return (
     <div className="navbar">

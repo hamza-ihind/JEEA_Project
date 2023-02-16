@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 import "./Cjem.scss";
 
@@ -6,9 +6,16 @@ import "./Cjem.scss";
 import cjem from "../../assets/cjem.png";
 import star from "../../assets/star.svg";
 
-const Cjem = (props) => {
+//context
+import { ThemeModeContext } from "../../contexts/ThemeModeContext"; 
+
+
+const Cjem = () => {
+  
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+
   return (
-    <div id="about" className={props.isDarkMode ? "cjem dark" : "cjem light"}>
+    <div id="about" className={isDarkModeActive ? "cjem dark" : "cjem light"}>
       <div className="cjem__container">
         <div className="title__container">
           <h1 className="title">WHAT IS CJEM?</h1>

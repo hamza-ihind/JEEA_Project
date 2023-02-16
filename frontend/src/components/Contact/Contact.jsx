@@ -1,10 +1,19 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Contact.scss";
 import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
+//context
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+
+
 const Footer = (props) => {
+
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+
+
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,7 +36,7 @@ const Footer = (props) => {
   const form = useRef();
 
   return (
-    <div className={props.isDarkMode ? "container dark" : "container light"}>
+    <div className={isDarkModeActive ? "container dark" : "container light"}>
       <div className="content">
         <div className="contact-text">
           <div className="title__container">
