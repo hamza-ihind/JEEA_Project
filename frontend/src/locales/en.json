@@ -5,5 +5,37 @@
     "About": "About",
     "ContactUs": "Contact us",
     "Services": "Services"
+  },
+
+  "hero": {
+    "slogan": "FOR EVERY PROBLEM, WE ENGINEER A SOLUTION",
+    "text": "Teaming up with Junior enterprise ENSA Agadir is your way to get hold of a wide range of skills provided by future engineers in different fields.",
+    "contact": "Contact us!",
+    "video": "Watch a video"
+  },
+
+  "cjem": {
+    "title": "WHAT IS CJEM?",
+    "text": "JEEA operates under the umbrella of CJEM (Confédération Marocaine des Juniors Entrepreneurs),which is the founder structure of the Junior-Entrepreneurship movement in Morocco, with the aim of promoting the concept of JE's at the national level, but also to ensure that the status of Junior Enterprises is legally recognized and valued by companies. For more information: https://cjem.ma/"
+  },
+
+  "jeea": {
+    "title": "WHO ARE WE?",
+    "text": "The JEEA (Junior Enterprise ENSA Agadir) is a branch of the JE (Junior Enterprise), whose primary goal is to refine the skills of young entrepreneurs in order to enrich their profiles before integrating the professional world. It is a consulting firm that was founded by the students of ENSA-A, in order to help students to integrate entrepreneurship by offering them the possibility to test their skills and put them to work according to the business standards. JEEA thus offers a unique opportunity for new junior-entrepreneurs to enter the job market and start their professional career. On the other hand, it provides aquality service to companies in order to meet the needs of clients in different fields."
+  },
+
+  "services": {
+    "title": "OUR SERVICES",
+    "recrute": "Join us! We invite you to become part of JEEA and a member of a highly motivated team of junior entrepreneurs.",
+    "activities": "Events and trainings. Discover all our events and trainings provided by experts in order to keep up with the latest market trends.",
+    "projects": "Discover our projects. Our initiation encompasses the company's mission, core values, challenges and promises.",
+    "services": "A Junior Enterprise for every need! We accompany you in the realization of your projects by offering quality services to guarantee your satisfaction.",
+    "button": "Learn more..."
+  },
+
+  "contact": {
+    "title": "CONTACT US",
+    "text": "Entrust your projects to our students",
+    "button": "SUBMIT"
   }
 }

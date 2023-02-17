@@ -5,5 +5,37 @@
     "About": "à propos",
     "ContactUs": "contactez-nous",
     "Services": "Services"
+  },
+
+  "hero": {
+    "slogan": "POUR CHAQUE PROBLEME, NOUS INGENIONS UNE SOLUTION",
+    "text": "S'associer à la Junior-Entreprise ENSA Agadir, c'est accéder à un large éventail de compétences apportées par de futurs ingénieurs dans différents domaines.",
+    "contact": "Contactez-nous!",
+    "video": "Regardez Une video"
+  },
+
+  "cjem": {
+    "title": "C'EST QUOI CJEM?",
+    "text": "CJEM (Confédération des Juniors Entreprises Marocaines) est la structure fédératrice du mouvement Junior-Entrepreneuriat à l'échelle marocaine dans le but de promouvoir le concept des JEs (Junior Enterprises) au niveau national, mais aussi faire en sorte que le statut du JE soit juridiquement reconnu et valorisé auprès des entreprises. Pour plus d'informations : https://cjem.ma/"
+  },
+
+  "jeea": {
+    "title": "QUI SOMMES NOUS?",
+    "text": "La JEEA est une extension de la JE (Junior Entreprise), dont le but prioritaire est d'affiner les compétences des jeunes entrepreneurs pour enrichir leur côté professionnel avant leur intégration dans le marché. La JEEA a vu le jour grâce aux étudiants de l'ENSA-A, afin  d’aider les étudiants contemporains à intégrer le monde de l' entrepreneuriat en offrant aux nouveaux entrepreneurs adhérents la possibilité de tester leurs compétences et de les mettre au travail. La JEEA opère sous la tutelle de la CJEM afin de maintenir un niveau de professionnalisme adéquat, et d'affiner davantage les compétences des jeunes entrepreneurs et assurer un environnement professionnel et une expérience unique."
+  },
+
+  "services": {
+    "title": "NOS SERVICES",
+    "recrute": "Rejoignez-nous! Nous vous invitons à rejoindre la JEEA et à faire partie d'une équipe très motivés de jeunes entrepreneurs.",
+    "activities": "Événements et formations, Découvrez tous nos événements et formations fournis par des experts afin de suivre les dernières tendances du marché.",
+    "projects": "Découvrez les projets réalisés par notre JEEA. Notre initiation englobe la mission de l'entreprise, ses valeurs fondamentales, les défis qu'elle doit relever et ses promesses.",
+    "services": "'Une Junior Entreprise pour chaque besoin!', Nous vous accompagnons dans la concrétisation de vos projets tout en offrant des services de qualité afin de garantir votre satisfaction.",
+    "button": "Voir plus..."
+  },
+
+  "contact": {
+    "title": "CONTACTEZ-NOUS",
+    "text": "Confiez vos projets à nos étudiants",
+    "button": "ENVOYEZ"
   }
 }

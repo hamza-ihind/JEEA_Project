@@ -25,14 +25,8 @@
     width: fit-content;
     text-align: center;
     border: 1px solid white;
-    background: radial-gradient(
-      51.72% 61.73% at 50% 50%,
-      #4358ff 0%,
-      #1f2656 63.85%
-    );
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   .starImg {
     position: absolute;
@@ -51,7 +45,7 @@
   align-items: center;
   padding: 1rem 0;
   position: relative;
-  width: 90%;
+  width: 100%;
 
   &-container {
     display: flex;

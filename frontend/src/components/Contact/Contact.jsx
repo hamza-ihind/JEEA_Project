@@ -1,18 +1,18 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import "./Contact.scss";
 import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
+
 //context
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
-
 const Footer = (props) => {
-
   const { isDarkModeActive } = useContext(ThemeModeContext);
-
-
+  const { t, i18n } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -36,15 +36,16 @@ const Footer = (props) => {
   const form = useRef();
 
   return (
-    <div className={isDarkModeActive ? "container dark" : "container light"}>
-      <div className="content">
+    <div className="container">
+      <div className={isDarkModeActive ? "content dark" : "content light"}>
         <div className="contact-text">
           <div className="title__container">
-            <h1 className="title">CONTACT US</h1>
+            <h1 className="title">{t("contact.title")}</h1>
             <img src={star} alt="star" className="starImg" />
           </div>
-          <p>Confiez vos projets à nos étudiants</p>
+          <p>{t("contact.text")}</p>
         </div>
+
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -53,73 +54,69 @@ const Footer = (props) => {
           name="contactForm"
           className="contactForm"
         >
-          <div>
-            <div className="Name_Area input">
-              <div className="name_input">
-                {" "}
-                <input
-                  type="text"
-                  className="form-control"
-                  name="Firstname"
-                  id="Firstname"
-                  placeholder="Your Firstname"
-                />{" "}
-              </div>
-              <div className="name_input">
-                {" "}
-                <input
-                  type="text"
-                  className="form-control"
-                  name="Lastname"
-                  id="Lastname"
-                  placeholder="Your Lastname"
-                />{" "}
-              </div>
+          <div className="Name_Area input">
+            <div className="name_input">
+              {" "}
+              <input
+                type="text"
+                className="form-control"
+                name="Firstname"
+                id="Firstname"
+                placeholder="Your Firstname"
+              />{" "}
             </div>
-
-            <div className="input">
-              <div>
-                {" "}
-                <input
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />{" "}
-              </div>
-            </div>
-
-            <div className="input">
-              <div>
-                {" "}
-                <input
-                  type="text"
-                  className="form-control"
-                  name="subject"
-                  id="subject"
-                  placeholder="Subject"
-                />{" "}
-              </div>
-            </div>
-
-            <div className="input ">
-              <div>
-                <textarea
-                  name="message"
-                  className="form-control"
-                  id="message"
-                  cols="30"
-                  rows="4"
-                  placeholder="Your message"
-                ></textarea>
-              </div>
-            </div>
-
-            <div className="submit_btn">
-              <input type="submit" value="SUBMIT" />
+            <div className="name_input">
+              {" "}
+              <input
+                type="text"
+                className="form-control"
+                name="Lastname"
+                id="Lastname"
+                placeholder="Your Lastname"
+              />{" "}
             </div>
           </div>
+
+          <div className="input">
+            <div>
+              {" "}
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                id="email"
+                placeholder="Email"
+              />{" "}
+            </div>
+          </div>
+
+          <div className="input">
+            <div>
+              {" "}
+              <input
+                type="text"
+                className="form-control"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+              />{" "}
+            </div>
+          </div>
+
+          <div className="input ">
+            <div>
+              <textarea
+                name="message"
+                className="form-control"
+                id="message"
+                cols="30"
+                rows="4"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+          </div>
+
+          <button className="button-main">{t("contact.button")}</button>
         </form>
       </div>
     </div>

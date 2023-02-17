@@ -1,8 +1,16 @@
 .light {
-  background-color: rgba(255, 169, 41);
+  background-color: var(--primary-color);
 }
+
 .dark {
-  background-color: #5b5fa9;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.text-light {
+}
+
+.text-dark {
 }
 
 body {

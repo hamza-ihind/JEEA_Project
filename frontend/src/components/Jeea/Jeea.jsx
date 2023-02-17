@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 
 import "./Jeea.scss";
 
@@ -6,12 +6,14 @@ import "./Jeea.scss";
 import jeea from "../../assets/jeea.png";
 import star from "../../assets/star.svg";
 
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
+
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Jeea = () => {
-
-  const {isDarkModeActive} = useContext(ThemeModeContext);
-
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+  const { t, i18n } = useTranslation();
 
   return (
     <section
@@ -20,19 +22,12 @@ const Jeea = () => {
     >
       <div className="jeea__container">
         <div className="title__container">
-          <h1 className="title">WHO ARE WE?</h1>
+          <h1 className="title">{t("jeea.title")}</h1>
 
           <img src={star} alt="star" className="starImg" />
         </div>
         <div className="content">
-          <p className="paragraph">
-            CJEM (Confédération des Juniors Entreprises Marocaines) est la
-            structure fédératrice du mouvement Junior-Entrepreneuriat à
-            l'échelle marocaine dans le but de promouvoir le concept des JEs
-            (Junior Enterprises) au niveau national, mais aussi faire en sorte
-            que le statut du JE soit juridiquement reconnu et valorisé auprès
-            des entreprises. Pour plus d'informations : https://cjem.ma/
-          </p>
+          <p className="paragraph">{t("jeea.text")}</p>
 
           <img src={jeea} alt="img" className="jeeaImg" />
         </div>

@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import "./Services.scss";
@@ -10,12 +10,15 @@ import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
 import formation from "../../assets/formation.svg";
 
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
+
 //context
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Services = () => {
-
-  const {isDarkModeActive} = useContext(ThemeModeContext);
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+  const { t, i18n } = useTranslation();
 
   return (
     <section
@@ -24,7 +27,7 @@ const Services = () => {
     >
       <div className="cards__container">
         <div className="title__container">
-          <h1 className="title">WHAT WE SERVE</h1>
+          <h1 className="title">{t("services.title")}</h1>
           <img src={star} alt="star" className="starImg" />
         </div>
 
@@ -32,12 +35,9 @@ const Services = () => {
           <div className="card">
             <img src={recrutement} className="card-img-top" alt="..." />
             <div className="card-body">
-              <p className="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard .
-              </p>
+              <p className="card-text">{t("services.recrute")}</p>
               <Link to="/Error">
-                <button className="button-main">Learn More...</button>
+                <button className="button-main">{t("services.button")}</button>
               </Link>
             </div>
           </div>
@@ -45,35 +45,27 @@ const Services = () => {
           <div className="card">
             <img src={formation} className="card-img-top" alt="..." />
             <div className="card-body">
-              <p className="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard .
-              </p>
-              <button className="button-main">Learn More...</button>
+              <p className="card-text">{t("services.activities")}</p>
+              <button className="button-main">{t("services.button")}</button>
             </div>
           </div>
         </div>
+
         <div className="content">
           <div className="card">
             <img src={projects} className="card-img-top" alt="..." />
             <div className="card-body">
-              <p className="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard .
-              </p>
-              <button className="button-main">Learn More...</button>
+              <p className="card-text">{t("services.projects")}</p>
+              <button className="button-main">{t("services.button")}</button>
             </div>
           </div>
 
           <div className="card">
             <img src={services} className="card-img-top" alt="..." />
             <div className="card-body">
-              <p className="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard .
-              </p>
+              <p className="card-text">{t("services.services")}</p>
               <Link to="/Services">
-                <button className="button-main">Learn more...</button>
+                <button className="button-main">{t("services.button")}</button>
               </Link>
             </div>
           </div>
