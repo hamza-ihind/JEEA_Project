@@ -90,15 +90,13 @@
     border: 0;
     border-radius: 1rem;
     padding: 0.3em 0.8em;
-    display: flex;
-
     .icon__mode {
       width: 1.2rem;
     }
   }
 }
 
-/* _____________________those are changes i have made here__________________*/
+
 .logo_toggle {
   cursor: pointer;
   display: none;
