@@ -46,6 +46,10 @@
       @media only screen and (max-width: 1000px) {
         line-height: 8vh;
       }
+
+      &.dark {
+        color: var(--primary-color);
+      }
     }
 
     &-text {

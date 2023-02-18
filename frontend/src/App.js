@@ -5,9 +5,10 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Error from "./components/Error/Error";
 
+import HomePage from "./pages/HomePage/HomePage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
-import Home from "./pages/Home/Home";
 import ActivitiesPage from "./pages/ActivitiesPage/ActivitiesPage";
+import TeamsPage from "./pages/TeamsPage/TeamsPage";
 
 import "./App.scss";
 
@@ -21,8 +22,9 @@ function App() {
     <div className={isDarkModeActive ? "App dark" : "App light"}>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/Services" element={<ServicesPage />} />
+        <Route path="/Teams" element={<TeamsPage />} />
         <Route path="/Activities" element={<ActivitiesPage />} />
         <Route path="/Error" element={<Error />} />
       </Routes>

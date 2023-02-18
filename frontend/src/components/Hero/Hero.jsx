@@ -23,7 +23,13 @@ const Hero = () => {
           isDarkModeActive ? "hero__content dark" : "hero__content light"
         }
       >
-        <div className="hero__content-slogan">
+        <div
+          className={
+            isDarkModeActive
+              ? "hero__content-slogan dark"
+              : "hero__content-slogan"
+          }
+        >
           <span className="hero__content-jeea">JEEA</span> <br />
           {t("hero.slogan")}
         </div>

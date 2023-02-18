@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import LOGO from "../../assets/JEEA_logo.png";
 import "./ServicesPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import card from "../../assets/card.png";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";

@@ -44,22 +44,24 @@ const Navbar = () => {
 
         <div className="navbar__element" ref={navRef}>
           <ul className="navbar__links">
-            <Link to="localhost:3000/#home">
+            <Link to="/">
               <li>
-                <a href="home">{t("labels.Home")}</a>
+                <a href="/">{t("labels.Home")}</a>
               </li>
             </Link>
-            <Link to="localhost:3000/#about">
+            <Link to="/">
               <li>
-                <a href="about">{t("labels.About")}</a>
+                <a href="/">{t("labels.About")}</a>
               </li>
             </Link>
             <li>
-              <a href="#">{t("labels.Services")}</a>
+              <a href="/">{t("labels.Services")}</a>
             </li>
-            <li>
-              <a href="#">{t("labels.Team")}</a>
-            </li>
+            <Link to="/Teams">
+              <li>
+                <a href="/">{t("labels.Team")}</a>
+              </li>
+            </Link>
           </ul>
 
           <ul className="navbar__features">
