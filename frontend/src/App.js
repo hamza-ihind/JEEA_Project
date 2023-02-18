@@ -3,9 +3,11 @@ import { Route, Routes } from "react-router";
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Home from "./components/Home/Home";
 import Error from "./components/Error/Error";
-import ServicesPage from "./components/ServicesPage/ServicesPage";
+
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
+import Home from "./pages/Home/Home";
+import ActivitiesPage from "./pages/ActivitiesPage/ActivitiesPage";
 
 import "./App.scss";
 
@@ -21,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<ServicesPage />} />
+        <Route path="/Activities" element={<ActivitiesPage />} />
         <Route path="/Error" element={<Error />} />
       </Routes>
       <Footer />

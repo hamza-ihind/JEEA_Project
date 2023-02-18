@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import Hero from "../Hero/Hero";
-import Contact from "../Contact/Contact";
-import Cjem from "../Cjem/Cjem";
-import Jeea from "../Jeea/Jeea";
-import Services from "../Services/Services";
-import Navbar from "../navbar/Navbar";
+
+import Hero from "../../components/Hero/Hero";
+import Contact from "../../components/Contact/Contact";
+import Cjem from "../../components/Cjem/Cjem";
+import Jeea from "../../components/Jeea/Jeea";
+import Services from "../../components/Services/Services";
+import Navbar from "../../components/navbar/Navbar";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 

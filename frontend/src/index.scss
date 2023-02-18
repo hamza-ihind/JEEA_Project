@@ -21,18 +21,14 @@
 .button {
   &-main {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     height: 2.75rem;
     width: 15rem;
     border-radius: 1rem;
     border: 0;
 
     //colors
-    background: linear-gradient(
-      0deg,
-      rgba(0, 34, 64, 1) 59%,
-      rgba(28, 63, 168, 1) 100%
-    );
+    background-color: var(--dark-color);
     color: white;
 
     @media only screen and (max-width: 1000px) {
@@ -45,11 +41,16 @@
       height: 2.5rem;
       width: 100%;
     }
+
+    &.dark {
+      background-color: var(--primary-color);
+      color: var(--dark-color);
+    }
   }
 
   &-stroke {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     height: 2.75rem;
     width: 15rem;
     border-radius: 1rem;
@@ -68,6 +69,11 @@
     @media only screen and (max-width: 900px) {
       height: 2.5rem;
       width: 100%;
+    }
+
+    &.dark {
+      border-color: var(--primary-color);
+      color: white;
     }
   }
 }

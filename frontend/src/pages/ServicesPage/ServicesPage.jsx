@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import LOGO from "../../assets/JEEA_logo.png";
 import "./ServicesPage.scss";
 //assets
 import star from "../../assets/star.svg";
 import card from "../../assets/card.png";
 import { AiFillCheckCircle } from "react-icons/ai";
+
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const temp = [
   {
@@ -25,6 +27,8 @@ const temp = [
 ];
 
 const ServicesPage = () => {
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+
   return (
     <div id="ServicesPage" className="services-page">
       {/* Services title: Browse Services */}
@@ -49,20 +53,26 @@ const ServicesPage = () => {
               <a href="#">Rtc</a>
             </li>
             <li>
-              <a href="#">Web Devlopment</a>
+              <a href="#">Web Development</a>
             </li>
           </ul>
         </div>
       </div>
 
       {/* Container Cards  */}
-      <div className="cards-container">
+      <div className="services__cards-container">
         {temp.map((element) => {
           return (
             <div className="services__card">
               <h3 className="services__card-title">{element.title}</h3>
               <p className="services__card-desc">{element.desc}</p>
-              <button className="button-main">apply</button>
+              <button
+                className={
+                  isDarkModeActive ? "button-main dark" : "button-main"
+                }
+              >
+                apply
+              </button>
             </div>
           );
         })}

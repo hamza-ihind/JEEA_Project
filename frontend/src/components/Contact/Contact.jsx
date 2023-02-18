@@ -116,7 +116,11 @@ const Footer = (props) => {
             </div>
           </div>
 
-          <button className="button-main">{t("contact.button")}</button>
+          <button
+            className={isDarkModeActive ? "button-main dark" : "button-main"}
+          >
+            {t("contact.button")}
+          </button>
         </form>
       </div>
     </div>

@@ -1,0 +1,117 @@
+.activities-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7rem 5rem;
+}
+
+.Title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+.title__container {
+  position: relative;
+  margin: 1rem 2rem;
+  .title {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(24px);
+    border-radius: 20px;
+    padding: 10px 16px;
+    width: fit-content;
+    text-align: center;
+    border: 1px solid white;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .starImg {
+    position: absolute;
+    bottom: -13px;
+    left: -31px;
+    width: 63.85px;
+    height: 56.42px;
+  }
+}
+
+// Styles: Navigation Bar
+.navbar__activities {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.418) 50%,
+      rgba(255, 255, 255, 0.075) 100%
+    );
+    backdrop-filter: blur(8px);
+    border-radius: 1.1rem;
+  }
+
+  &-img {
+    height: 100%;
+    width: 80px;
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 3em;
+
+    li,
+    a {
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--dark-color);
+      transition: all 0.3s;
+    }
+
+    li,
+    a:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+// Cards Container
+.activities {
+  &__cards-container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__card {
+    padding: 3rem 1.5rem;
+    width: 80%;
+    background-color: white;
+    border-radius: 25px;
+
+    &-title {
+      font-weight: 800;
+    }
+
+    &-desc {
+    }
+  }
+}

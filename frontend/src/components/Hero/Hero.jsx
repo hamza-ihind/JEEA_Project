@@ -29,8 +29,18 @@ const Hero = () => {
         </div>
         <p className="hero__content-text">{t("hero.text")}</p>
         <div className="hero__content-buttons">
-          <button className="button-main"> {t("hero.contact")} </button>
-          <button className="button-stroke"> {t("hero.video")} </button>
+          <button
+            className={isDarkModeActive ? "button-main dark" : "button-main"}
+          >
+            {t("hero.contact")}
+          </button>
+          <button
+            className={
+              isDarkModeActive ? "button-stroke dark" : "button-stroke"
+            }
+          >
+            {t("hero.video")}
+          </button>
         </div>
       </div>
       <img src={Line} alt="line" className="hero__line" />

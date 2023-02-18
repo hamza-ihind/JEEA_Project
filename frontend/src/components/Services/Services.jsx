@@ -8,7 +8,7 @@ import star from "../../assets/star2.svg";
 import recrutement from "../../assets/recrutement.svg";
 import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
-import formation from "../../assets/formation.svg";
+import activities from "../../assets/activities.svg";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -37,16 +37,30 @@ const Services = () => {
             <div className="card-body">
               <p className="card-text">{t("services.recrute")}</p>
               <Link to="/Error">
-                <button className="button-main">{t("services.button")}</button>
+                <button
+                  className={
+                    isDarkModeActive ? "button-main dark" : "button-main"
+                  }
+                >
+                  {t("services.button")}
+                </button>
               </Link>
             </div>
           </div>
 
           <div className="card">
-            <img src={formation} className="card-img-top" alt="..." />
+            <img src={activities} className="card-img-top" alt="..." />
             <div className="card-body">
               <p className="card-text">{t("services.activities")}</p>
-              <button className="button-main">{t("services.button")}</button>
+              <Link to="/Activities">
+                <button
+                  className={
+                    isDarkModeActive ? "button-main dark" : "button-main"
+                  }
+                >
+                  {t("services.button")}
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -56,7 +70,13 @@ const Services = () => {
             <img src={projects} className="card-img-top" alt="..." />
             <div className="card-body">
               <p className="card-text">{t("services.projects")}</p>
-              <button className="button-main">{t("services.button")}</button>
+              <button
+                className={
+                  isDarkModeActive ? "button-main dark" : "button-main"
+                }
+              >
+                {t("services.button")}
+              </button>
             </div>
           </div>
 
@@ -65,7 +85,13 @@ const Services = () => {
             <div className="card-body">
               <p className="card-text">{t("services.services")}</p>
               <Link to="/Services">
-                <button className="button-main">{t("services.button")}</button>
+                <button
+                  className={
+                    isDarkModeActive ? "button-main dark" : "button-main"
+                  }
+                >
+                  {t("services.button")}
+                </button>
               </Link>
             </div>
           </div>
