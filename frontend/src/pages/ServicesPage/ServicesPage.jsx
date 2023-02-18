@@ -5,6 +5,7 @@ import star from "../../assets/star.svg";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+import { motion } from "framer-motion";
 import { Services } from "../../database/Services";
 
 const ServicesPage = () => {
@@ -52,7 +53,11 @@ const ServicesPage = () => {
       </div>
 
       {/* Container Cards  */}
-      <div className="services__cards-container">
+      <motion.div
+        animate={animateCard}
+        transition={{ duration: 0.4, delayChildren: 0.4 }}
+        className="services__cards-container"
+      >
         {services.map((element) => {
           return (
             <div className="services__card">
@@ -68,7 +73,7 @@ const ServicesPage = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

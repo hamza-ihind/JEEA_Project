@@ -3,8 +3,8 @@ import "./TeamsPage.scss";
 //assets
 import star from "../../assets/star.svg";
 
-import hamza from "../../assets/test.jpg";
-import hassan from "../../assets/design.png";
+import hamza from "../../assets/Members/ihind.jpg";
+import aqnouch from "../../assets/Members/aqnouch.jpeg";
 
 import { AiFillCheckCircle } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
@@ -159,7 +159,7 @@ const TeamsPage = () => {
               arrow
               placement="top"
             >
-              <img src={hamza} alt="Leader" />
+              <img src={aqnouch} alt="Leader" />
             </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />

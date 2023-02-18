@@ -1,6 +1,7 @@
 // Import of images
-import hamza from "../assets/test.jpg";
-import hassan from "../assets/design.png";
+import hamza from "../assets/Members/ihind.jpg";
+import aqnouch from "../assets/Members/aqnouch.jpeg";
+import zouane from "../assets/Members/zouane.jpg";
 
 // Databases
 export const info = [
@@ -33,22 +34,22 @@ export const info = [
 export const design = [
   {
     name: "Hassan Elqadi",
-    img: hassan,
+    img: aqnouch,
   },
 ];
 
 export const rtc = [
   {
-    name: "Hassan Elqadi",
-    img: hassan,
+    name: "Oumaima Zouane",
+    img: zouane,
   },
   {
     name: "Hassan Elqadi",
-    img: hassan,
+    img: aqnouch,
   },
   {
     name: "Hassan Elqadi",
-    img: hassan,
+    img: aqnouch,
   },
   {
     name: "Hamza ihind",

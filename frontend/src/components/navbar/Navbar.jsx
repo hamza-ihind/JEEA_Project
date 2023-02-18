@@ -37,9 +37,9 @@ const Navbar = () => {
     setLight(!light);
   }
 
-  const scrollToContactUs = ()=>{
-      window.scrollTo("./#CONTACTUS")
-  }
+  const scrollToContactUs = () => {
+    window.scrollTo("./#CONTACTUS");
+  };
 
   return (
     <div className="navbar">
@@ -48,23 +48,21 @@ const Navbar = () => {
 
         <div className="navbar__element" ref={navRef}>
           <ul className="navbar__links">
-           
-              <li>
-                <a href="./#hero">{t("labels.Home")}</a>
-              </li>
-           
-          
-              <li>
-                <a href="./#about">{t("labels.About")}</a>
-              </li>
-            
+            <li>
+              <a href="./#hero">{t("labels.Home")}</a>
+            </li>
+
+            <li>
+              <a href="./#about">{t("labels.About")}</a>
+            </li>
+
             <li>
               <a href="/#CARDS">{t("labels.Services")}</a>
             </li>
-           
-              <li>
-                <Link to="/Teams">{t("labels.Team")}</Link>
-              </li>
+
+            <li>
+              <Link to="/Teams">{t("labels.Team")}</Link>
+            </li>
           </ul>
 
           <ul className="navbar__features">
@@ -85,15 +83,24 @@ const Navbar = () => {
               <button
                 className="navbar__button fr_eng_icon"
                 onClick={() =>
-                  changeLanguage(i18n.resolvedLanguage === "en" ? "fr" : "en")
+                  changeLanguage(
+                    i18n.resolvedLanguage === "français"
+                      ? "english"
+                      : "français"
+                  )
                 }
               >
                 {i18n.resolvedLanguage}
               </button>
             </li>
             <li>
-              <button className="navbar__button contact_us_button" >
-                <a href='./#CONTACTUS' style={{color:"white",textDecoration:"none"}}>{t("labels.ContactUs")}</a>  
+              <button className="navbar__button contact_us_button">
+                <a
+                  href="./#CONTACTUS"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  {t("labels.ContactUs")}
+                </a>
               </button>
             </li>
           </ul>

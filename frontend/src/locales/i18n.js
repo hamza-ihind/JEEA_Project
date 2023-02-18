@@ -13,11 +13,11 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translations: enLocales },
-      fr: { translations: frLocales },
+      english: { translations: enLocales },
+      français: { translations: frLocales },
     },
-    lng: "en",
-    fallbackLng: "en",
+    lng: "english",
+    fallbackLng: "english",
     debug: false,
     ns: ["translations"],
     defaultNS: "translations",
