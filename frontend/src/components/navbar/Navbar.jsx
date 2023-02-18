@@ -37,6 +37,10 @@ const Navbar = () => {
     setLight(!light);
   }
 
+  const scrollToContactUs = ()=>{
+      window.scrollTo("./#CONTACTUS")
+  }
+
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -44,24 +48,23 @@ const Navbar = () => {
 
         <div className="navbar__element" ref={navRef}>
           <ul className="navbar__links">
-            <Link to="/">
+           
               <li>
-                <a href="/">{t("labels.Home")}</a>
+                <a href="./#hero">{t("labels.Home")}</a>
               </li>
-            </Link>
-            <Link to="/">
+           
+          
               <li>
-                <a href="/">{t("labels.About")}</a>
+                <a href="./#about">{t("labels.About")}</a>
               </li>
-            </Link>
+            
             <li>
-              <a href="/">{t("labels.Services")}</a>
+              <a href="/#CARDS">{t("labels.Services")}</a>
             </li>
-            <Link to="/Teams">
+           
               <li>
-                <a href="/">{t("labels.Team")}</a>
+                <Link to="/Teams">{t("labels.Team")}</Link>
               </li>
-            </Link>
           </ul>
 
           <ul className="navbar__features">
@@ -89,8 +92,8 @@ const Navbar = () => {
               </button>
             </li>
             <li>
-              <button className="navbar__button contact_us_button">
-                {t("labels.ContactUs")}
+              <button className="navbar__button contact_us_button" >
+                <a href='./#CONTACTUS' style={{color:"white",textDecoration:"none"}}>{t("labels.ContactUs")}</a>  
               </button>
             </li>
           </ul>

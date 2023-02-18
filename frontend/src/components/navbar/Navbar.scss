@@ -6,7 +6,10 @@
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
-
+  a{
+    text-decoration: none;
+    color: white;
+  }
   &__element {
     display: flex;
     align-items: center;
@@ -48,7 +51,7 @@
     a {
       font-size: 1rem;
       font-weight: 600;
-      text-decoration: none;
+      text-decoration: none !important;
       color: var(--dark-color);
       transition: all 0.3s;
     }
@@ -56,6 +59,7 @@
     li,
     a:hover {
       color: var(--secondary-color);
+      text-decoration: none;
     }
   }
 
@@ -187,6 +191,7 @@
     border-radius: 11px;
     right: 3%;
     font-size: 14px;
+
   }
   .navbar__links {
     flex-direction: column;
