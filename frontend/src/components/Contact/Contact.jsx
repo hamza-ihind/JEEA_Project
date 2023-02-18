@@ -36,7 +36,7 @@ const Footer = (props) => {
   const form = useRef();
 
   return (
-    <div className="container">
+    <div className="container" id="CONTACTUS">
       <div className={isDarkModeActive ? "content dark" : "content light"}>
         <div className="contact-text">
           <div className="title__container">
