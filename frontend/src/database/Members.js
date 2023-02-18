@@ -4,6 +4,8 @@ import aqnouch from "../assets/Members/aqnouch.jpeg";
 import zouane from "../assets/Members/zouane.jpg";
 import errai from "../assets/Members/errai.jpg";
 import tariq from "../assets/Members/tariq.jpeg";
+import sara from "../assets/Members/sara.jpg";
+import manal from "../assets/Members/manal.jpg";
 
 // Databases
 export const info = [
@@ -36,7 +38,7 @@ export const design = [
   },
   {
     name: "Manal ELMOUSSAOUI",
-    // img: hassan,
+    img: manal,
   },
 ];
 
@@ -51,10 +53,6 @@ export const rtc = [
   },
   {
     name: "Sara AQNOUCH",
-    img: aqnouch,
-  },
-  {
-    name: "Amine AIT HAMMA",
-    img: hamza,
+    img: sara,
   },
 ];
