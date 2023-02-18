@@ -61,3 +61,32 @@
     background-color: var(--primary-color);
   }
 }
+
+@media (max-width:994px) {
+  .teams__side-container {
+    flex-direction: column;
+  }
+  .hr {
+    width: 60%;
+    transform: rotate(180deg);
+  }
+  .teams__side-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .title__container {
+    margin: auto;
+    .title {
+      font-size: 2rem;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .title__container {
+    .title {
+      font-size: 1.1rem;
+    }
+  }
+}

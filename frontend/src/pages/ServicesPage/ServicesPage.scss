@@ -46,7 +46,7 @@
   padding: 1rem 0;
   position: relative;
   width: 80%;
-
+  
   &-container {
     display: flex;
     justify-content: space-between;
@@ -75,6 +75,7 @@
     margin: 0;
     gap: 3em;
 
+
     li,
     a {
       font-size: 1rem;
@@ -83,6 +84,14 @@
       color: var(--dark-color);
       transition: all 0.3s;
     }
+    li button {
+      background-color: transparent;
+      border: none;
+      color: rgba(31, 36, 113, 1);
+      cursor: pointer;
+      
+    }
+
 
     li,
     a:hover {
