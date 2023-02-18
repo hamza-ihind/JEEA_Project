@@ -29,7 +29,7 @@ const ActivitiesPage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div id="ActivitiesPage" className="activities-page">
+    <div className="activities-page">
       {/* Services title: Browse Services */}
       <div className="Title">
         <div className="title__container">

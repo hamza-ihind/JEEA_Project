@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import "./TeamsPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import test from "../../assets/test.jpg";
+
+import hamza from "../../assets/test.jpg";
+import hassan from "../../assets/design.png";
 
 import { AiFillCheckCircle } from "react-icons/ai";
+import Tooltip from "@mui/material/Tooltip";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { info, design, rtc } from "../../database/Members";
@@ -41,7 +44,15 @@ const TeamsPage = () => {
               isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
             }
           >
-            <img src={test} alt="cjem" />
+            <Tooltip
+              disableFocusListener
+              disableTouchListener
+              title="Hamza Ihind"
+              arrow
+              placement="top"
+            >
+              <img src={hamza} alt="Leader" />
+            </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
@@ -54,7 +65,15 @@ const TeamsPage = () => {
                       : "teams__side-lead"
                   }
                 >
-                  <img src={element.img} alt="member" />
+                  <Tooltip
+                    disableFocusListener
+                    disableTouchListener
+                    title={element.name}
+                    arrow
+                    placement="top"
+                  >
+                    <img src={element.img} alt="member" />
+                  </Tooltip>
                 </div>
               );
             })}
@@ -79,7 +98,15 @@ const TeamsPage = () => {
               isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
             }
           >
-            <img src={test} alt="cjem" />
+            <Tooltip
+              disableFocusListener
+              disableTouchListener
+              title="Ali Zagdi"
+              arrow
+              placement="top"
+            >
+              <img src={hamza} alt="Leader" />
+            </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
@@ -92,7 +119,15 @@ const TeamsPage = () => {
                       : "teams__side-lead"
                   }
                 >
-                  <img src={element.img} alt="member" />
+                  <Tooltip
+                    disableFocusListener
+                    disableTouchListener
+                    title={element.name}
+                    arrow
+                    placement="top"
+                  >
+                    <img src={element.img} alt="member" />
+                  </Tooltip>
                 </div>
               );
             })}
@@ -117,7 +152,15 @@ const TeamsPage = () => {
               isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
             }
           >
-            <img src={test} alt="cjem" />
+            <Tooltip
+              disableFocusListener
+              disableTouchListener
+              title="Samia Aqnouch"
+              arrow
+              placement="top"
+            >
+              <img src={hamza} alt="Leader" />
+            </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
@@ -130,7 +173,15 @@ const TeamsPage = () => {
                       : "teams__side-lead"
                   }
                 >
-                  <img src={element.img} alt="member" />
+                  <Tooltip
+                    disableFocusListener
+                    disableTouchListener
+                    title={element.name}
+                    arrow
+                    placement="top"
+                  >
+                    <img src={element.img} alt="member" />
+                  </Tooltip>
                 </div>
               );
             })}

@@ -1,34 +1,31 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./ServicesPage.scss";
 //assets
 import star from "../../assets/star.svg";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-
-const temp = [
-  {
-    title: "Poster Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-    img: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-  },
-  {
-    title: "E-commerce Website",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-    img: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-  },
-  {
-    title: "Rapport PFA",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-    img: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-  },
-];
+import { Services } from "../../database/Services";
 
 const ServicesPage = () => {
+  const [services, setServices] = useState([]);
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
+  const filterPole = (pole) => {
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      const updatedPole = Services.filter((currentPole) => {
+        return currentPole.pole === pole;
+      });
+      setServices(updatedPole);
+    }, 420);
+  };
+
   return (
-    <div id="ServicesPage" className="services-page">
+    <div className="services-page">
       {/* Services title: Browse Services */}
       <div className="Title">
         <div className="title__container">
@@ -42,16 +39,13 @@ const ServicesPage = () => {
         <div className="navbar__services-container">
           <ul className="navbar__services-links">
             <li>
-              <a href="#">ALL</a>
+              <button onClick={() => filterPole("info")}>Info</button>
             </li>
             <li>
-              <a href="#">Design</a>
+              <button onClick={() => filterPole("design")}>Design</button>
             </li>
             <li>
-              <a href="#">Rtc</a>
-            </li>
-            <li>
-              <a href="#">Web Development</a>
+              <button onClick={() => filterPole("rtc")}>RTC</button>
             </li>
           </ul>
         </div>
@@ -59,7 +53,7 @@ const ServicesPage = () => {
 
       {/* Container Cards  */}
       <div className="services__cards-container">
-        {temp.map((element) => {
+        {services.map((element) => {
           return (
             <div className="services__card">
               <h3 className="services__card-title">{element.title}</h3>

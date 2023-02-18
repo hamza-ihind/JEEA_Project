@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -47,7 +47,6 @@ html{
 
     @media only screen and (max-width: 900px) {
       height: 2.5rem;
-      width: 100%;
     }
 
     &.dark {
@@ -87,7 +86,6 @@ html{
 
     @media only screen and (max-width: 900px) {
       height: 2.5rem;
-      width: 100%;
     }
 
     &.dark {
