@@ -20,7 +20,9 @@ const Cjem = () => {
     <div id="about" className={isDarkModeActive ? "cjem dark" : "cjem light"}>
       <div className="cjem__container">
         <div className="title__container">
-          <h1 className="title">{t("cjem.title")}</h1>
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            {t("cjem.title")}
+          </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
 

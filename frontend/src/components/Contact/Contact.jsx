@@ -40,7 +40,9 @@ const Footer = (props) => {
       <div className={isDarkModeActive ? "content dark" : "content light"}>
         <div className="contact-text">
           <div className="title__container">
-            <h1 className="title">{t("contact.title")}</h1>
+            <h1 className={isDarkModeActive ? "title dark" : "title"}>
+              {t("contact.title")}
+            </h1>
             <img src={star} alt="star" className="starImg" />
           </div>
           <p>{t("contact.text")}</p>

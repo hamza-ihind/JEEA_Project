@@ -22,7 +22,9 @@ const Jeea = () => {
     >
       <div className="jeea__container">
         <div className="title__container">
-          <h1 className="title">{t("jeea.title")}</h1>
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            {t("jeea.title")}
+          </h1>
 
           <img src={star} alt="star" className="starImg" />
         </div>

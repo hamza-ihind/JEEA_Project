@@ -32,6 +32,10 @@
         border: 1px solid white;
         background-clip: text;
         -webkit-background-clip: text;
+
+        &.dark {
+          color: var(--primary-color);
+        }
       }
 
       .starImg {

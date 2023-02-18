@@ -9,7 +9,7 @@ import Navbar from "../../components/navbar/Navbar";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
-const Home = () => {
+const HomePage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
@@ -24,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

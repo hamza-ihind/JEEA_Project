@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import LOGO from "../../assets/JEEA_logo.png";
 import "./ActivitiesPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import card from "../../assets/card.png";
 import { AiFillCheckCircle } from "react-icons/ai";
+
+import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const temp = [
   {
@@ -25,12 +26,16 @@ const temp = [
 ];
 
 const ActivitiesPage = () => {
+  const { isDarkModeActive } = useContext(ThemeModeContext);
+
   return (
     <div id="ActivitiesPage" className="activities-page">
       {/* Services title: Browse Services */}
       <div className="Title">
         <div className="title__container">
-          <h1 className="title">Browse Activities</h1>
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            Browse Activities
+          </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
       </div>

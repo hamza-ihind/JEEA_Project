@@ -7,33 +7,7 @@ import test from "../../assets/test.jpg";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-
-const temp = [
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-  {
-    name: "hamza",
-    photo: "../../assets/cjem.png",
-  },
-];
+import { info, design, rtc } from "../../database/Members";
 
 const TeamsPage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
@@ -43,7 +17,9 @@ const TeamsPage = () => {
       {/* Services title: Teams */}
       <div className="Title">
         <div className="title__container">
-          <h1 className="title">Teams</h1>
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            DISCOVER THE TEAMS!
+          </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
       </div>
@@ -60,15 +36,25 @@ const TeamsPage = () => {
 
         {/* Container */}
         <div className="teams__side-container">
-          <div className="teams__side-lead">
+          <div
+            className={
+              isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
+            }
+          >
             <img src={test} alt="cjem" />
           </div>
-          <hr className="hr" />
+          <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
-            {temp.map((element) => {
+            {info.map((element) => {
               return (
-                <div className="teams__side-lead">
-                  <img src={test} alt="member" />
+                <div
+                  className={
+                    isDarkModeActive
+                      ? "teams__side-lead dark"
+                      : "teams__side-lead"
+                  }
+                >
+                  <img src={element.img} alt="member" />
                 </div>
               );
             })}
@@ -88,15 +74,25 @@ const TeamsPage = () => {
 
         {/* Container */}
         <div className="teams__side-container">
-          <div className="teams__side-lead">
+          <div
+            className={
+              isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
+            }
+          >
             <img src={test} alt="cjem" />
           </div>
-          <hr className="hr" />
+          <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
-            {temp.map((element) => {
+            {design.map((element) => {
               return (
-                <div className="teams__side-lead">
-                  <img src={test} alt="member" />
+                <div
+                  className={
+                    isDarkModeActive
+                      ? "teams__side-lead dark"
+                      : "teams__side-lead"
+                  }
+                >
+                  <img src={element.img} alt="member" />
                 </div>
               );
             })}
@@ -116,15 +112,25 @@ const TeamsPage = () => {
 
         {/* Container */}
         <div className="teams__side-container">
-          <div className="teams__side-lead">
+          <div
+            className={
+              isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
+            }
+          >
             <img src={test} alt="cjem" />
           </div>
-          <hr className="hr" />
+          <hr className={isDarkModeActive ? "hr dark" : "hr"} />
           <div className="teams__side-team">
-            {temp.map((element) => {
+            {rtc.map((element) => {
               return (
-                <div className="teams__side-lead">
-                  <img src={test} alt="member" />
+                <div
+                  className={
+                    isDarkModeActive
+                      ? "teams__side-lead dark"
+                      : "teams__side-lead"
+                  }
+                >
+                  <img src={element.img} alt="member" />
                 </div>
               );
             })}

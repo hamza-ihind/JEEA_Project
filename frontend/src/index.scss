@@ -26,10 +26,15 @@
     width: 15rem;
     border-radius: 1rem;
     border: 0;
+    transition: all 0.5s;
 
     //colors
     background-color: var(--dark-color);
     color: white;
+
+    &:hover {
+      background-color: #022a4d;
+    }
 
     @media only screen and (max-width: 1000px) {
       font-size: medium;
@@ -45,6 +50,10 @@
     &.dark {
       background-color: var(--primary-color);
       color: var(--dark-color);
+
+      &:hover {
+        background-color: #ff7802;
+      }
     }
   }
 
@@ -54,11 +63,18 @@
     height: 2.75rem;
     width: 15rem;
     border-radius: 1rem;
+    transition: all 0.5s;
 
     //colors
     background: transparent;
     border-color: var(--dark-color);
     color: var(--dark-color);
+
+    &:hover {
+      background-color: var(--dark-color);
+      color: white;
+      border: none;
+    }
 
     @media only screen and (max-width: 1000px) {
       font-size: medium;
@@ -74,6 +90,11 @@
     &.dark {
       border-color: var(--primary-color);
       color: white;
+      transition: all 0.5s;
+      &:hover {
+        background-color: var(--primary-color);
+        border: none;
+      }
     }
   }
 }
