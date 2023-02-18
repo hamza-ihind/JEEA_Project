@@ -6,17 +6,16 @@
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   border-radius: 10px;
-  height: 86vh;
   box-shadow: 0px 1px 7px 4px rgb(0 0 0 / 15%);
   justify-content: center;
   margin-top: 4rem;
   margin: auto;
   padding: 70px;
 
+
   .content {
     width: 90%;
   }
-
   .contact-text {
     text-align: center;
     margin: 15px;
@@ -78,18 +77,28 @@
         resize: none;
       }
     }
+   
   }
 }
 
-@media (max-width: 1400px) {
-  .container {
-    padding: 0;
-    height: 100%;
-  }
+@media (min-width:765px) {
+  .button-main{
+    margin: auto;
+    width: 15rem;
+  } 
 }
 @media (max-width: 764px) {
+  
   .container {
-    padding: 0;
+    padding: 1rem;
+    height: 120%;
+    width: 95%;
+     .content {
+      width: 76%;
+     }
+  }
+  .container .contact-text .title__container .title {
+    font-size: 1.5rem;
   }
   .contactForm {
     .Name_Area {
@@ -99,9 +108,12 @@
       height: 100px;
     }
   }
+  .button-main {
+    width: 100%;
+  }
 }
 @media (max-width: 390px) {
-  .container .contact-text .title__container .title {
-    font-size: 1.7rem;
+  .container .contact-text .title__container .title  {
+    font-size: 1.2rem;
   }
 }
