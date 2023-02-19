@@ -39,17 +39,17 @@ const ServicesPage = () => {
       <div className="navbar__services">
         <div className="navbar__services-container">
           <ul className="navbar__services-links">
-          <li>
-              <button onClick={() => filterPole("All")}>All</button>
+            <li>
+              <button>All</button>
             </li>
             <li>
-              <button onClick={() => filterPole("Design")}>Info</button>
+              <button onClick={() => filterPole("info")}>Info</button>
             </li>
             <li>
-              <button onClick={() => filterPole("Rtc")}>Design</button>
+              <button onClick={() => filterPole("design")}>Design</button>
             </li>
             <li>
-              <button onClick={() => filterPole("Web Development")}>RTC</button>
+              <button onClick={() => filterPole("rtc")}>RTC</button>
             </li>
           </ul>
         </div>
