@@ -9,17 +9,21 @@ import Navbar from "../../components/navbar/Navbar";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
+//animation
+import Animation from "../../components/Animation";
+
 const HomePage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
+  
+  const HomePageComponent = [<Hero />,<Cjem />, <Jeea />,<Services />,<Contact />]
 
   return (
     <div className={isDarkModeActive ? "homepage dark" : "homepage light"}>
-      <Navbar />
-      <Hero />
-      <Cjem />
-      <Jeea />
-      <Services />
-      <Contact />
+      {HomePageComponent.map((section)=>{
+        return <Animation>
+          {section}
+        </Animation>
+      })}
     </div>
   );
 };

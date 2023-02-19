@@ -11,12 +11,14 @@ import { changeLanguage } from "i18next";
 //contexts
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
+
+
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div className={isDarkModeActive ? "hero dark" : "hero light"} id="hero">
+    <div className={isDarkModeActive ? "hero dark" : "hero light"}   id="hero">
       {/* <img src={Decoration} alt="decoration" className="hero__decoration" /> */}
       <div
         className={

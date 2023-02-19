@@ -7,7 +7,7 @@ import hamza from "../../assets/Members/ihind.jpg";
 import aqnouch from "../../assets/Members/aqnouch.jpeg";
 
 import { AiFillCheckCircle } from "react-icons/ai";
-import Tooltip from "@mui/material/Tooltip";
+import Tooltip from '@mui/material/Tooltip';
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { info, design, rtc } from "../../database/Members";
