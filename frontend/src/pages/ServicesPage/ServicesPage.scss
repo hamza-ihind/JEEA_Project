@@ -129,3 +129,19 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width:768px) {
+  .services-page {
+   padding-left: 0;
+   padding-right: 0;
+  }
+  .navbar__services {
+    width: 100%;
+  }
+  .navbar__services-container {
+    justify-content: center;
+  }
+  .navbar__services-links {
+    gap: 1rem;
+  }
+}
