@@ -1,9 +1,8 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import "./Footer.scss";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
-
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
@@ -70,7 +69,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="copyright">Copyright © JEEA | ENSA AGADIR </p>
+      <p className={isDarkModeActive ? "copyright dark" : "copyright"}>
+        Copyright © JEEA | ENSA AGADIR{" "}
+      </p>
     </div>
   );
 };

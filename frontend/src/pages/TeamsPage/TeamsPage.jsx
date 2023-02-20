@@ -6,18 +6,30 @@ import star from "../../assets/star.svg";
 import hamza from "../../assets/Members/ihind.jpg";
 import aqnouch from "../../assets/Members/aqnouch.jpeg";
 import zagdi from "../../assets/Members/zagdi.jpg";
+import hiba from "../../assets/Members/hiba.jpg";
 
 import { AiFillCheckCircle } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { info, design, rtc } from "../../database/Members";
 
 const TeamsPage = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
     <div className="teams">
+      <motion.div
+        className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
+        style={{ scaleX }}
+      />
       {/* Services title: Teams */}
       <div className="Title">
         <div className="title__container">
@@ -27,7 +39,6 @@ const TeamsPage = () => {
           <img src={star} alt="star" className="starImg" />
         </div>
       </div>
-
       {/* Pole Informatique */}
       <div className="teams__side">
         {/* Title */}
@@ -81,7 +92,6 @@ const TeamsPage = () => {
           </div>
         </div>
       </div>
-
       {/*Pole Design */}
       <div className="teams__side">
         {/* Title */}
@@ -135,7 +145,6 @@ const TeamsPage = () => {
           </div>
         </div>
       </div>
-
       {/* Pole RTC */}
       <div className="teams__side">
         {/* Title */}
@@ -175,7 +184,7 @@ const TeamsPage = () => {
               arrow
               placement="top"
             >
-              <img src={aqnouch} alt="Leader" />
+              <img src={hiba} alt="Leader" />
             </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />

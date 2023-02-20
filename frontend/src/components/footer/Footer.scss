@@ -11,6 +11,7 @@ $background-color_1: var(--dark-color);
     rgba(255, 169, 41, 1) 100%
   );
 }
+
 .footer-clean.dark {
   background: linear-gradient(
     0deg,
@@ -139,10 +140,16 @@ $background-color_1: var(--dark-color);
   font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0.01em;
+  background-color: var(--secondary-color);
   color: #dbdcdc;
   border-top: 1px $color_3 solid;
   p {
     margin: 0;
+  }
+
+  &.dark {
+    color: black;
+    background-color: var(--primary-color);
   }
 }
 

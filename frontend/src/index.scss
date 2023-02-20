@@ -37,7 +37,7 @@ html {
     color: white;
 
     &:hover {
-      background-color: #022a4d;
+      background-color: #0c3e6a;
     }
 
     @media only screen and (max-width: 1000px) {
@@ -87,6 +87,7 @@ html {
 
     @media only screen and (max-width: 900px) {
       height: 2.5rem;
+      width: auto;
     }
 
     &.dark {

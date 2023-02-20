@@ -51,7 +51,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <img src={Line} alt="line" className="hero__line" />
+      {/* <img src={Line} alt="line" className="hero__line" /> */}
     </div>
   );
 };

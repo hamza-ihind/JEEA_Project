@@ -89,11 +89,20 @@
     color: white;
     padding: 0.3rem 0.8rem;
     font-weight: 300;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: #0c3e6a;
+    }
 
     &.dark {
       background-color: var(--primary-color);
       color: black;
       font-weight: 400;
+
+      &:hover {
+        background-color: #ff7802;
+      }
     }
   }
 }

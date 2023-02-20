@@ -1,0 +1,57 @@
+.progress-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10px;
+  transform-origin: 0%;
+  z-index: 7;
+  background-color: var(--secondary-color);
+
+  &.dark {
+    background-color: var(--primary-color);
+  }
+}
+
+.homepage {
+  position: relative;
+  padding-top: 2rem;
+  overflow-x: hidden;
+
+  .blob-1 {
+    position: absolute;
+    top: -10rem;
+    left: -15rem;
+    width: 45%;
+    z-index: 5;
+    opacity: 50%;
+    mix-blend-mode: soft-light;
+  }
+  .blob-2 {
+    position: absolute;
+    top: 17rem;
+    right: -15rem;
+    width: 45%;
+    z-index: 1;
+    opacity: 50%;
+    mix-blend-mode: soft-light;
+  }
+  .blob-3 {
+    position: absolute;
+    top: 50rem;
+    left: -15rem;
+    width: 50%;
+    z-index: 1;
+    opacity: 50%;
+    mix-blend-mode: soft-light;
+  }
+  .blob-4 {
+    position: absolute;
+    top: 80rem;
+    right: -15rem;
+    width: 50%;
+    z-index: 1;
+    opacity: 50%;
+    mix-blend-mode: soft-light;
+  }
+}
