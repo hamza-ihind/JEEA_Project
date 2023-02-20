@@ -27,6 +27,10 @@
     border: 1px solid white;
     background-clip: text;
     -webkit-background-clip: text;
+
+    &.dark {
+      background-color: var(--primary-color);
+    }
   }
   .starImg {
     position: absolute;
@@ -46,7 +50,7 @@
   padding: 1rem 0;
   position: relative;
   width: 80%;
-  
+
   &-container {
     display: flex;
     justify-content: space-between;
@@ -74,28 +78,22 @@
     padding: 0;
     margin: 0;
     gap: 3em;
+  }
 
+  .button-pole {
+    z-index: 5;
 
-    li,
-    a {
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--dark-color);
-      transition: all 0.3s;
-    }
-    li button {
-      background-color: transparent;
-      border: none;
-      color: rgba(31, 36, 113, 1);
-      cursor: pointer;
-      
-    }
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-weight: 300;
 
-
-    li,
-    a:hover {
-      color: var(--secondary-color);
+    &.dark {
+      background-color: var(--primary-color);
+      color: black;
+      font-weight: 400;
     }
   }
 }
@@ -107,6 +105,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   width: 85%;
+
+  &.dark {
+    color: black;
+  }
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -130,10 +132,10 @@
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .services-page {
-   padding-left: 0;
-   padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .navbar__services {
     width: 100%;

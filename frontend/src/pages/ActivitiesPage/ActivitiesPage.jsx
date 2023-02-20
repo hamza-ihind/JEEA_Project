@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import LOGO from "../../assets/JEEA_logo.png";
 import "./ActivitiesPage.scss";
+
 //assets
 import star from "../../assets/star.svg";
-import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
@@ -16,7 +15,7 @@ const temp = [
   {
     title: "E-commerce Website",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
-    img: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero suscipit minima pariatur magnam omnis eligendi nam reprehenderit.",
+    img: "",
   },
   {
     title: "Rapport PFA",
@@ -30,7 +29,7 @@ const ActivitiesPage = () => {
 
   return (
     <div className="activities-page">
-      {/* Services title: Browse Services */}
+      {/* Activities title: Browse Activities */}
       <div className="Title">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
@@ -40,7 +39,7 @@ const ActivitiesPage = () => {
         </div>
       </div>
 
-      {/* Services Navbar */}
+      {/* Activities Navbar */}
       <div className="navbar__activities">
         <div className="navbar__activities-container">
           <ul className="navbar__activities-links">
@@ -61,7 +60,13 @@ const ActivitiesPage = () => {
       </div>
 
       {/* Container Cards  */}
-      <div className="activities__cards-container">
+      <div
+        className={
+          isDarkModeActive
+            ? "activities__cards-container dark"
+            : "activities__cards-container"
+        }
+      >
         {temp.map((element) => {
           return (
             <div className="activities__card">

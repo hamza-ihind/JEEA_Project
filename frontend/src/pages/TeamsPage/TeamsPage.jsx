@@ -5,9 +5,10 @@ import star from "../../assets/star.svg";
 
 import hamza from "../../assets/Members/ihind.jpg";
 import aqnouch from "../../assets/Members/aqnouch.jpeg";
+import zagdi from "../../assets/Members/zagdi.jpg";
 
 import { AiFillCheckCircle } from "react-icons/ai";
-import Tooltip from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { info, design, rtc } from "../../database/Members";
@@ -16,7 +17,7 @@ const TeamsPage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div id="TeamsPage" className="teams">
+    <div className="teams">
       {/* Services title: Teams */}
       <div className="Title">
         <div className="title__container">
@@ -47,7 +48,7 @@ const TeamsPage = () => {
             <Tooltip
               disableFocusListener
               disableTouchListener
-              title="Hamza Ihind"
+              title="Hamza IHIND"
               arrow
               placement="top"
             >
@@ -101,11 +102,11 @@ const TeamsPage = () => {
             <Tooltip
               disableFocusListener
               disableTouchListener
-              title="Ali Zagdi"
+              title="Ali ZAGDI"
               arrow
               placement="top"
             >
-              <img src={hamza} alt="Leader" />
+              <img src={zagdi} alt="Leader" />
             </Tooltip>
           </div>
           <hr className={isDarkModeActive ? "hr dark" : "hr"} />
@@ -155,7 +156,22 @@ const TeamsPage = () => {
             <Tooltip
               disableFocusListener
               disableTouchListener
-              title="Samia Aqnouch"
+              title="Samia AQNOUCH"
+              arrow
+              placement="top"
+            >
+              <img src={aqnouch} alt="Leader" />
+            </Tooltip>
+          </div>
+          <div
+            className={
+              isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
+            }
+          >
+            <Tooltip
+              disableFocusListener
+              disableTouchListener
+              title="Hiba AFAILI"
               arrow
               placement="top"
             >

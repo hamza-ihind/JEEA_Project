@@ -19,19 +19,20 @@ const Footer = (props) => {
 
     emailjs
       .sendForm(
-        "service_g4q2e5n",
-        "template_14eom8v",
+        "Service_JEEA_Agadir",
+        "Template_JEEA_Agadir",
         form.current,
-        "urJJ-zITTzUwicVvq"
+        "hcOXqMAVlCzSmuxSw"
       )
       .then(
         (result) => {
-          console.log("success");
+          console.log(result.text);
         },
         (error) => {
-          console.log("failed", error);
+          console.log(error.text);
         }
       );
+    e.target.reset();
   };
   const form = useRef();
 

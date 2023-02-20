@@ -21,16 +21,19 @@ const ServicesPage = () => {
       const updatedPole = Services.filter((currentPole) => {
         return currentPole.pole === pole;
       });
+
       setServices(updatedPole);
     }, 420);
   };
 
   return (
-    <div className="services-page">
+    <div className={isDarkModeActive ? "services-page dark" : "services-page"}>
       {/* Services title: Browse Services */}
       <div className="Title">
         <div className="title__container">
-          <h1 className="title">Browse Services</h1>
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            Browse Services
+          </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
       </div>
@@ -39,17 +42,38 @@ const ServicesPage = () => {
       <div className="navbar__services">
         <div className="navbar__services-container">
           <ul className="navbar__services-links">
-            <li>
+            {/* <li>
               <button>All</button>
+            </li> */}
+            <li>
+              <button
+                onClick={() => filterPole("info")}
+                className={
+                  isDarkModeActive ? "button-pole dark" : "button-pole"
+                }
+              >
+                Info
+              </button>
             </li>
             <li>
-              <button onClick={() => filterPole("info")}>Info</button>
+              <button
+                onClick={() => filterPole("design")}
+                className={
+                  isDarkModeActive ? "button-pole dark" : "button-pole"
+                }
+              >
+                Design
+              </button>
             </li>
             <li>
-              <button onClick={() => filterPole("design")}>Design</button>
-            </li>
-            <li>
-              <button onClick={() => filterPole("rtc")}>RTC</button>
+              <button
+                onClick={() => filterPole("rtc")}
+                className={
+                  isDarkModeActive ? "button-pole dark" : "button-pole"
+                }
+              >
+                RTC
+              </button>
             </li>
           </ul>
         </div>
@@ -59,7 +83,11 @@ const ServicesPage = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.4, delayChildren: 0.4 }}
-        className="services__cards-container"
+        className={
+          isDarkModeActive
+            ? "services__cards-container dark"
+            : "services__cards-container"
+        }
       >
         {services.map((element) => {
           return (
@@ -71,7 +99,7 @@ const ServicesPage = () => {
                   isDarkModeActive ? "button-main dark" : "button-main"
                 }
               >
-                apply
+                APPLY
               </button>
             </div>
           );

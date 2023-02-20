@@ -34,6 +34,10 @@ const Navbar = () => {
       return;
     }
     switchToDarkMode();
+  }
+
+  function mixed() {
+    toggleMode();
     setLight(!light);
   }
 
@@ -69,7 +73,7 @@ const Navbar = () => {
             <li>
               <button
                 className="navbar__button light_dark_icon"
-                onClick={toggleMode}
+                onClick={mixed}
               >
                 {light ? (
                   <img src={Dark} className="icon__mode" />

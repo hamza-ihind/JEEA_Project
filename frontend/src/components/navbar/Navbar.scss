@@ -6,7 +6,7 @@
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
-  a{
+  a {
     text-decoration: none;
     color: white;
   }
@@ -81,22 +81,18 @@
   }
 
   &__button {
-    background: linear-gradient(
-      0deg,
-      rgba(0, 34, 64, 1) 59%,
-      rgba(28, 63, 168, 1) 100%
-    );
+    background-color: var(--secondary-color);
     color: white;
     border: 0;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     padding: 0.3em 0.8em;
     cursor: pointer;
+
     .icon__mode {
       width: 1.2rem;
     }
   }
 }
-
 
 .logo_toggle {
   cursor: pointer;
@@ -190,7 +186,6 @@
     border-radius: 11px;
     right: 3%;
     font-size: 14px;
-
   }
   .navbar__links {
     flex-direction: column;
