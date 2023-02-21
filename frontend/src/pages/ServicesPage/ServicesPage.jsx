@@ -5,7 +5,7 @@ import star from "../../assets/star.svg";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { Services } from "../../database/Services";
 
 const ServicesPage = () => {
@@ -26,8 +26,19 @@ const ServicesPage = () => {
     }, 420);
   };
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <div className={isDarkModeActive ? "services-page dark" : "services-page"}>
+      <motion.div
+        className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
+        style={{ scaleX }}
+      />
       {/* Services title: Browse Services */}
       <div className="Title">
         <div className="title__container">
