@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import "./Cjem.scss";
 
 //assets
-import cjem from "../../assets/cjem.svg";
+import cjem from "../../assets/cjem.png";
 import star from "../../assets/star.svg";
 import back from "../../assets/GIF.gif";
 
@@ -32,9 +32,15 @@ const Cjem = () => {
           <img src={star} alt="star" className="starImg" />
         </div>
 
-        <div className="content">
-          <p className="paragraph">{t("cjem.text")}</p>
-          <img src={cjem} alt="img" className="cjemImg" />
+        <div className="cjem__content">
+          <p className="cjem__paragraph">
+            <img
+              src={cjem}
+              alt="img"
+              className={isDarkModeActive ? "cjemImg dark" : "cjemImg"}
+            />
+            {t("cjem.text")}
+          </p>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import "./ActivitiesPage.scss";
 
 //assets
 import star from "../../assets/star.svg";
+import back from "../../assets/GIF.gif";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Activities } from "../../database/Activities";
@@ -35,93 +36,84 @@ const ActivitiesPage = () => {
 
   return (
     <div className="activities-page">
-      <motion.div
-        className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
-        style={{ scaleX }}
-      />
-      {/* Activities title: Browse Activities */}
-      <div className="Title">
-        <div className="title__container">
-          <h1 className={isDarkModeActive ? "title dark" : "title"}>
-            Browse Activities
-          </h1>
-          <img src={star} alt="star" className="starImg" />
-        </div>
-      </div>
-
-      {/* <div className="navbar__services">
-        <div className="navbar__services-container">
-          <ul className="navbar__services-links">
-          
-            <li>
-              <button
-                onClick={() => filterPole("info")}
-                className={
-                  isDarkModeActive ? "button-pole dark" : "button-pole"
-                }
-              >
-                Info
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => filterPole("design")}
-                className={
-                  isDarkModeActive ? "button-pole dark" : "button-pole"
-                }
-              >
-                Design
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => filterPole("rtc")}
-                className={
-                  isDarkModeActive ? "button-pole dark" : "button-pole"
-                }
-              >
-                RTC
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div> */}
-
-      {/* Container Cards  */}
-      <div
+      <img
+        src={back}
+        alt="back"
         className={
           isDarkModeActive
-            ? "activities__cards-container dark"
-            : "activities__cards-container"
+            ? "activities-page__back1 dark"
+            : "activities-page__back1"
         }
-      >
-        {Activities.map((element) => {
-          return (
-            <div className="activities__card">
-              <div className="activities__card-right">
-                <h3 className="activities__card-right-title">
-                  {element.title}
-                </h3>
-                <p className="activities__card-right-info">{element.info}</p>
-                <p className="activities__card-right-desc">{element.desc}</p>
-                <button
-                  className={
-                    isDarkModeActive ? "button-main dark" : "button-main"
-                  }
-                >
-                  Learn more ...
-                </button>
+      />
+      <img
+        src={back}
+        alt="back"
+        className={
+          isDarkModeActive
+            ? "activities-page__back2 dark"
+            : "activities-page__back2"
+        }
+      />
+      <img
+        src={back}
+        alt="back"
+        className={
+          isDarkModeActive
+            ? "activities-page__back3 dark"
+            : "activities-page__back3"
+        }
+      />
+      <div className="activities">
+        <motion.div
+          className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
+          style={{ scaleX }}
+        />
+        {/* Activities title: Browse Activities */}
+        <div className="Title">
+          <div className="title__container">
+            <h1 className={isDarkModeActive ? "title dark" : "title"}>
+              Browse Activities
+            </h1>
+            <img src={star} alt="star" className="starImg" />
+          </div>
+        </div>
+
+        {/* Container Cards  */}
+        <div
+          className={
+            isDarkModeActive
+              ? "activities__cards-container dark"
+              : "activities__cards-container"
+          }
+        >
+          {Activities.map((element) => {
+            return (
+              <div className="activities__card">
+                <div className="activities__card-right">
+                  <h3 className="activities__card-right-title">
+                    {element.title}
+                  </h3>
+                  <p className="activities__card-right-info">{element.info}</p>
+                  <p className="activities__card-right-desc">{element.desc}</p>
+                  <button
+                    className={
+                      isDarkModeActive ? "button-main dark" : "button-main"
+                    }
+                  >
+                    Learn more ...
+                  </button>
+                </div>
+                <div className="activities__card-left">
+                  <img
+                    src={element.img}
+                    alt="image"
+                    className="activities__card-left-img"
+                  />
+                </div>
               </div>
-              <div className="activities__card-left">
-                <img
-                  src={element.img}
-                  alt="image"
-                  className="activities__card-left-img"
-                />
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

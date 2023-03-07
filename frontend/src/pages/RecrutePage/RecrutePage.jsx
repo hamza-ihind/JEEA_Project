@@ -17,9 +17,31 @@ const RecrutePage = () => {
     restDelta: 0.001,
   });
 
+  console.log(Math.floor(Date.now() / 1000 / 60 / 60 / 24 / 365));
+
   return (
     <div className={isDarkModeActive ? "recrute-page dark" : "recrute-page"}>
-      RecrutePage
+      <div className="recrutement">
+        <div className="Title">
+          <div className="title__container">
+            <h1 className={isDarkModeActive ? "title dark" : "title"}>
+              Recruitement
+            </h1>
+            <img src={star} alt="star" className="starImg" />
+          </div>
+        </div>
+
+        <div className="counter">
+          <div className="title__container">
+            <h1
+              style={{ padding: "1.5rem 2.5rem" }}
+              className={isDarkModeActive ? "title dark" : "title"}
+            >
+              ENDS IN :
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

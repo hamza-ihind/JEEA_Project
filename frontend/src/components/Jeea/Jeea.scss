@@ -82,22 +82,31 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-around;
-      align-items: center;
-      gap: 5rem;
+      align-items: flex-start;
+      // gap: 5rem;
       width: 100%;
+
       @media screen and (max-width: 1200px) {
         flex-wrap: wrap;
       }
+
       .paragraph {
         font-weight: 400;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         z-index: 5;
       }
     }
   }
 
   .jeeaImg {
+    float: left;
     width: 20rem;
+    margin: 3.5rem;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(4079%)
+      hue-rotate(195deg) brightness(95%) contrast(100%);
+    &.dark {
+      filter: none;
+    }
     @media screen and (max-width: 1200px) {
       width: 20rem;
     }

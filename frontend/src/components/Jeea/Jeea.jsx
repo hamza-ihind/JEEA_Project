@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import "./Jeea.scss";
 
 //assets
-import jeea from "../../assets/jeea.svg";
+import jeea from "../../assets/jeea.png";
 import star from "../../assets/star.svg";
 import back from "../../assets/GIF.gif";
 
@@ -35,9 +35,15 @@ const Jeea = () => {
           <img src={star} alt="star" className="starImg" />
         </div>
         <div className="content">
-          <p className="paragraph">{t("jeea.text")}</p>
-
-          <img src={jeea} alt="img" className="jeeaImg" />
+          <p className="paragraph">
+            {" "}
+            <img
+              src={jeea}
+              alt="img"
+              className={isDarkModeActive ? "jeeaImg dark" : "jeeaImg"}
+            />
+            {t("jeea.text")}
+          </p>
         </div>
       </div>
     </section>

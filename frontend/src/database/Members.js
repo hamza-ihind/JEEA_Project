@@ -13,6 +13,7 @@ import hassan from "../assets/Members/Hassan.jpg";
 import moulay from "../assets/Members/moulay.jpg";
 import mekaoui from "../assets/Members/mekaoui.jpg";
 import aicha from "../assets/Members/aicha.jpg";
+import houda from "../assets/Members/houda.jpg";
 
 // Databases
 export const info = [
@@ -65,5 +66,9 @@ export const rtc = [
   {
     name: "Aicha KHAMMACH",
     img: aicha,
+  },
+  {
+    name: "Houda ELMATNI",
+    img: houda,
   },
 ];
