@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import Line from "../../assets/line.svg";
 import Decoration from "../../assets/decoration.svg";
+import back from "../../assets/GIF.gif";
 
 import "./Hero.scss";
 
@@ -16,13 +17,13 @@ const Hero = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div className={isDarkModeActive ? "hero dark" : "hero light"} id="hero">
-      {/* <img src={Decoration} alt="decoration" className="hero__decoration" /> */}
-      <div
-        className={
-          isDarkModeActive ? "hero__content dark" : "hero__content light"
-        }
-      >
+    <div className={isDarkModeActive ? "hero hero_dark" : "hero"} id="hero">
+      <img
+        src={back}
+        alt="back"
+        className={isDarkModeActive ? "hero__back dark" : "hero__back"}
+      />
+      <div className="hero__content">
         <div
           className={
             isDarkModeActive
@@ -30,7 +31,7 @@ const Hero = () => {
               : "hero__content-slogan"
           }
         >
-          <span className="hero__content-jeea">JEEA</span> <br />
+          {/* <span className="hero__content-jeea">JEEA</span> <br /> */}
           {t("hero.slogan")}
         </div>
         <p className="hero__content-text">{t("hero.text")}</p>

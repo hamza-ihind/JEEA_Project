@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import "./Jeea.scss";
 
 //assets
-import jeea from "../../assets/jeea.png";
+import jeea from "../../assets/jeea.svg";
 import star from "../../assets/star.svg";
+import back from "../../assets/GIF.gif";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -20,6 +21,11 @@ const Jeea = () => {
       id="JEEA"
       className={isDarkModeActive ? "jeea dark" : "jeea light"}
     >
+      <img
+        src={back}
+        alt="back"
+        className={isDarkModeActive ? "jeea__back dark" : "jeea__back"}
+      />
       <div className="jeea__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>

@@ -15,43 +15,28 @@
 
 .homepage {
   position: relative;
-  padding-top: 2rem;
-  overflow-x: hidden;
+  // padding-top: 2rem;
+  overflow: hidden;
 
-  .blob-1 {
+  .ellipse {
     position: absolute;
-    top: -10rem;
-    left: -15rem;
-    width: 45%;
-    z-index: 5;
-    opacity: 50%;
-    mix-blend-mode: soft-light;
+    width: 800px;
+    height: 800px;
+    left: -200px;
+    top: 1000px;
+
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(150px);
   }
-  .blob-2 {
+
+  .ellipse2 {
     position: absolute;
-    top: 17rem;
-    right: -15rem;
-    width: 45%;
-    z-index: 1;
-    opacity: 50%;
-    mix-blend-mode: soft-light;
-  }
-  .blob-3 {
-    position: absolute;
-    top: 50rem;
-    left: -15rem;
-    width: 50%;
-    z-index: 1;
-    opacity: 50%;
-    mix-blend-mode: soft-light;
-  }
-  .blob-4 {
-    position: absolute;
-    top: 80rem;
-    right: -15rem;
-    width: 50%;
-    z-index: 1;
-    opacity: 50%;
-    mix-blend-mode: soft-light;
+    width: 800px;
+    height: 800px;
+    right: -200px;
+    bottom: 1000px;
+
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(150px);
   }
 }

@@ -43,10 +43,6 @@ export const design = [
     name: "Zakaria AHRBIL",
     // img: ahrbil,
   },
-  {
-    name: "Manal ELMOUSSAOUI",
-    img: manal,
-  },
 ];
 
 export const rtc = [

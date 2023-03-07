@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import "./Cjem.scss";
 
 //assets
-import cjem from "../../assets/cjem.png";
+import cjem from "../../assets/cjem.svg";
 import star from "../../assets/star.svg";
+import back from "../../assets/GIF.gif";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -18,6 +19,11 @@ const Cjem = () => {
 
   return (
     <div id="about" className={isDarkModeActive ? "cjem dark" : "cjem light"}>
+      <img
+        src={back}
+        alt="back"
+        className={isDarkModeActive ? "cjem__back dark" : "cjem__back"}
+      />
       <div className="cjem__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>

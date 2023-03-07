@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-y: hidden;
 
   &__line {
     position: absolute;
@@ -17,11 +18,18 @@
     }
   }
 
-  &__decoration {
+  &__back {
     position: absolute;
-    width: 100px;
-    left: 20rem;
-    top: 8rem;
+    mix-blend-mode: screen;
+    width: 100%;
+    // height: 100vh;
+    &.dark {
+      opacity: 20%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      visibility: hidden;
+    }
   }
 
   &__content {
@@ -31,6 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 2;
     gap: 0.8rem;
 
     &-jeea {
@@ -38,17 +47,34 @@
     }
 
     &-slogan {
-      line-height: 8vh;
-      font-size: 3vw;
+      line-height: 9vh;
+      font-size: 5vw;
       font-weight: 1000;
       max-width: 70%;
+      background: radial-gradient(
+        51.72% 61.73% at 50% 50%,
+        #1d37fe 0%,
+        #0a1142 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
 
       @media only screen and (max-width: 1000px) {
         line-height: 8vh;
       }
 
       &.dark {
-        color: var(--primary-color);
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #ffffff 0%,
+          #ffb13e 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
       }
     }
 

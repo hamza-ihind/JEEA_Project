@@ -5,6 +5,7 @@ import "./Services.scss";
 
 //assets
 import star from "../../assets/star2.svg";
+import back from "../../assets/GIF.gif";
 import recrutement from "../../assets/recrutement.svg";
 import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
@@ -25,6 +26,16 @@ const Services = () => {
       id="CARDS"
       className={isDarkModeActive ? "cards dark" : "cards light"}
     >
+      <img
+        src={back}
+        alt="back"
+        className={isDarkModeActive ? "cards__back1 dark" : "cards__back1"}
+      />
+      <img
+        src={back}
+        alt="back"
+        className={isDarkModeActive ? "cards__back2 dark" : "cards__back2"}
+      />
       <div className="cards__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
@@ -38,7 +49,7 @@ const Services = () => {
             <img src={recrutement} className="card-img-top" alt="..." />
             <div className="card-body">
               <p className="card-text">{t("services.recrute")}</p>
-              <Link to="/Error">
+              <Link to="/Recrutement">
                 <button
                   className={
                     isDarkModeActive ? "button-main dark" : "button-main"

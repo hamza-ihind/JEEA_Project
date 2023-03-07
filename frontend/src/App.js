@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import ActivitiesPage from "./pages/ActivitiesPage/ActivitiesPage";
 import TeamsPage from "./pages/TeamsPage/TeamsPage";
+import RecrutePage from "./pages/RecrutePage/RecrutePage";
 
 import "./App.scss";
 
@@ -26,7 +27,7 @@ function App() {
         <Route path="/Services" element={<ServicesPage />} />
         <Route path="/Teams" element={<TeamsPage />} />
         <Route path="/Activities" element={<ActivitiesPage />} />
-        <Route path="/Error" element={<Error />} />
+        <Route path="/Recrutement" element={<RecrutePage />} />
       </Routes>
       <Footer />
     </div>

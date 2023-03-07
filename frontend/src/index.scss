@@ -8,7 +8,7 @@ html {
 }
 
 :root {
-  --primary-color: #ffa929;
+  --primary-color: #ffa329;
 
   --secondary-color: #1f2656;
 
@@ -33,11 +33,12 @@ html {
     cursor: pointer;
 
     //colors
-    background-color: var(--dark-color);
     color: white;
 
+    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
+
     &:hover {
-      background-color: #0c3e6a;
+      background-color: #021f38;
     }
 
     @media only screen and (max-width: 1000px) {
@@ -52,12 +53,8 @@ html {
     }
 
     &.dark {
-      background-color: var(--primary-color);
+      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
       color: var(--dark-color);
-
-      &:hover {
-        background-color: #ff7802;
-      }
     }
   }
 
@@ -75,7 +72,7 @@ html {
     color: var(--dark-color);
 
     &:hover {
-      background-color: var(--dark-color);
+      background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
       color: white;
       border: none;
     }
@@ -95,8 +92,10 @@ html {
       border-color: var(--primary-color);
       color: white;
       transition: all 0.5s;
+      background-color: transparent;
       &:hover {
-        background-color: var(--primary-color);
+        background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
+        color: var(--dark-color);
         border: none;
       }
     }

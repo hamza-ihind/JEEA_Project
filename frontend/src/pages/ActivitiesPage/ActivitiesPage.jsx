@@ -49,13 +49,10 @@ const ActivitiesPage = () => {
         </div>
       </div>
 
-      {/* Activities Navbar */}
-      <div className="navbar__services">
+      {/* <div className="navbar__services">
         <div className="navbar__services-container">
           <ul className="navbar__services-links">
-            {/* <li>
-              <button>All</button>
-            </li> */}
+          
             <li>
               <button
                 onClick={() => filterPole("info")}
@@ -88,7 +85,7 @@ const ActivitiesPage = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Container Cards  */}
       <div

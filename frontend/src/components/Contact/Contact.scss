@@ -1,19 +1,36 @@
+.contact {
+  position: relative;
+  height: 100vh;
+  &__back {
+    position: absolute;
+    width: 100%;
+    // height: 100vh;
+    right: 45%;
+    mix-blend-mode: screen;
+    &.dark {
+      opacity: 25%;
+    }
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: -1;
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   box-shadow: 0px 1px 7px 4px rgb(0 0 0 / 15%);
   justify-content: center;
   margin-top: 4rem;
+  padding: 2rem;
   margin: auto;
-  padding: 70px;
+  border-radius: 10px;
+
   .content {
     width: 90%;
   }
+
   .contact-text {
     text-align: center;
     margin: 15px;
@@ -29,20 +46,30 @@
         padding: 0.75rem 1.5rem;
         width: fit-content;
         text-align: center;
-        border: 1px solid white;
-        background-clip: text;
+        background: radial-gradient(
+          51.72% 61.73% at 50% 50%,
+          #4358ff 0%,
+          #1f2656 63.85%
+        );
         -webkit-background-clip: text;
-        &.dark {
-          color: var(--primary-color);
-        }
-      }
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
 
-      .starImg {
-        position: absolute;
-        bottom: -15px;
-        left: -15px;
-        width: 3rem;
-        height: 3rem;
+        mix-blend-mode: normal;
+        &.dark {
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #ffffff 0%,
+            #ffb13e 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+
+          mix-blend-mode: normal;
+        }
       }
     }
   }
@@ -81,6 +108,7 @@
     width: 15rem;
   }
 }
+
 @media (max-width: 764px) {
   .container {
     padding: 1rem;
@@ -89,6 +117,10 @@
     .content {
       width: 76%;
     }
+  }
+  .button-main {
+    margin: auto;
+    width: 15rem;
   }
   .container .contact-text .title__container .title {
     font-size: 1.5rem;

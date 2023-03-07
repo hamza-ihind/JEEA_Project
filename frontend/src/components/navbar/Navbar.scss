@@ -81,7 +81,7 @@
   }
 
   &__button {
-    background-color: var(--secondary-color);
+    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
     color: white;
     border: 0;
     border-radius: 0.7rem;
@@ -99,6 +99,7 @@
   display: none;
   background: transparent;
 }
+
 .logo_toggle i {
   font-size: 21px;
   border-radius: 5px;
@@ -106,22 +107,26 @@
   background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
   font-size: 28px;
 }
+
 .close_btn {
   position: absolute;
   top: 5%;
   right: 3%;
   color: rgb(255 216 158);
 }
+
 .logo_toggle {
   cursor: pointer;
   display: none;
 }
+
 .logo_toggle i {
   font-size: 21px;
   border-radius: 5px;
   padding: 0.2rem;
   background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
 }
+
 .close_btn {
   position: absolute;
   top: 5%;

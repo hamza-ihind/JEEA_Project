@@ -25,11 +25,26 @@
     width: fit-content;
     text-align: center;
     border: 1px solid white;
-    background-clip: text;
+    background: radial-gradient(
+      51.72% 61.73% at 50% 50%,
+      #4358ff 0%,
+      #1f2656 63.85%
+    );
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    mix-blend-mode: normal;
 
     &.dark {
-      background-color: var(--primary-color);
+      background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #ffb13e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      mix-blend-mode: normal;
     }
   }
   .starImg {
@@ -85,15 +100,17 @@
 
     border: none;
     border-radius: 10px;
-    background-color: var(--secondary-color);
     color: white;
     padding: 0.3rem 0.8rem;
     font-weight: 300;
     transition: all 0.5s;
-
-    &:hover {
-      background-color: #0c3e6a;
-    }
+    background: radial-gradient(
+      51.72% 61.73% at 50% 50%,
+      #4358ff 0%,
+      #1f2656 100%
+    );
+    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
 
     &.dark {
       background-color: var(--primary-color);

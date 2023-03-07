@@ -14,9 +14,7 @@ const Footer = () => {
           <div className="left_side">
             <ul className="footer_nav top">
               <li>
-                <a href="#" className="active">
-                  Home
-                </a>
+                <a href="#">Home</a>
               </li>
               <li>
                 <a href="#">Services</a>
