@@ -2,14 +2,14 @@
 import hamza from "../assets/Members/ihind.jpg";
 import aqnouch from "../assets/Members/aqnouch.jpeg";
 import zouane from "../assets/Members/zouane.jpg";
-import errai from "../assets/Members/errai.jpg";
+import errai from "../assets/Members/errai.jpeg";
 import tariq from "../assets/Members/tariq.jpeg";
 import sara from "../assets/Members/sara.jpg";
 import manal from "../assets/Members/manal.jpg";
 import aah from "../assets/Members/aah.jpg";
 import jaafouri from "../assets/Members/jaafouri.png";
 import zagdi from "../assets/Members/zagdi.jpg";
-import hassan from "../assets/Members/Hassan.jpg";
+import hassan from "../assets/Members/hassan.jpg";
 import moulay from "../assets/Members/moulay.jpg";
 import mekaoui from "../assets/Members/mekaoui.jpg";
 import aicha from "../assets/Members/aicha.jpg";
@@ -46,6 +46,17 @@ export const design = [
   },
 ];
 
+export const dessin = [
+  {
+    name: "Houda ELMATNI",
+    img: houda,
+  },
+  {
+    name: "Sahar AQNOUCH",
+    img: hassan,
+  },
+];
+
 export const rtc = [
   {
     name: "Oumaima ZOUANE",
@@ -66,9 +77,5 @@ export const rtc = [
   {
     name: "Aicha KHAMMACH",
     img: aicha,
-  },
-  {
-    name: "Houda ELMATNI",
-    img: houda,
   },
 ];

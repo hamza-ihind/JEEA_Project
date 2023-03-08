@@ -10,6 +10,10 @@
     &.dark {
       opacity: 25%;
     }
+    @media only screen and (max-width: 768px) {
+      width: 250%;
+      right: 0%;
+    }
   }
 }
 

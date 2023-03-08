@@ -28,7 +28,7 @@
     }
 
     @media only screen and (max-width: 768px) {
-      visibility: hidden;
+      width: 170%;
     }
   }
 
@@ -42,13 +42,9 @@
     z-index: 2;
     gap: 0.8rem;
 
-    &-jeea {
-      font-size: 10vw;
-    }
-
     &-slogan {
       line-height: 9vh;
-      font-size: 5vw;
+      font-size: 4rem;
       font-weight: 1000;
       max-width: 70%;
       background: radial-gradient(
@@ -62,7 +58,7 @@
       text-fill-color: transparent;
 
       @media only screen and (max-width: 1000px) {
-        line-height: 8vh;
+        // line-height: 8vh;
       }
 
       &.dark {
@@ -90,41 +86,11 @@
     }
 
     @media only screen and (max-width: 900px) {
-      width: 80%;
-
-      &-jeea {
-        font-size: 5.5rem;
-      }
-
-      &-slogan {
-        width: 100%;
-        font-size: 1.8rem;
-        line-height: 2rem;
-      }
-
-      &-text {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media only screen and (max-width: 900px) {
       width: 90%;
 
-      &-jeea {
-        font-size: 5.5rem;
-      }
-
-      &-buttons {
-        flex-direction: column;
-        align-items: center;
-        width: 45%;
-        height: auto;
-      }
-
       &-slogan {
         width: 100%;
-        font-size: 1.8rem;
-        line-height: 2rem;
+        font-size: 3rem;
       }
 
       &-text {
@@ -133,28 +99,28 @@
     }
 
     @media only screen and (max-width: 450px) {
-      width: 95%;
-
-      &-jeea {
-        font-size: 5rem;
-      }
-
+      width: 95;
       &-buttons {
-        flex-direction: column;
         align-items: center;
-        width: 45%;
+        justify-content: space-around;
+        width: 70%;
         height: auto;
+
+        button {
+          width: 8rem;
+          font-size: 0.75rem;
+        }
       }
 
       &-slogan {
         width: 100%;
-        font-size: 1.4rem;
-        line-height: 1.85rem;
+        font-size: 2.5rem;
+        line-height: 2rem;
       }
 
       &-text {
         max-width: 75%;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
       }
     }
   }
