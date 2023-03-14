@@ -4,4 +4,103 @@
   align-items: center;
   flex-direction: column;
   padding: 7rem 5rem;
+  width: 100%;
+
+  .recrutement {
+    width: 90%;
+  }
+}
+
+.counter {
+  padding: 3rem 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -1;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0px 1px 7px 4px rgb(0 0 0 / 15%);
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 10px;
+  width: 90%;
+
+  .content {
+    width: 90%;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin: 15px;
+    .title__container {
+      position: relative;
+      width: fit-content;
+      margin: auto;
+      .title {
+        margin: 10px auto;
+        backdrop-filter: blur(24px);
+        font-size: 2.5rem;
+        border-radius: 20px;
+        padding: 0.75rem 1.5rem;
+        width: fit-content;
+        text-align: center;
+        background: radial-gradient(
+          51.72% 61.73% at 50% 50%,
+          #4358ff 0%,
+          #1f2656 63.85%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        mix-blend-mode: normal;
+        &.dark {
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #ffffff 0%,
+            #ffb13e 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+
+          mix-blend-mode: normal;
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    .Name_Area {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      .name_input {
+        width: 100%;
+      }
+    }
+    .input {
+      margin: 8px;
+      input {
+        height: 3rem;
+        border-radius: 10px;
+      }
+      textarea {
+        max-height: 10rem;
+        min-height: 10rem;
+        border-radius: 10px;
+        white-space: pre;
+        resize: none;
+      }
+    }
+  }
 }

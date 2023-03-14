@@ -67,6 +67,10 @@ const Navbar = () => {
             <li>
               <Link to="/Teams">{t("labels.Team")}</Link>
             </li>
+
+            <li>
+              <Link to="/Bureau">Bureau</Link>
+            </li>
           </ul>
 
           <ul className="navbar__features">

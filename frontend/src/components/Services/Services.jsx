@@ -83,13 +83,16 @@ const Services = () => {
             <img src={projects} className="card-img-top" alt="..." />
             <div className="card-body">
               <p className="card-text">{t("services.projects")}</p>
-              <button
-                className={
-                  isDarkModeActive ? "button-main dark" : "button-main"
-                }
-              >
-                {t("services.button")}
-              </button>
+
+              <Link to="/projects">
+                <button
+                  className={
+                    isDarkModeActive ? "button-main dark" : "button-main"
+                  }
+                >
+                  {t("services.button")}
+                </button>
+              </Link>
             </div>
           </div>
 

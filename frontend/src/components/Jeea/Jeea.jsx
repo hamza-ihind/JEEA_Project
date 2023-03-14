@@ -35,15 +35,12 @@ const Jeea = () => {
           <img src={star} alt="star" className="starImg" />
         </div>
         <div className="content">
-          <p className="paragraph">
-            {" "}
-            <img
-              src={jeea}
-              alt="img"
-              className={isDarkModeActive ? "jeeaImg dark" : "jeeaImg"}
-            />
-            {t("jeea.text")}
-          </p>
+          <img
+            src={jeea}
+            alt="img"
+            className={isDarkModeActive ? "jeeaImg dark" : "jeeaImg"}
+          />
+          <p className="paragraph"> {t("jeea.text")}</p>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import zouane from "../assets/Members/zouane.jpg";
 import errai from "../assets/Members/errai.jpeg";
 import tariq from "../assets/Members/tariq.jpeg";
 import sara from "../assets/Members/sara.jpg";
+import sahar from "../assets/Members/sahar.jpg";
 import manal from "../assets/Members/manal.jpg";
 import aah from "../assets/Members/aah.jpg";
 import jaafouri from "../assets/Members/jaafouri.png";
@@ -14,6 +15,8 @@ import moulay from "../assets/Members/moulay.jpg";
 import mekaoui from "../assets/Members/mekaoui.jpg";
 import aicha from "../assets/Members/aicha.jpg";
 import houda from "../assets/Members/houda.jpg";
+import rabii from "../assets/Members/rabii.png";
+import ahrbil from "../assets/Members/ahrbil.jpeg";
 
 // Databases
 export const info = [
@@ -42,7 +45,7 @@ export const design = [
   },
   {
     name: "Zakaria AHRBIL",
-    // img: ahrbil,
+    img: ahrbil,
   },
 ];
 
@@ -53,7 +56,7 @@ export const dessin = [
   },
   {
     name: "Sahar AQNOUCH",
-    img: hassan,
+    img: sahar,
   },
 ];
 
@@ -77,5 +80,12 @@ export const rtc = [
   {
     name: "Aicha KHAMMACH",
     img: aicha,
+  },
+];
+
+export const mecanique = [
+  {
+    name: "Rabii NOUINIA",
+    img: rabii,
   },
 ];

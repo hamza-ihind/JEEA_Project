@@ -1,23 +1,47 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 
 import Line from "../../assets/line.svg";
 import Decoration from "../../assets/decoration.svg";
 import back from "../../assets/GIF.gif";
 
+import facebook from "../../assets/facebook.png";
+import instagram from "../../assets/instagram.png";
+import linkedin from "../../assets/linkedin.png";
+
 import "./Hero.scss";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
+import { motion } from "framer-motion";
+import VideoPlayer from "../VideoPlayer";
 
 //contexts
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Hero = () => {
+  const [show, setShow] = useState(false);
   const { t, i18n } = useTranslation();
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
+  const toggle = () => {
+    setShow(!show);
+  };
+
   return (
     <div className={isDarkModeActive ? "hero hero_dark" : "hero"} id="hero">
+      {show && (
+        <motion.div className="video-player">
+          <button className="close-btn" onClick={toggle}>
+            X
+          </button>
+          <VideoPlayer />
+        </motion.div>
+      )}
+      <div className="hero__socials">
+        <img src={facebook} alt="social-media" className="social" />
+        <img src={instagram} alt="social-media" className="social" />
+        <img src={linkedin} alt="social-media" className="social" />
+      </div>
       <img
         src={back}
         alt="back"
@@ -44,6 +68,7 @@ const Hero = () => {
             </button>
           </a>
           <button
+            onClick={toggle}
             className={
               isDarkModeActive ? "button-stroke dark" : "button-stroke"
             }

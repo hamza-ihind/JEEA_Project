@@ -9,13 +9,14 @@ import aqnouch from "../../assets/Members/aqnouch.jpeg";
 import zagdi from "../../assets/Members/zagdi.jpg";
 import hiba from "../../assets/Members/hiba.jpg";
 import manal from "../../assets/Members/manal.jpg";
+import saad from "../../assets/Members/saad.jpg";
 
 import { AiFillCheckCircle } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-import { info, design, rtc, dessin } from "../../database/Members";
+import { info, design, rtc, dessin, mecanique } from "../../database/Members";
 
 const TeamsPage = () => {
   const { scrollYProgress } = useScroll();
@@ -124,7 +125,7 @@ const TeamsPage = () => {
           <div className="Title">
             <div className="title__container">
               <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Media
+                Pole Média
               </h1>
               <img src={star} alt="star" className="starImg" />
             </div>
@@ -258,12 +259,14 @@ const TeamsPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Pole Artistic */}
         <div className="teams__side">
           {/* Title */}
           <div className="Title">
             <div className="title__container">
               <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Dessin
+                Pole Artistique
               </h1>
               <img src={star} alt="star" className="starImg" />
             </div>
@@ -289,6 +292,61 @@ const TeamsPage = () => {
             <hr className={isDarkModeActive ? "hr dark" : "hr"} />
             <div className="teams__side-team">
               {dessin.map((element) => {
+                return (
+                  <div
+                    className={
+                      isDarkModeActive
+                        ? "teams__side-lead dark"
+                        : "teams__side-lead"
+                    }
+                  >
+                    <Tooltip
+                      disableFocusListener
+                      disableTouchListener
+                      title={element.name}
+                      arrow
+                      placement="top"
+                    >
+                      <img src={element.img} alt="member" />
+                    </Tooltip>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        {/* Pole Mecanique */}
+        <div className="teams__side">
+          {/* Title */}
+          <div className="Title">
+            <div className="title__container">
+              <h1 className={isDarkModeActive ? "title dark" : "title"}>
+                Pole Mécanique
+              </h1>
+              <img src={star} alt="star" className="starImg" />
+            </div>
+          </div>
+
+          {/* Container */}
+          <div className="teams__side-container">
+            <div
+              className={
+                isDarkModeActive ? "teams__side-lead dark" : "teams__side-lead"
+              }
+            >
+              <Tooltip
+                disableFocusListener
+                disableTouchListener
+                title="Saad LAGHLIMI"
+                arrow
+                placement="top"
+              >
+                <img src={saad} alt="Leader" />
+              </Tooltip>
+            </div>
+            <hr className={isDarkModeActive ? "hr dark" : "hr"} />
+            <div className="teams__side-team">
+              {mecanique.map((element) => {
                 return (
                   <div
                     className={

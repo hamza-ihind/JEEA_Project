@@ -84,9 +84,9 @@
 
     .content {
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-around;
-      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       // gap: 5rem;
       width: 100%;
 
