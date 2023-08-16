@@ -13,6 +13,7 @@ import TeamsPage from "./pages/TeamsPage/TeamsPage";
 import BureauPage from "./pages/BureauPage/BureauPage";
 import RecrutePage from "./pages/RecrutePage/RecrutePage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
 
 import "./App.scss";
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Services" element={<ServicesPage />} />
         <Route path="/Teams" element={<TeamsPage />} />
         <Route path="/Bureau" element={<BureauPage />} />
+        <Route path="/Admin" element={<AdminPage />} />
         <Route path="/Activities" element={<ActivitiesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/Recrutement" element={<RecrutePage />} />

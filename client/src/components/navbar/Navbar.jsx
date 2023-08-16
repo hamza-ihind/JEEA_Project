@@ -71,6 +71,10 @@ const Navbar = () => {
             <li>
               <Link to="/Bureau">Bureau</Link>
             </li>
+
+            <li>
+              <Link to="/Admin">Admin</Link>
+            </li>
           </ul>
 
           <ul className="navbar__features">
