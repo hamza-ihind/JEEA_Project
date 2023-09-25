@@ -14,6 +14,7 @@ import BureauPage from "./pages/BureauPage/BureauPage";
 import RecrutePage from "./pages/RecrutePage/RecrutePage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
 
 import "./App.scss";
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/Activities" element={<ActivitiesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/Recrutement" element={<RecrutePage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
       <Footer />
     </div>

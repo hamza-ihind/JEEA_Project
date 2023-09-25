@@ -1,0 +1,24 @@
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7rem 5rem;
+}
+
+.Title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form__container {
+  width: 30%;
+  .signup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

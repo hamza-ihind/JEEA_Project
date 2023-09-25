@@ -111,7 +111,7 @@ const Navbar = () => {
                   href="./#CONTACTUS"
                   style={{ color: "white", textDecoration: "none" }}
                 >
-                  {t("labels.ContactUs")}
+                  <Link to="/signup">{t("labels.signup")}</Link>
                 </a>
               </button>
             </li>

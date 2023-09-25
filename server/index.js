@@ -1,9 +1,11 @@
-const { ApolloServer } = require("apollo-server");
-const { MONGODB } = require("./config.js");
 const mongoose = require("mongoose");
 
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
+
+// Destructured
+const { ApolloServer } = require("apollo-server");
+const { MONGODB } = require("./config.js");
 
 const server = new ApolloServer({
   typeDefs,
