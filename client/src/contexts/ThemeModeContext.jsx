@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 export const ThemeModeContext = createContext();
 export default function ThemeModeContextProvider(props) {
-  const [isDarkModeActive, setIsDarkModeActive] = useState(true);
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
 
   const switchToLightMode = () => {
     setIsDarkModeActive(false);

@@ -88,8 +88,7 @@
 .cjem__content {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  // gap: 5rem;
+  align-items: center;
   width: 100%;
 
   @media screen and (max-width: 1200px) {
@@ -97,6 +96,10 @@
   }
 
   .cjem__paragraph {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3rem;
     font-weight: 400;
     font-size: 1.5rem;
     z-index: 5;

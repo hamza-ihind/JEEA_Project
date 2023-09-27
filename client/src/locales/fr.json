@@ -37,5 +37,10 @@
     "title": "CONTACTEZ-NOUS",
     "text": "Confiez vos projets à nos étudiants",
     "button": "ENVOYEZ"
+  },
+
+  "recrute": {
+    "title": "RECRUTEMENT",
+    "form": "Formulaire"
   }
 }

@@ -53,13 +53,11 @@ const RecrutePage = () => {
   return (
     <div className={isDarkModeActive ? "recrute-page dark" : "recrute-page"}>
       <div className="recrutement">
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={isDarkModeActive ? "title dark" : "title"}>
-              Recruitement
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
+        <div className="title__container">
+          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+            {t("recrute.title")}
+          </h1>
+          <img src={star} alt="star" className="starImg" />
         </div>
 
         <div className="counter">
@@ -77,7 +75,7 @@ const RecrutePage = () => {
             <div className="contact-text">
               <div className="title__container">
                 <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                  Form
+                  {t("recrute.form")}
                 </h1>
               </div>
               <p>{t("contact.text")}</p>

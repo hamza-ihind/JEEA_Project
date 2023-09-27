@@ -48,9 +48,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar__container">
-        <img src={LOGO} alt="ENSA" className="navbar__img" />
-
         <div className="navbar__element" ref={navRef}>
+          <img src={LOGO} alt="ENSA" className="navbar__img" />
           <ul className="navbar__links">
             <li>
               <a href="./#hero">{t("labels.Home")}</a>

@@ -37,11 +37,6 @@ const Hero = () => {
           <VideoPlayer />
         </motion.div>
       )}
-      <div className="hero__socials">
-        <img src={facebook} alt="social-media" className="social" />
-        <img src={instagram} alt="social-media" className="social" />
-        <img src={linkedin} alt="social-media" className="social" />
-      </div>
       <img
         src={back}
         alt="back"
