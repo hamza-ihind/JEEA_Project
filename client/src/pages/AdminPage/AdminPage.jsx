@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import "./AdminPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Tooltip from "@mui/material/Tooltip";

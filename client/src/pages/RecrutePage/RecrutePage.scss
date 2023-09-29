@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 7rem 5rem;
+  padding: 7rem 4rem;
   width: 100%;
 
   .recrutement {
@@ -11,6 +11,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 7rem 1rem;
+    .form-container {
+      width: 100%;
+    }
+    .button-main {
+      width: 90%;
+    }
   }
 }
 

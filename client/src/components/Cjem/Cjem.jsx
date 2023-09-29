@@ -5,7 +5,7 @@ import "./Cjem.scss";
 //assets
 import cjem from "../../assets/cjem.png";
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -19,11 +19,14 @@ const Cjem = () => {
 
   return (
     <div id="about" className={isDarkModeActive ? "cjem dark" : "cjem light"}>
-      <img
-        src={back}
-        alt="back"
+      <video
         className={isDarkModeActive ? "cjem__back dark" : "cjem__back"}
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="cjem__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
@@ -31,7 +34,6 @@ const Cjem = () => {
           </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
-
         <div className="cjem__content">
           <p className="cjem__paragraph">
             <img

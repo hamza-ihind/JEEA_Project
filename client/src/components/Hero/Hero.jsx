@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 
 import Line from "../../assets/line.svg";
 import Decoration from "../../assets/decoration.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
@@ -37,11 +37,14 @@ const Hero = () => {
           <VideoPlayer />
         </motion.div>
       )}
-      <img
-        src={back}
-        alt="back"
+      <video
         className={isDarkModeActive ? "hero__back dark" : "hero__back"}
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="hero__content">
         <div
           className={

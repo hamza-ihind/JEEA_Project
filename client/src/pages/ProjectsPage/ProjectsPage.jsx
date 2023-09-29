@@ -3,7 +3,7 @@ import "./ProjectsPage.scss";
 
 //assets
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Activities } from "../../database/Activities";
@@ -36,33 +36,42 @@ const ProjectsPage = () => {
 
   return (
     <div className="activities-page">
-      <img
-        src={back}
-        alt="back"
+      <video
         className={
           isDarkModeActive
             ? "activities-page__back1 dark"
             : "activities-page__back1"
         }
-      />
-      <img
-        src={back}
-        alt="back"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
+      <video
         className={
           isDarkModeActive
             ? "activities-page__back2 dark"
             : "activities-page__back2"
         }
-      />
-      <img
-        src={back}
-        alt="back"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
+      <video
         className={
           isDarkModeActive
             ? "activities-page__back3 dark"
             : "activities-page__back3"
         }
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="activities">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}

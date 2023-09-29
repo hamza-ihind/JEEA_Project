@@ -1,21 +1,21 @@
 import React, { useState, useContext } from "react";
-
 import { Link } from "react-router-dom";
-
 import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 import Light from "../../assets/light.png";
 import Dark from "../../assets/dark.png";
-
+import Close from "../../assets/close.png";
+import Menu from "../../assets/menu.png";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
-
 import { useRef } from "react";
 
-//context
+// context
+import { AuthContext } from "../../contexts/AuthContext";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
   const [light, setLight] = useState(true);
 
   const { isDarkModeActive, switchToLightMode, switchToDarkMode } =
@@ -31,48 +31,32 @@ const Navbar = () => {
   function toggleMode() {
     if (isDarkModeActive) {
       switchToLightMode();
-      return;
+    } else {
+      switchToDarkMode();
     }
-    switchToDarkMode();
-  }
-
-  function mixed() {
-    toggleMode();
     setLight(!light);
   }
-
-  const scrollToContactUs = () => {
-    window.scrollTo("./#CONTACTUS");
-  };
 
   return (
     <div className="navbar">
       <div className="navbar__container">
+        <img src={LOGO} alt="ENSA" className="navbar__img" />
         <div className="navbar__element" ref={navRef}>
-          <img src={LOGO} alt="ENSA" className="navbar__img" />
           <ul className="navbar__links">
             <li>
-              <a href="./#hero">{t("labels.Home")}</a>
+              <a href="/#hero">{t("labels.Home")}</a>
             </li>
 
             <li>
-              <a href="./#about">{t("labels.About")}</a>
+              <a>{t("labels.About")}</a>
             </li>
 
             <li>
-              <a href="/#CARDS">{t("labels.Services")}</a>
+              <a>{t("labels.Services")}</a>
             </li>
 
             <li>
               <Link to="/Teams">{t("labels.Team")}</Link>
-            </li>
-
-            <li>
-              <Link to="/Bureau">Bureau</Link>
-            </li>
-
-            <li>
-              <Link to="/Admin">Admin</Link>
             </li>
           </ul>
 
@@ -80,16 +64,15 @@ const Navbar = () => {
             <li>
               <button
                 className="navbar__button light_dark_icon"
-                onClick={mixed}
+                onClick={toggleMode}
               >
                 {light ? (
-                  <img src={Dark} className="icon__mode" />
+                  <img src={Dark} alt="dark" className="icon__mode" />
                 ) : (
-                  <img src={Light} className="icon__mode" />
+                  <img src={Light} alt="light" className="icon__mode" />
                 )}
               </button>
             </li>
-            <li></li>
             <li>
               <button
                 className="navbar__button fr_eng_icon"
@@ -104,27 +87,54 @@ const Navbar = () => {
                 {i18n.resolvedLanguage}
               </button>
             </li>
-            <li>
-              <button className="navbar__button contact_us_button">
-                <a
-                  href="./#CONTACTUS"
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                  <Link to="/signup">{t("labels.signup")}</Link>
-                </a>
-              </button>
-            </li>
+            {user ? (
+              <>
+                <li>
+                  <button
+                    onClick={logout}
+                    className="navbar__button contact_us_button"
+                  >
+                    {t("labels.logout")}
+                  </button>
+                </li>
+                <li className="navbar__username">{user.username}</li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <button className="navbar__button contact_us_button">
+                    <Link
+                      to="/signup"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      {t("labels.signup")}
+                    </Link>
+                  </button>
+                </li>
+                <li>
+                  <button className="navbar__button contact_us_button">
+                    <Link
+                      to="/login"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      {t("labels.login")}
+                    </Link>
+                  </button>
+                </li>
+              </>
+            )}
           </ul>
           <div className="logo_toggle close_btn " onClick={showNavbar}>
-            <i class="fa fa-bars"></i>
+            <img src={Close} alt="close" className="button_nav" />
           </div>
         </div>
 
         <div className="logo_toggle " onClick={showNavbar}>
-          <i class="fa fa-bars"></i>
+          <img src={Menu} alt="menu" className="button_nav" />
         </div>
       </div>
     </div>
   );
 };
+
 export default Navbar;

@@ -11,10 +11,11 @@
     color: white;
   }
   &__element {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 30%;
+    flex: 1;
+    justify-content: flex-end;
     position: relative;
   }
 
@@ -33,8 +34,13 @@
   }
 
   &__img {
-    //height: 100%;
+    height: 100%;
     width: 80px;
+  }
+
+  &__username {
+    font-size: 1.2rem !important;
+    padding: 0 0 0 1.5rem;
   }
 
   &__links {
@@ -119,11 +125,12 @@
   display: none;
 }
 
-.logo_toggle i {
-  font-size: 21px;
+.button_nav {
   border-radius: 5px;
   padding: 0.2rem;
   background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
+  width: 20px;
+  height: 100%;
 }
 
 .close_btn {

@@ -91,11 +91,12 @@
   align-items: center;
   width: 100%;
 
-  @media screen and (max-width: 1200px) {
-    flex-wrap: wrap;
-  }
-
   .cjem__paragraph {
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
     display: flex;
     flex-direction: row-reverse;
     align-items: center;

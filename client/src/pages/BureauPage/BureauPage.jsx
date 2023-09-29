@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./BureauPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Tooltip from "@mui/material/Tooltip";
@@ -24,27 +24,36 @@ const BureauPage = () => {
 
   return (
     <div className="bureau-page">
-      <img
-        src={back}
-        alt="back"
+      <video
         className={
           isDarkModeActive ? "bureau-page__back1 dark" : "bureau-page__back1"
         }
-      />
-      <img
-        src={back}
-        alt="back"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
+      <video
         className={
           isDarkModeActive ? "bureau-page__back2 dark" : "bureau-page__back2"
         }
-      />
-      <img
-        src={back}
-        alt="back"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
+      <video
         className={
           isDarkModeActive ? "bureau-page__back3 dark" : "bureau-page__back3"
         }
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="bureau">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}

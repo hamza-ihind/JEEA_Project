@@ -5,7 +5,7 @@ import "./Services.scss";
 
 //assets
 import star from "../../assets/star2.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 import recrutement from "../../assets/recrutement.svg";
 import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
@@ -26,16 +26,22 @@ const Services = () => {
       id="CARDS"
       className={isDarkModeActive ? "cards dark" : "cards light"}
     >
-      <img
-        src={back}
-        alt="back"
+      <video
         className={isDarkModeActive ? "cards__back1 dark" : "cards__back1"}
-      />
-      <img
-        src={back}
-        alt="back"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
+      <video
         className={isDarkModeActive ? "cards__back2 dark" : "cards__back2"}
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="cards__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>

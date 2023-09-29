@@ -1,9 +1,11 @@
 {
   "labels": {
-    "Team": "équipe",
+    "Team": "Equipe",
     "Home": "Acceuil",
-    "About": "à propos",
-    "signup": "s'inscrire",
+    "About": "A propos",
+    "signup": "S'inscrire",
+    "login": "Se connecter",
+    "logout": "se déconnceter",
     "Services": "Services"
   },
 

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./TeamsPage.scss";
 //assets
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import hamza from "../../assets/Members/ihind.jpg";
 import aqnouch from "../../assets/Members/aqnouch.jpeg";

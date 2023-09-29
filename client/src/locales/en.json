@@ -4,6 +4,8 @@
     "Home": "Home",
     "About": "About",
     "signup": "Sign up",
+    "login": "Login",
+    "logout": "Logout",
     "Services": "Services"
   },
 

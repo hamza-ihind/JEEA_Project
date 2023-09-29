@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Contact.scss";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
@@ -38,11 +38,14 @@ const Footer = (props) => {
 
   return (
     <div className="contact" id="CONTACTUS">
-      <img
-        src={back}
-        alt="back"
+      <video
         className={isDarkModeActive ? "contact__back dark" : "contact__back"}
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="container">
         <div className="content">
           <div className="contact-text">

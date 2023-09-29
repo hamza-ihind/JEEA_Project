@@ -5,7 +5,7 @@ import "./Jeea.scss";
 //assets
 import jeea from "../../assets/jeea.png";
 import star from "../../assets/star.svg";
-import back from "../../assets/GIF.gif";
+import back from "../../assets/hmzt.mp4";
 
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -21,11 +21,14 @@ const Jeea = () => {
       id="JEEA"
       className={isDarkModeActive ? "jeea dark" : "jeea light"}
     >
-      <img
-        src={back}
-        alt="back"
+      <video
         className={isDarkModeActive ? "jeea__back dark" : "jeea__back"}
-      />
+        autoPlay
+        loop
+        muted
+      >
+        <source src={back} type="video/mp4" />
+      </video>
       <div className="jeea__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>

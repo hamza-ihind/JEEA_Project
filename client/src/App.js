@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Error from "./components/Error/Error";
+import AuthRoute from "./components/AuthRoute";
 
 // Pages
 import HomePage from "./pages/HomePage/HomePage";
@@ -15,11 +16,13 @@ import RecrutePage from "./pages/RecrutePage/RecrutePage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 import "./App.scss";
 
 //Theme context
 import { ThemeModeContext } from "./contexts/ThemeModeContext";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   const { isDarkModeActive } = useContext(ThemeModeContext);
@@ -37,6 +40,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/Recrutement" element={<RecrutePage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </div>

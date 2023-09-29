@@ -14,7 +14,7 @@ const Countdown = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("Mars26, 2023").getTime();
+    const countDownDate = new Date("October7, 2023").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();

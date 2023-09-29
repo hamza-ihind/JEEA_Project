@@ -1,17 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./SignupPage.scss";
 //assets
 import star from "../../assets/star.svg";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import { gql, useMutation } from "@apollo/client";
 import { useForm } from "../../hooks/useForm";
 
+import { AuthContext } from "../../contexts/AuthContext";
+
 const SignupPage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
     username: "",
@@ -20,7 +21,7 @@ const SignupPage = () => {
     confirmPassword: "",
   });
 
-  const [addUser, { loading }] = useMutation(REGISTER_USER, {
+  const [addUser] = useMutation(REGISTER_USER, {
     update(proxy, result) {
       console.log(result);
     },
@@ -95,7 +96,7 @@ const SignupPage = () => {
           <button
             className={isDarkModeActive ? "button-main dark" : "button-main"}
           >
-            {t("signup.button")}
+            {t("labels.signup")}
           </button>
         </form>
       </div>
