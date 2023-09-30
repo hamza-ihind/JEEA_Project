@@ -48,15 +48,11 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a>{t("labels.About")}</a>
-            </li>
-
-            <li>
-              <a>{t("labels.Services")}</a>
-            </li>
-
-            <li>
               <Link to="/Teams">{t("labels.Team")}</Link>
+            </li>
+
+            <li>
+              <a href="/#CONTACTUS">contact</a>
             </li>
           </ul>
 
@@ -87,7 +83,7 @@ const Navbar = () => {
                 {i18n.resolvedLanguage}
               </button>
             </li>
-            {user ? (
+            {/* {user ? (
               <>
                 <li>
                   <button
@@ -122,7 +118,7 @@ const Navbar = () => {
                   </button>
                 </li>
               </>
-            )}
+            )} */}
           </ul>
           <div className="logo_toggle close_btn " onClick={showNavbar}>
             <img src={Close} alt="close" className="button_nav" />

@@ -32,16 +32,13 @@ const Footer = () => {
                 <h1>JEEA</h1>
               </div>
               <div className=" item_social">
-                <a href="#">
+                <a href="https://www.facebook.com/JEEA.ENSAA">
                   <i className="fa fa-facebook"></i>
                 </a>
-                <a href="#">
-                  <i className="fa fa-twitter "></i>
-                </a>
-                <a href="">
+                <a href="https://www.linkedin.com/company/jeea-ensaa/">
                   <i className="fa fa-linkedin"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/jeea.ensaa/">
                   <i className="fa fa-instagram"></i>
                 </a>
               </div>
@@ -62,8 +59,8 @@ const Footer = () => {
 
           <div className="right_side ">
             <p>JEEA, Votre compagnon de confiance! </p>
-            <span>contact@JEEA.com</span>
-            <span>+212 645-987-756</span>
+            <span>jeea.contact@gmail.com</span>
+            <span>+212 621-07 5329</span>
           </div>
         </div>
       </div>

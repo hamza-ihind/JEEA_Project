@@ -58,6 +58,10 @@
 
         mix-blend-mode: normal;
 
+        @media screen and (max-width: 500px) {
+          font-size: 2rem !important;
+        }
+
         &.dark {
           background: radial-gradient(
             50% 50% at 50% 50%,
@@ -98,6 +102,9 @@
         font-weight: 400;
         font-size: 1.4rem;
         z-index: 5;
+        @media screen and (max-width: 600px) {
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -113,7 +120,7 @@
     }
     @media screen and (max-width: 800px) {
       width: 100%;
-      margin: 3rem 0;
+      margin: 0.5rem 0;
     }
   }
 }

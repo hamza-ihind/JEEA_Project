@@ -35,12 +35,12 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="activities-page">
+    <div className="projectsvities-page">
       <video
         className={
           isDarkModeActive
-            ? "activities-page__back1 dark"
-            : "activities-page__back1"
+            ? "projectsvities-page__back1 dark"
+            : "projectsvities-page__back1"
         }
         autoPlay
         loop
@@ -51,8 +51,8 @@ const ProjectsPage = () => {
       <video
         className={
           isDarkModeActive
-            ? "activities-page__back2 dark"
-            : "activities-page__back2"
+            ? "projectsvities-page__back2 dark"
+            : "projectsvities-page__back2"
         }
         autoPlay
         loop
@@ -63,8 +63,8 @@ const ProjectsPage = () => {
       <video
         className={
           isDarkModeActive
-            ? "activities-page__back3 dark"
-            : "activities-page__back3"
+            ? "projectsvities-page__back3 dark"
+            : "projectsvities-page__back3"
         }
         autoPlay
         loop
@@ -72,12 +72,12 @@ const ProjectsPage = () => {
       >
         <source src={back} type="video/mp4" />
       </video>
-      <div className="activities">
+      <div className="projects">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
           style={{ scaleX }}
         />
-        {/* Activities title: Browse Activities */}
+        {/* projectsvities title: Browse projectsvities */}
         <div className="Title">
           <div className="title__container">
             <h1 className={isDarkModeActive ? "title dark" : "title"}>
@@ -91,19 +91,19 @@ const ProjectsPage = () => {
         <div
           className={
             isDarkModeActive
-              ? "activities__cards-container dark"
-              : "activities__cards-container"
+              ? "projects_cards-container dark"
+              : "projects_cards-container"
           }
         >
-          {Activities.map((element) => {
+          {projects.map((element) => {
             return (
-              <div className="activities__card">
-                <div className="activities__card-right">
-                  <h3 className="activities__card-right-title">
+              <div className="projects__card">
+                <div className="projects__card-right">
+                  <h3 className="projects__card-right-title">
                     {element.title}
                   </h3>
-                  <p className="activities__card-right-info">{element.info}</p>
-                  <p className="activities__card-right-desc">{element.desc}</p>
+                  <p className="projects__card-right-info">{element.info}</p>
+                  <p className="projects__card-right-desc">{element.desc}</p>
                   <button
                     className={
                       isDarkModeActive ? "button-main dark" : "button-main"
@@ -112,11 +112,11 @@ const ProjectsPage = () => {
                     Learn more ...
                   </button>
                 </div>
-                <div className="activities__card-left">
+                <div className="projects__card-left">
                   <img
                     src={element.img}
                     alt="image"
-                    className="activities__card-left-img"
+                    className="projects__card-left-img"
                   />
                 </div>
               </div>

@@ -108,17 +108,10 @@
   }
 }
 
-@media (min-width: 765px) {
-  .button-main {
-    margin: auto;
-    width: 15rem;
-  }
-}
-
 @media (max-width: 764px) {
   .container {
     padding: 1rem;
-    height: 120%;
+    // height: 120%;
     // width: 95%;
     .content {
       width: 76%;

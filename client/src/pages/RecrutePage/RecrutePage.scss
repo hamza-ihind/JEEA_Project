@@ -75,6 +75,10 @@
         text-fill-color: transparent;
 
         mix-blend-mode: normal;
+
+        @media screen and (max-width: ) {
+        }
+
         &.dark {
           background: radial-gradient(
             50% 50% at 50% 50%,

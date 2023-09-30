@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import "./ActivitiesPage.scss";
 
 //assets
@@ -8,26 +9,13 @@ import back from "../../assets/hmzt.mp4";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Activities } from "../../database/Activities";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ActivitiesPage = () => {
-  const [activities, setActivities] = useState([]);
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const { isDarkModeActive } = useContext(ThemeModeContext);
-
-  const filterPole = (pole) => {
-    setAnimateCard([{ y: 100, opacity: 0 }]);
-
-    setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
-      const updatedPole = Activities.filter((currentPole) => {
-        return currentPole.pole === pole;
-      });
-
-      setActivities(updatedPole);
-    }, 420);
-  };
-
+  const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -36,7 +24,7 @@ const ActivitiesPage = () => {
 
   return (
     <div className="activities-page">
-      <video
+      {/* <video
         className={
           isDarkModeActive
             ? "activities-page__back1 dark"
@@ -71,7 +59,7 @@ const ActivitiesPage = () => {
         muted
       >
         <source src={back} type="video/mp4" />
-      </video>
+      </video> */}
       <div className="activities">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
@@ -97,21 +85,32 @@ const ActivitiesPage = () => {
         >
           {Activities.map((element) => {
             return (
-              <div className="activities__card">
+              <div className="activities__card" key={element.id}>
+                {/* Content side */}
                 <div className="activities__card-right">
                   <h3 className="activities__card-right-title">
                     {element.title}
+                    <p className="activities__card-right-info">
+                      {element.info}
+                    </p>
                   </h3>
-                  <p className="activities__card-right-info">{element.info}</p>
-                  <p className="activities__card-right-desc">{element.desc}</p>
-                  <button
-                    className={
-                      isDarkModeActive ? "button-main dark" : "button-main"
-                    }
-                  >
-                    Learn more ...
-                  </button>
+                  <p className="activities__card-right-desc">
+                    <TruncatedText
+                      text={element.desc}
+                      maxLength={300}
+                    ></TruncatedText>
+                  </p>
+                  <Link to={`/activities/${element.id}`}>
+                    <button
+                      className={
+                        isDarkModeActive ? "button-main dark" : "button-main"
+                      }
+                    >
+                      {t("labels.more")}
+                    </button>
+                  </Link>
                 </div>
+                {/* Image side */}
                 <div className="activities__card-left">
                   <img
                     src={element.img}
@@ -127,5 +126,14 @@ const ActivitiesPage = () => {
     </div>
   );
 };
+
+function TruncatedText({ text, maxLength }) {
+  if (text.length <= maxLength) {
+    return <>{text}</>;
+  } else {
+    const truncatedText = text.slice(0, maxLength) + "...";
+    return <>{truncatedText}</>;
+  }
+}
 
 export default ActivitiesPage;

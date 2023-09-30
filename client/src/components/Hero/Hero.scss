@@ -31,38 +31,6 @@
     }
   }
 
-  &__socials {
-    position: absolute;
-    left: 20%;
-    padding: 0.75rem 0.5rem;
-    z-index: 5;
-    background: rgba(255, 255, 255, 0.23);
-    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(24px);
-    border-radius: 20px;
-    //
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    .social {
-      width: 1.2rem;
-    }
-  }
-
-  &__line {
-    position: absolute;
-    right: 21%;
-    height: 20rem;
-
-    @media only screen and (max-width: 900px) {
-      right: 10%;
-      height: 15rem;
-    }
-  }
-
   &__back {
     position: absolute;
     mix-blend-mode: screen;
@@ -166,6 +134,22 @@
       &-text {
         max-width: 75%;
         font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    overflow-x: hidden;
+    width: 100%;
+    padding: 8rem 0 5rem 0;
+    height: 100%;
+    &__content {
+      width: 100%;
+      &-slogan {
+        width: 100%;
+        font-size: 2.5rem;
       }
     }
   }
