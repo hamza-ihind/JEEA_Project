@@ -1,18 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import "./RecrutePage.scss";
-//assets
 import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
-
 import { useTranslation } from "react-i18next";
-
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import Countdown from "../../components/Countdown/Countdown";
 
 const RecrutePage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
   const { t } = useTranslation();
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -32,29 +29,36 @@ const RecrutePage = () => {
           console.log(error.text);
         }
       );
+
     e.target.reset();
   };
-  const form = useRef();
-
-  console.log(Math.floor(Date.now() / 1000 / 60 / 60 / 24 / 365));
 
   return (
-    <div className={isDarkModeActive ? "recrute-page dark" : "recrute-page"}>
+    <div className={`recrute-page ${isDarkModeActive ? "dark" : ""}`}>
       <div className="recrutement">
         <div className="title__container">
-          <h1 className={isDarkModeActive ? "title dark" : "title"}>
+          <h1 className={`title ${isDarkModeActive ? "dark" : ""}`}>
             {t("recrute.title")}
           </h1>
           <img src={star} alt="star" className="starImg" />
         </div>
 
         <div className="counter">
-          <div
-            className={
-              isDarkModeActive ? "title__container dark" : "title__container"
-            }
-          >
+          <div className={`title__container ${isDarkModeActive ? "dark" : ""}`}>
             <Countdown />
+          </div>
+        </div>
+
+        <div className="link">
+          <div className={`title__container ${isDarkModeActive ? "dark" : ""}`}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEaO9OvH6W3ssZJ2njtio5SpKnppgx1fU11y1al5eeG-F2sw/viewform?usp=sf_link"
+              target="_blank"
+            >
+              <h1 className={isDarkModeActive ? "title dark" : "title"}>
+                {t("recrute.link")}
+              </h1>
+            </a>
           </div>
         </div>
 
@@ -62,7 +66,7 @@ const RecrutePage = () => {
           <div className="content">
             <div className="contact-text">
               <div className="title__container">
-                <h1 className={isDarkModeActive ? "title dark" : "title"}>
+                <h1 className={`title ${isDarkModeActive ? "dark" : ""}`}>
                   {t("recrute.form")}
                 </h1>
               </div>
@@ -85,47 +89,44 @@ const RecrutePage = () => {
                     name="Firstname"
                     id="Firstname"
                     placeholder="Your Firstname"
-                  />{" "}
+                  />
                 </div>
                 <div className="name_input">
-                  {" "}
                   <input
                     type="text"
                     className="form-control"
                     name="Lastname"
                     id="Lastname"
                     placeholder="Your Lastname"
-                  />{" "}
+                  />
                 </div>
               </div>
 
               <div className="input">
                 <div>
-                  {" "}
                   <input
                     type="email"
                     className="form-control"
                     name="email"
                     id="email"
                     placeholder="Email"
-                  />{" "}
+                  />
                 </div>
               </div>
 
               <div className="input">
                 <div>
-                  {" "}
                   <input
                     type="text"
                     className="form-control"
                     name="subject"
                     id="subject"
                     placeholder="Subject"
-                  />{" "}
+                  />
                 </div>
               </div>
 
-              <div className="input ">
+              <div className="input">
                 <div>
                   <textarea
                     name="message"
@@ -139,9 +140,7 @@ const RecrutePage = () => {
               </div>
 
               <button
-                className={
-                  isDarkModeActive ? "button-main dark" : "button-main"
-                }
+                className={`button-main ${isDarkModeActive ? "dark" : ""}`}
               >
                 {t("contact.button")}
               </button>

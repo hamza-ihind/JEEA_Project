@@ -44,6 +44,7 @@
 
   "recrute": {
     "title": "RECRUTEMENT",
-    "form": "Formulaire"
+    "form": "Formulaire",
+    "link": "Cliquez ici pour rediriger vers le formulaire"
   }
 }

@@ -1,26 +1,14 @@
 import React, { useState, useContext } from "react";
-
-import Line from "../../assets/line.svg";
-import Decoration from "../../assets/decoration.svg";
-import back from "../../assets/hmzt.mp4";
-
-import facebook from "../../assets/facebook.png";
-import instagram from "../../assets/instagram.png";
-import linkedin from "../../assets/linkedin.png";
-
 import "./Hero.scss";
-
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
+import back from "../../assets/hmzt.mp4";
 import { motion } from "framer-motion";
 import VideoPlayer from "../VideoPlayer";
-
-//contexts
+import { useTranslation } from "react-i18next";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Hero = () => {
   const [show, setShow] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   const toggle = () => {
@@ -28,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <div className={isDarkModeActive ? "hero hero_dark" : "hero"} id="hero">
+    <div className={`hero ${isDarkModeActive ? "hero_dark" : ""}`} id="hero">
       {show && (
         <motion.div className="video-player">
           <button className="close-btn" onClick={toggle}>
@@ -38,7 +26,7 @@ const Hero = () => {
         </motion.div>
       )}
       <video
-        className={isDarkModeActive ? "hero__back dark" : "hero__back"}
+        className={`hero__back ${isDarkModeActive ? "dark" : ""}`}
         autoPlay
         loop
         muted
@@ -47,35 +35,25 @@ const Hero = () => {
       </video>
       <div className="hero__content">
         <div
-          className={
-            isDarkModeActive
-              ? "hero__content-slogan dark"
-              : "hero__content-slogan"
-          }
+          className={`hero__content-slogan ${isDarkModeActive ? "dark" : ""}`}
         >
-          {/* <span className="hero__content-jeea">JEEA</span> <br /> */}
           {t("hero.slogan")}
         </div>
         <p className="hero__content-text">{t("hero.text")}</p>
         <div className="hero__content-buttons">
-          <a href="./#CONTACTUS">
-            <button
-              className={isDarkModeActive ? "button-main dark" : "button-main"}
-            >
+          <a href="#CONTACTUS">
+            <button className={`button-main ${isDarkModeActive ? "dark" : ""}`}>
               {t("hero.contact")}
             </button>
           </a>
           <button
             onClick={toggle}
-            className={
-              isDarkModeActive ? "button-stroke dark" : "button-stroke"
-            }
+            className={`button-stroke ${isDarkModeActive ? "dark" : ""}`}
           >
             {t("hero.video")}
           </button>
         </div>
       </div>
-      {/* <img src={Line} alt="line" className="hero__line" /> */}
     </div>
   );
 };

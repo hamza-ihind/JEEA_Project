@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Footer.scss";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Footer = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
@@ -14,16 +14,16 @@ const Footer = () => {
           <div className="left_side">
             <ul className="footer_nav top">
               <li>
-                <a href="#">Home</a>
+                <a href="/#hero">Home</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="/#Services">Services</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="/#About">About</a>
               </li>
               <li>
-                <a href="#">Team</a>
+                <a href="/teams">Team</a>
               </li>
             </ul>
 

@@ -1,30 +1,21 @@
-.cjem {
-  padding: 10px;
+.about {
+  padding: 0 10rem;
   width: 100%;
-  position: relative;
-
-  @media screen and (min-width: 1200px) {
-    height: 100vh;
-  }
-
-  &__back {
-    position: absolute;
-    width: 100%;
-    // height: 100vh;
-    right: 50%;
-    mix-blend-mode: screen;
-    &.dark {
-      opacity: 25%;
-    }
-    @media only screen and (max-width: 768px) {
-      width: 200%;
-      right: 0%;
-    }
-  }
-
+  gap: 10rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 5rem;
+    gap: 5rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 2rem;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__container {
     width: 75%;
@@ -52,28 +43,15 @@
           #4358ff 0%,
           #1f2656 63.85%
         );
+
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
-
         mix-blend-mode: normal;
+
         @media screen and (max-width: 500px) {
-          font-size: 2rem !important;
-        }
-
-        &.dark {
-          background: radial-gradient(
-            50% 50% at 50% 50%,
-            #ffffff 0%,
-            #ffb13e 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-
-          mix-blend-mode: normal;
+          font-size: 1.5rem !important;
         }
       }
 
@@ -88,42 +66,52 @@
   }
 }
 
-.cjem__content {
+.about__content {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 
-  .cjem__paragraph {
+  .about__paragraph {
     @media screen and (max-width: 1200px) {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
+
     @media screen and (max-width: 600px) {
       font-size: 1.1rem;
     }
+
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 3rem;
     font-weight: 400;
     font-size: 1.5rem;
+    text-align: center;
     z-index: 5;
   }
 }
 
-.cjemImg {
+.jeeaImg {
+  margin: 2.1rem;
+}
+
+.cjemImg,
+.jeeaImg {
   width: 22.5rem;
-  float: right;
-  margin: 3rem;
+  padding-bottom: 4rem;
   filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(4079%)
     hue-rotate(195deg) brightness(95%) contrast(100%);
+
   &.dark {
     filter: none;
   }
+
   @media screen and (max-width: 800px) {
     width: 100%;
     margin: 0.5rem 0;
+    padding-bottom: 2rem;
   }
 }

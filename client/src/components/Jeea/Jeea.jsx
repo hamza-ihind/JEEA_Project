@@ -21,31 +21,7 @@ const Jeea = () => {
       id="JEEA"
       className={isDarkModeActive ? "jeea dark" : "jeea light"}
     >
-      <video
-        className={isDarkModeActive ? "jeea__back dark" : "jeea__back"}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={back} type="video/mp4" />
-      </video>
-      <div className="jeea__container">
-        <div className="title__container">
-          <h1 className={isDarkModeActive ? "title dark" : "title"}>
-            {t("jeea.title")}
-          </h1>
-
-          <img src={star} alt="star" className="starImg" />
-        </div>
-        <div className="content">
-          <img
-            src={jeea}
-            alt="img"
-            className={isDarkModeActive ? "jeeaImg dark" : "jeeaImg"}
-          />
-          <p className="paragraph"> {t("jeea.text")}</p>
-        </div>
-      </div>
+      hamza
     </section>
   );
 };

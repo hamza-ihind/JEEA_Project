@@ -35,8 +35,8 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="projectsvities-page">
-      <video
+    <div className="projects-page">
+      {/* <video
         className={
           isDarkModeActive
             ? "projectsvities-page__back1 dark"
@@ -71,7 +71,7 @@ const ProjectsPage = () => {
         muted
       >
         <source src={back} type="video/mp4" />
-      </video>
+      </video> */}
       <div className="projects">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
@@ -87,8 +87,20 @@ const ProjectsPage = () => {
           </div>
         </div>
 
+        <div className="Title" style={{ marginTop: "10rem" }}>
+          <div className="title__container">
+            <h1
+              style={{ fontSize: 75 }}
+              className={isDarkModeActive ? "title dark" : "title"}
+            >
+              COMING SOON...
+            </h1>
+            <img src={star} alt="star" className="starImg" />
+          </div>
+        </div>
+
         {/* Container Cards  */}
-        <div
+        {/* <div
           className={
             isDarkModeActive
               ? "projects_cards-container dark"
@@ -122,7 +134,7 @@ const ProjectsPage = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

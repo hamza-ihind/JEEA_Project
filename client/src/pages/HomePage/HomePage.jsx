@@ -1,17 +1,11 @@
 import React, { useContext } from "react";
-
+import { motion, useScroll, useSpring } from "framer-motion";
 import Hero from "../../components/Hero/Hero";
 import Contact from "../../components/Contact/Contact";
-import Cjem from "../../components/Cjem/Cjem";
-import Jeea from "../../components/Jeea/Jeea";
+import About from "../../components/About/About";
 import Services from "../../components/Services/Services";
 import Navbar from "../../components/navbar/Navbar";
-
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-import { motion, useScroll, useSpring } from "framer-motion";
-
-//animation
-// import Animation from "../../components/Animation";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -31,8 +25,7 @@ const HomePage = () => {
       />
       <div className={isDarkModeActive ? "homepage dark" : "homepage light"}>
         <Hero />
-        <Cjem />
-        <Jeea />
+        <About />
         <Services />
         <Contact />
       </div>

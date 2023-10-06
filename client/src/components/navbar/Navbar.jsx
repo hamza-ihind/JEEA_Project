@@ -1,48 +1,68 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 import "./Navbar.scss";
 import LOGO from "../../assets/JEEA_logo.png";
 import Light from "../../assets/light.png";
 import Dark from "../../assets/dark.png";
 import Close from "../../assets/close.png";
 import Menu from "../../assets/menu.png";
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
-import { useRef } from "react";
-
-// context
 import { AuthContext } from "../../contexts/AuthContext";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-  const [light, setLight] = useState(true);
-
   const { isDarkModeActive, switchToLightMode, switchToDarkMode } =
     useContext(ThemeModeContext);
   const { t, i18n } = useTranslation();
 
-  // toggle navbar :
+  const [light, setLight] = useState(true);
   const navRef = useRef();
-  const showNavbar = () => {
+
+  const toggleMode = () => {
+    isDarkModeActive ? switchToLightMode() : switchToDarkMode();
+    setLight(!light);
+  };
+
+  const toggleNavbar = () => {
     navRef.current.classList.toggle("Responsive_nav");
   };
 
-  function toggleMode() {
-    if (isDarkModeActive) {
-      switchToLightMode();
-    } else {
-      switchToDarkMode();
-    }
-    setLight(!light);
-  }
+  const getModeButtonClassName = () =>
+    isDarkModeActive
+      ? "navbar__button light_dark_icon navbar__button_dark"
+      : "navbar__button light_dark_icon";
+
+  const getLanguageButtonClassName = () =>
+    isDarkModeActive
+      ? "navbar__button fr_eng_icon navbar__button_dark"
+      : "navbar__button fr_eng_icon";
 
   return (
     <div className="navbar">
       <div className="navbar__container">
-        <img src={LOGO} alt="ENSA" className="navbar__img" />
+        <div className="navbar__verimg">
+          <a href="/#hero">
+            <img src={LOGO} alt="ENSA" className="navbar__img" />
+          </a>
+          <div
+            className={
+              isDarkModeActive ? "navbar__ver navbar__ver_dark" : "navbar__ver"
+            }
+          >
+            Testing version
+          </div>
+        </div>
+
         <div className="navbar__element" ref={navRef}>
-          <ul className="navbar__links">
+          <ul
+            className={
+              isDarkModeActive
+                ? "navbar__links navbar__links_dark"
+                : "navbar__links"
+            }
+          >
             <li>
               <a href="/#hero">{t("labels.Home")}</a>
             </li>
@@ -52,16 +72,17 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="/#CONTACTUS">contact</a>
+              <Link to="/Bureau">Bureau</Link>
+            </li>
+
+            <li>
+              <a href="/#Contact">Contact</a>
             </li>
           </ul>
 
           <ul className="navbar__features">
             <li>
-              <button
-                className="navbar__button light_dark_icon"
-                onClick={toggleMode}
-              >
+              <button className={getModeButtonClassName()} onClick={toggleMode}>
                 {light ? (
                   <img src={Dark} alt="dark" className="icon__mode" />
                 ) : (
@@ -71,7 +92,7 @@ const Navbar = () => {
             </li>
             <li>
               <button
-                className="navbar__button fr_eng_icon"
+                className={getLanguageButtonClassName()}
                 onClick={() =>
                   changeLanguage(
                     i18n.resolvedLanguage === "français"
@@ -83,7 +104,9 @@ const Navbar = () => {
                 {i18n.resolvedLanguage}
               </button>
             </li>
-            {/* {user ? (
+          </ul>
+
+          {/* {user ? (
               <>
                 <li>
                   <button
@@ -119,13 +142,13 @@ const Navbar = () => {
                 </li>
               </>
             )} */}
-          </ul>
-          <div className="logo_toggle close_btn " onClick={showNavbar}>
+
+          <div className="logo_toggle close_btn" onClick={toggleNavbar}>
             <img src={Close} alt="close" className="button_nav" />
           </div>
         </div>
 
-        <div className="logo_toggle " onClick={showNavbar}>
+        <div className="logo_toggle" onClick={toggleNavbar}>
           <img src={Menu} alt="menu" className="button_nav" />
         </div>
       </div>

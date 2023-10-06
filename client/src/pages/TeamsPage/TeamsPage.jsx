@@ -29,7 +29,7 @@ const TeamsPage = () => {
 
   return (
     <div className="teams-page">
-      <img
+      {/* <img
         src={back}
         alt="back"
         className={
@@ -49,7 +49,7 @@ const TeamsPage = () => {
         className={
           isDarkModeActive ? "teams-page__back3 dark" : "teams-page__back3"
         }
-      />
+      /> */}
       <div className="teams">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}

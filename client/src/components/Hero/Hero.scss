@@ -5,7 +5,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-x: hidden;
   overflow-y: hidden;
+  padding: 10rem 0;
 
   .video-player {
     position: absolute;
@@ -35,7 +37,7 @@
     position: absolute;
     mix-blend-mode: screen;
     width: 100%;
-    // height: 100vh;
+
     &.dark {
       opacity: 20%;
     }
@@ -56,10 +58,10 @@
     gap: 0.8rem;
 
     &-slogan {
-      line-height: 9vh;
       font-size: 6rem;
+      line-height: 6rem;
       font-weight: 1000;
-      max-width: 70%;
+      max-width: 100%;
       background: radial-gradient(
         51.72% 61.73% at 50% 50%,
         #1d37fe 0%,
@@ -69,9 +71,10 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+      mix-blend-mode: normal;
 
       @media only screen and (max-width: 1000px) {
-        // line-height: 8vh;
+        font-size: 4rem;
       }
 
       &.dark {
@@ -90,30 +93,19 @@
     &-text {
       max-width: 70%;
       font-size: 1.3vw;
+
+      @media only screen and (max-width: 900px) {
+        font-size: 1rem;
+      }
     }
 
     &-buttons {
       display: flex;
       gap: 0.5rem;
       height: 1.5rem;
-    }
 
-    @media only screen and (max-width: 900px) {
-      width: 90%;
-
-      &-slogan {
-        width: 100%;
-        font-size: 3rem;
-      }
-
-      &-text {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media only screen and (max-width: 450px) {
-      width: 95;
-      &-buttons {
+      @media only screen and (max-width: 450px) {
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
         width: 70%;
@@ -124,33 +116,35 @@
           font-size: 0.75rem;
         }
       }
+    }
+  }
 
+  @media screen and (max-width: 780px) {
+    &__content {
       &-slogan {
-        width: 100%;
-        font-size: 2.5rem;
-        line-height: 2rem;
-      }
-
-      &-text {
-        max-width: 75%;
-        font-size: 0.75rem;
+        line-height: 3.5rem;
+        font-size: 3.5rem;
       }
     }
   }
-}
 
-@media screen and (max-width: 500px) {
-  .hero {
-    overflow-x: hidden;
-    width: 100%;
-    padding: 8rem 0 5rem 0;
+  @media screen and (max-width: 500px) {
+    padding: 7rem 0 3rem 0;
     height: 100%;
+
     &__content {
-      width: 100%;
+      width: 80%;
+
       &-slogan {
-        width: 100%;
-        font-size: 2.5rem;
+        line-height: 3rem;
+        font-size: 2.25rem;
       }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .hero__content-slogan {
+      max-width: 80%;
     }
   }
 }

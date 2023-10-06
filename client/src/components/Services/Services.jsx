@@ -1,47 +1,39 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import "./Services.scss";
 
-//assets
+// Assets
 import star from "../../assets/star2.svg";
-import back from "../../assets/hmzt.mp4";
 import recrutement from "../../assets/recrutement.svg";
 import projects from "../../assets/projects.svg";
 import services from "../../assets/services.svg";
 import activities from "../../assets/activities.svg";
 
 import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
 
-//context
+// Context
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Services = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <section
-      id="CARDS"
+    <div
+      id="Services"
       className={isDarkModeActive ? "cards dark" : "cards light"}
     >
-      <video
-        className={isDarkModeActive ? "cards__back1 dark" : "cards__back1"}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={back} type="video/mp4" />
-      </video>
-      <video
-        className={isDarkModeActive ? "cards__back2 dark" : "cards__back2"}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={back} type="video/mp4" />
-      </video>
+      {/* Background videos */}
+      {/* <div className={isDarkModeActive ? "cards__back1 dark" : "cards__back1"}>
+        <video autoPlay loop muted>
+          <source src={back} type="video/mp4" />
+        </video>
+      </div>
+      <div className={isDarkModeActive ? "cards__back2 dark" : "cards__back2"}>
+        <video autoPlay loop muted>
+          <source src={back} type="video/mp4" />
+        </video>
+      </div> */}
       <div className="cards__container">
         <div className="title__container">
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
@@ -119,7 +111,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

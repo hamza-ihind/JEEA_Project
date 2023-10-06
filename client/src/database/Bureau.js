@@ -1,66 +1,70 @@
 // import pictures
-import hamza from "../assets/Members/ihind.jpg";
-import aqnouch from "../assets/Members/aqnouch.jpeg";
+import bureau from "../constants/bureau";
 
 export const Bureau = [
   {
-    name: "Wissal Belbayda",
-    post: "president",
-    img: hamza,
+    name: "Hamza IHIND",
+    post: "Président",
+    img: bureau.president,
   },
   {
-    name: "Wissal Belbayda",
-    post: "v-president",
-    // img: ,
+    name: "Wissal BELBAYDA",
+    post: "Vice-présidente",
+    img: bureau.vice_president,
   },
   {
-    name: "Wissal Belbayda",
-    post: "treasurer",
-    // img: ,
+    name: "Aya JARAIB",
+    post: "Trésorière",
+    img: bureau.treasurer,
   },
   {
-    name: "Wissal Belbayda",
-    post: "secretary",
-    // img: ,
+    name: "Aicha KHAMMACH",
+    post: "Secretaire générale",
+    img: bureau.secretary,
   },
   {
-    name: "Wissal Belbayda",
-    post: "prospection",
-    // img: ,
+    name: "Hiba AFAILI",
+    post: "Respo. Formations",
+    img: bureau.formations,
   },
   {
-    name: "Wissal Belbayda",
-    post: "formation",
-    // img: ,
+    name: "Hind RAIS",
+    post: "Respo. Prospeection",
+    img: bureau.prospection,
   },
   {
-    name: "Wissal Belbayda",
-    post: "rh",
-    // img: ,
+    name: "Yazid AKKI",
+    post: "Respo. RH",
+    img: bureau.rh,
   },
   {
-    name: "Wissal Belbayda",
-    post: "comm",
-    // img: ,
+    name: "Samia AQNOUCH",
+    post: "Respo. Communication",
+    img: bureau.communication,
   },
   {
-    name: "Wissal Belbayda",
-    post: "montage",
-    // img: ,
+    name: "Manal ELMOUSSAOUI",
+    post: "Respo. Média (Montage)",
+    img: bureau.montage,
   },
   {
-    name: "Wissal Belbayda",
-    post: "design",
-    // img: ,
+    name: "Zakaria AHRBIL",
+    post: "Respo. Média (Design)",
+    img: bureau.design,
   },
   {
-    name: "Wissal Belbayda",
-    post: "event",
-    // img: ,
+    name: "Khalid ET-TAZY",
+    post: "Respo. Evénementiel",
+    img: bureau.events,
   },
   {
-    name: "Wissal Belbayda",
-    post: "logs",
-    // img: ,
+    name: "Ghizlane MOUDANE",
+    post: "Respo. Logistiques",
+    img: bureau.logistics,
+  },
+  {
+    name: "Ali ZAGDI",
+    post: "Respo. Qualité",
+    img: bureau.quality,
   },
 ];

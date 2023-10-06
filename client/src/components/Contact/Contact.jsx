@@ -1,18 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import "./Contact.scss";
-import back from "../../assets/hmzt.mp4";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
-
 import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
-
-//context
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
-const Footer = (props) => {
+const Footer = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -34,23 +29,14 @@ const Footer = (props) => {
       );
     e.target.reset();
   };
-  const form = useRef();
 
   return (
-    <div className="contact" id="CONTACTUS">
-      <video
-        className={isDarkModeActive ? "contact__back dark" : "contact__back"}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={back} type="video/mp4" />
-      </video>
+    <div className={`contact ${isDarkModeActive ? "dark" : ""}`} id="Contact">
       <div className="container">
         <div className="content">
           <div className="contact-text">
             <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
+              <h1 className={`title ${isDarkModeActive ? "dark" : ""}`}>
                 {t("contact.title")}
               </h1>
             </div>
@@ -73,47 +59,44 @@ const Footer = (props) => {
                   name="Firstname"
                   id="Firstname"
                   placeholder="Your Firstname"
-                />{" "}
+                />
               </div>
               <div className="name_input">
-                {" "}
                 <input
                   type="text"
                   className="form-control"
                   name="Lastname"
                   id="Lastname"
                   placeholder="Your Lastname"
-                />{" "}
+                />
               </div>
             </div>
 
             <div className="input">
               <div>
-                {" "}
                 <input
                   type="email"
                   className="form-control"
                   name="email"
                   id="email"
                   placeholder="Email"
-                />{" "}
+                />
               </div>
             </div>
 
             <div className="input">
               <div>
-                {" "}
                 <input
                   type="text"
                   className="form-control"
                   name="subject"
                   id="subject"
                   placeholder="Subject"
-                />{" "}
+                />
               </div>
             </div>
 
-            <div className="input ">
+            <div className="input">
               <div>
                 <textarea
                   name="message"
@@ -126,9 +109,7 @@ const Footer = (props) => {
               </div>
             </div>
 
-            <button
-              className={isDarkModeActive ? "button-main dark" : "button-main"}
-            >
+            <button className={`button-main ${isDarkModeActive ? "dark" : ""}`}>
               {t("contact.button")}
             </button>
           </form>
@@ -137,4 +118,5 @@ const Footer = (props) => {
     </div>
   );
 };
+
 export default Footer;
