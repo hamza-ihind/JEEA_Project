@@ -1,58 +1,57 @@
 import React, { useState, useContext } from "react";
 import "./Hero.scss";
-import back from "../../assets/hmzt.mp4";
+import assets from "../../constants/assets";
+
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import VideoPlayer from "../VideoPlayer";
-import { useTranslation } from "react-i18next";
-import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 
 const Hero = () => {
   const [show, setShow] = useState(false);
   const { t } = useTranslation();
-  const { isDarkModeActive } = useContext(ThemeModeContext);
 
   const toggle = () => {
     setShow(!show);
   };
-
+  const sloganHTML = { __html: t("hero.slogan") };
   return (
-    <div className={`hero ${isDarkModeActive ? "hero_dark" : ""}`} id="hero">
-      {show && (
+    <div className="hero" id="hero">
+      {/* {show && (
         <motion.div className="video-player">
           <button className="close-btn" onClick={toggle}>
             X
           </button>
           <VideoPlayer />
         </motion.div>
-      )}
-      <video
-        className={`hero__back ${isDarkModeActive ? "dark" : ""}`}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={back} type="video/mp4" />
-      </video>
+      )} */}
       <div className="hero__content">
         <div
-          className={`hero__content-slogan ${isDarkModeActive ? "dark" : ""}`}
-        >
-          {t("hero.slogan")}
-        </div>
+          className="hero__content-slogan"
+          dangerouslySetInnerHTML={sloganHTML}
+        ></div>
         <p className="hero__content-text">{t("hero.text")}</p>
         <div className="hero__content-buttons">
           <a href="#CONTACTUS">
-            <button className={`button-main ${isDarkModeActive ? "dark" : ""}`}>
-              {t("hero.contact")}
-            </button>
+            <button className="button-main">{t("hero.contact")}</button>
           </a>
-          <button
-            onClick={toggle}
-            className={`button-stroke ${isDarkModeActive ? "dark" : ""}`}
-          >
+          <button onClick={toggle} className="button-stroke">
             {t("hero.video")}
           </button>
         </div>
+        <div className="hero__content-socials">
+          <a href="https://www.facebook.com/JEEA.ENSAA">
+            <img src={assets.facebook} alt="FACEBOOK" />
+          </a>
+          <a href="https://www.instagram.com/jeea.ensaa/">
+            <img src={assets.instagram} alt="INSTAGRAM" />
+          </a>
+          <a href="https://www.linkedin.com/company/jeea-ensaa/">
+            <img src={assets.linkedin} alt="LINKEDIN" />
+          </a>
+        </div>
+      </div>
+      <div className="hero__chess">
+        <img src={assets.chess1} alt="CHESS" />
       </div>
     </div>
   );

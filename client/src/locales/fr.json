@@ -11,7 +11,7 @@
   },
 
   "hero": {
-    "slogan": "POUR CHAQUE PROBLEME, NOUS INGENIONS UNE SOLUTION",
+    "slogan": "POUR CHAQUE PROBLEME,<br/>NOUS INGENIONS <br/>UNE SOLUTION",
     "text": "S'associer à la Junior-Entreprise ENSA Agadir, c'est accéder à un large éventail de compétences apportées par de futurs ingénieurs dans différents domaines.",
     "contact": "Contactez-nous!",
     "video": "Regardez Une video"
@@ -24,7 +24,7 @@
 
   "jeea": {
     "title": "QUI SOMMES NOUS",
-    "text": "La JEEA est une extension de la Junior Entreprise, dont le but crucial est d'affiner les compétences de ses jeunes entrepreneurs pour enrichir leur côté professionnel avant leur intégration au marché. La JEEA est un bureau d'études qui a apparu grâce aux efforts des étudiants d'ENSA-A, ses activités permettent aux adhérents de s'auto évaluer au niveau des compétences en offrant une opportunité de pénétrer facilement le marché de travail, et de rendre des services de qualité à ses clients."
+    "text": "La JEEA (Junior Enterprise ENSA Agadir) est une branche de la JE (Junior Enterprise) dont l'objectif est d'améliorer les compétences des jeunes entrepreneurs avant leur entrée dans le monde professionnel. Fondée par des étudiants de l'ENSA-A, elle offre une opportunité unique aux jeunes entrepreneurs juniors pour intégrer le marché du travail. De plus, elle fournit des services de qualité à des clients dans divers domaines."
   },
 
   "services": {

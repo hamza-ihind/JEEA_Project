@@ -1,39 +1,29 @@
 import React, { useContext } from "react";
 import jeea from "../../assets/jeea.png";
 import cjem from "../../assets/cjem.png";
-import star from "../../assets/star.svg";
 import { useTranslation } from "react-i18next";
-import { ThemeModeContext } from "../../contexts/ThemeModeContext";
+
+import assets from "../../constants/assets";
+
+import Title from "../Title/Title";
 
 import "./About.scss";
 
 const Cjem = () => {
-  const { isDarkModeActive } = useContext(ThemeModeContext);
   const { t } = useTranslation();
 
-  const containerClass = isDarkModeActive ? "about dark" : "about";
-  const titleClass = isDarkModeActive ? "title dark" : "title";
-  const imageClass = isDarkModeActive ? "dark" : "";
-
   return (
-    <div id="About" className={containerClass}>
+    <div id="About" className="about">
+      <Title text={t("jeea.title")} img={assets.chess1} />
+
       <div className="about__container">
-        <div className="title__container">
-          <h1 className={titleClass}>{t("cjem.title")}</h1>
-          <img src={star} alt="star" className="starImg" />
-        </div>
         <div className="about__content">
-          <img src={cjem} alt="img" className={`cjemImg ${imageClass}`} />
+          <img src={cjem} alt="img" className="cjemImg" />
           <p className="about__paragraph">{t("cjem.text")}</p>
         </div>
-      </div>
-      <div className="about__container">
-        <div className="title__container">
-          <h1 className={titleClass}>{t("jeea.title")}</h1>
-          <img src={star} alt="star" className="starImg" />
-        </div>
+
         <div className="about__content">
-          <img src={jeea} alt="img" className={`jeeaImg ${imageClass}`} />
+          <img src={jeea} alt="img" className="jeeaImg" />
           <p className="about__paragraph">{t("jeea.text")}</p>
         </div>
       </div>

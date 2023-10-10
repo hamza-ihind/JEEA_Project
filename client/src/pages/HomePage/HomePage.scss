@@ -14,29 +14,7 @@
 }
 
 .homepage {
+  padding: 0 13rem;
   position: relative;
-  // padding-top: 2rem;
   overflow: hidden;
-
-  .ellipse {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    left: -200px;
-    top: 1000px;
-
-    background: rgba(255, 255, 255, 0.5);
-    filter: blur(150px);
-  }
-
-  .ellipse2 {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    right: -200px;
-    bottom: 1000px;
-
-    background: rgba(255, 255, 255, 0.5);
-    filter: blur(150px);
-  }
 }

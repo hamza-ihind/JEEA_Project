@@ -13,29 +13,14 @@ $dark-bg: rgba(255, 255, 255, 0.075);
   position: fixed;
   width: 100%;
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  &__element {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 2;
-    gap: 2rem;
-    width: 50%;
-  }
-
   &__container {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(90deg, $light-bg 50%, $dark-bg 100%);
+    padding: 0.85rem 1.5rem;
+    background: linear-gradient(90deg, $light-bg 40%, $dark-bg 100%);
     backdrop-filter: blur(8px);
-    border-radius: 1.1rem;
+    border-radius: 8px;
   }
 
   &__verimg {
@@ -44,28 +29,18 @@ $dark-bg: rgba(255, 255, 255, 0.075);
     justify-content: center;
     gap: 1rem;
     height: 100%;
-  }
 
-  &__ver {
-    padding: 0.2rem 0.8rem;
-    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
-    color: white;
-    border-radius: 50px;
-
-    &_dark {
-      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-      color: var(--dark-color);
+    &-ver {
+      padding: 0.2rem 0.8rem;
+      background-color: var(--primary-color);
+      color: #422800;
+      border-radius: 8px;
     }
-  }
 
-  &__img {
-    height: 50%;
-    width: 80px;
-  }
-
-  &__username {
-    font-size: 1.2rem !important;
-    padding: 0 0 0 1.5rem;
+    &-img {
+      height: 50%;
+      width: 85px;
+    }
   }
 
   &__links {
@@ -75,31 +50,20 @@ $dark-bg: rgba(255, 255, 255, 0.075);
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 2em;
+    gap: 2rem;
 
     li,
     a {
-      font-size: 0.9rem;
+      color: white;
+      font-size: 1.05rem;
       font-weight: 600;
-      text-decoration: none !important;
-      color: var(--dark-color);
+      text-decoration: none;
       transition: all 0.3s;
     }
 
     li,
     a:hover {
-      color: $primary-color;
-      text-decoration: none;
-    }
-
-    &_dark {
-      li,
-      a {
-        color: white;
-        &:hover {
-          color: $secondary-color;
-        }
-      }
+      color: var(--primary-color);
     }
   }
 
@@ -121,144 +85,13 @@ $dark-bg: rgba(255, 255, 255, 0.075);
   }
 
   &__button {
-    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
-    color: white;
+    background: var(--primary-color);
+    color: #422800;
+    font-weight: 500;
+    font-size: 0.8rem;
     border: 0;
-    border-radius: 0.7rem;
-    padding: 0.3em 0.8em;
+    border-radius: 6px;
+    padding: 0.4em 1em;
     cursor: pointer;
-
-    &_dark {
-      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-      color: var(--dark-color);
-      .icon__mode {
-        filter: invert(1);
-      }
-    }
-
-    .icon__mode {
-      width: 1.2rem;
-    }
-  }
-
-  .logo_toggle {
-    cursor: pointer;
-    display: none;
-    background: transparent;
-  }
-
-  .logo_toggle i {
-    font-size: 21px;
-    border-radius: 5px;
-    padding: 0.2rem;
-    background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-    font-size: 28px;
-  }
-
-  .close_btn {
-    position: absolute;
-    top: 5%;
-    right: 3%;
-    color: rgb(255 216 158);
-  }
-
-  .logo_toggle {
-    cursor: pointer;
-    display: none;
-  }
-
-  .button_nav {
-    border-radius: 5px;
-    padding: 0.2rem;
-    background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-    width: 20px;
-    height: 100%;
-  }
-
-  .close_btn {
-    position: absolute;
-    top: 5%;
-    right: 3%;
-  }
-
-  /* medium screen */
-  @media (max-width: 1024px) {
-    .navbar__container {
-      width: 100%;
-    }
-    .navbar__element {
-      gap: 20px;
-      justify-content: space-evenly;
-      display: flex;
-      .navbar__links {
-        gap: 18px;
-      }
-    }
-  }
-
-  /* mobile screen */
-  @media (max-width: 700px) {
-    &__img {
-      width: 75px;
-    }
-
-    &__ver {
-      font-size: 0.75rem;
-    }
-
-    .logo_toggle {
-      display: block;
-    }
-    .navbar__element {
-      top: 0;
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 23px;
-      right: 0;
-      width: 100%;
-      font-size: 12px;
-      background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
-      transition: 1s;
-      border-radius: 12px;
-      padding: 20px;
-      z-index: 1;
-      transform: translateY(-100vh);
-    }
-    button.navbar__button.light_dark_icon {
-      position: absolute;
-      top: 6%;
-      left: 5%;
-      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-      color: white;
-      width: 4rem;
-      height: 2rem;
-      border-radius: 11px;
-    }
-    button.navbar__button.fr_eng_icon {
-      position: absolute;
-      bottom: 7%;
-      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-      width: 4rem;
-      height: 2rem;
-      border-radius: 11px;
-      right: 3%;
-      font-size: 14px;
-    }
-    .navbar__links {
-      flex-direction: column;
-      a {
-        color: rgba(255, 211, 147, 1);
-      }
-    }
-    .contact_us_button {
-      display: none;
-    }
-  }
-
-  .Responsive_nav {
-    transform: none;
   }
 }

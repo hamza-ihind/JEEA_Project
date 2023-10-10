@@ -1,41 +1,5 @@
 .teams-page {
   position: relative;
-
-  &__back1 {
-    position: absolute;
-    mix-blend-mode: screen;
-    width: 100%;
-    // height: 100vh;
-    left: 40%;
-    top: 0;
-    &.dark {
-      opacity: 25%;
-    }
-  }
-
-  &__back2 {
-    position: absolute;
-    mix-blend-mode: screen;
-    width: 100%;
-    // height: 100vh;
-    right: 45%;
-    top: 30%;
-    &.dark {
-      opacity: 25%;
-    }
-  }
-
-  &__back3 {
-    position: absolute;
-    mix-blend-mode: screen;
-    width: 100%;
-    // height: 100vh;
-    left: 45%;
-    bottom: 0;
-    &.dark {
-      opacity: 25%;
-    }
-  }
 }
 
 .teams {
@@ -116,12 +80,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  .title__container {
-    margin: auto;
-    .title {
-      font-size: 2rem;
-    }
   }
 }
 

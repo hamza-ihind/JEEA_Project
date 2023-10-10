@@ -13,49 +13,6 @@
   position: relative;
 }
 
-.title__container {
-  position: relative;
-  margin: 1rem 2rem;
-  .title {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(24px);
-    border-radius: 20px;
-    padding: 10px 16px;
-    width: fit-content;
-    text-align: center;
-    border: 1px solid white;
-    background: radial-gradient(
-      51.72% 61.73% at 50% 50%,
-      #4358ff 0%,
-      #1f2656 63.85%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-
-    mix-blend-mode: normal;
-
-    &.dark {
-      background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #ffb13e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-
-      mix-blend-mode: normal;
-    }
-  }
-  .starImg {
-    position: absolute;
-    bottom: -13px;
-    left: -31px;
-    width: 63.85px;
-    height: 56.42px;
-  }
-}
-
 // Styles: Navigation Bar
 .navbar__services {
   z-index: 2;

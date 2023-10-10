@@ -3,12 +3,17 @@
 html {
   scroll-behavior: smooth;
 }
+
 * {
+  padding: 0;
+  margin: 0;
   font-family: "Outfit", sans-serif;
 }
 
 :root {
-  --primary-color: #ffa329;
+  --bg-color: #000018;
+
+  --primary-color: rgb(255, 178, 63);
 
   --secondary-color: #1f2656;
 
@@ -23,22 +28,18 @@ html {
 
 .button {
   &-main {
-    font-size: 1rem;
+    padding: 0.65rem 6rem;
+    border-radius: 0.65rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    height: 2.75rem;
-    width: 15rem;
-    border-radius: 1rem;
-    border: 0;
     transition: all 0.5s;
     cursor: pointer;
-
-    //colors
-    color: white;
-
-    background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
+    color: #422800;
+    background: var(--primary-color);
+    border: 0;
 
     &:hover {
-      background-color: #021f38;
+      background-color: #ff9901;
     }
 
     @media only screen and (max-width: 1000px) {
@@ -51,29 +52,22 @@ html {
       height: 2.5rem;
       // width: 100%;
     }
-
-    &.dark {
-      background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-      color: var(--dark-color);
-    }
   }
 
   &-stroke {
-    font-size: 1rem;
-    font-weight: 500;
-    height: 2.75rem;
-    width: 15rem;
-    border-radius: 1rem;
-    transition: all 0.5s;
-
-    //colors
     background: transparent;
-    border-color: var(--dark-color);
-    color: var(--dark-color);
+    padding: 0.5rem 3rem;
+    border-radius: 0.65rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #ff9901;
+    border: 2px solid var(--primary-color);
 
     &:hover {
-      background: linear-gradient(180deg, #1614d1 0%, #1f2656 35.94%);
-      color: white;
+      background-color: var(--primary-color);
+      color: #422800;
       border: none;
     }
 
@@ -86,18 +80,6 @@ html {
     @media only screen and (max-width: 900px) {
       height: 2.5rem;
       width: 100%;
-    }
-
-    &.dark {
-      border-color: var(--primary-color);
-      color: white;
-      transition: all 0.5s;
-      background-color: transparent;
-      &:hover {
-        background: linear-gradient(180deg, #ffe4bb 0%, #ffab2e 30%);
-        color: var(--dark-color);
-        border: none;
-      }
     }
   }
 }

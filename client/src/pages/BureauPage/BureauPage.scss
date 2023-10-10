@@ -1,33 +1,6 @@
 .bureau-page {
   height: 100%;
   width: 100%;
-
-  &__back1,
-  &__back2,
-  &__back3 {
-    position: absolute;
-    mix-blend-mode: screen;
-    width: 100%;
-    /* height: 100vh; */
-    &.dark {
-      opacity: 25%;
-    }
-  }
-
-  &__back1 {
-    left: 40%;
-    top: 0;
-  }
-
-  &__back2 {
-    right: 45%;
-    top: 30%;
-  }
-
-  &__back3 {
-    left: 45%;
-    bottom: 0;
-  }
 }
 
 .bureau {

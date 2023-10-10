@@ -1,12 +1,8 @@
 import { useEffect, useContext } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { ThemeModeContext } from "./contexts/ThemeModeContext";
-import { AuthProvider } from "./contexts/AuthContext";
 
-import AuthRoute from "./components/AuthRoute";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Error from "./components/Error/Error";
 
 import HomePage from "./pages/HomePage/HomePage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
@@ -21,6 +17,7 @@ import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 
 import "./App.scss";
+import assets from "./constants/assets";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,27 +30,29 @@ function ScrollToTop() {
 }
 
 function App() {
-  const { isDarkModeActive } = useContext(ThemeModeContext);
-
   return (
-    <div className={isDarkModeActive ? "App dark" : "App light"}>
-      <ScrollToTop />
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Services" element={<ServicesPage />} />
-        <Route path="/Teams" element={<TeamsPage />} />
-        <Route path="/Bureau" element={<BureauPage />} />
-        <Route path="/Admin" element={<AdminPage />} />
-        <Route path="/Activities" element={<ActivitiesPage />} />
-        <Route path="/Activities/:id" element={<ActivityPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/Recrutement" element={<RecrutePage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-      <Footer />
-    </div>
+      <div className="App">
+        <div className="blue__blob"></div>
+        <div className="orange__blob"></div>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Services" element={<ServicesPage />} />
+          <Route path="/Teams" element={<TeamsPage />} />
+          <Route path="/Bureau" element={<BureauPage />} />
+          <Route path="/Admin" element={<AdminPage />} />
+          <Route path="/Activities" element={<ActivitiesPage />} />
+          <Route path="/Activities/:id" element={<ActivityPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/Recrutement" element={<RecrutePage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </>
   );
 }
 

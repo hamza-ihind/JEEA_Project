@@ -55,47 +55,6 @@
   .contact-text {
     text-align: center;
     margin: 15px;
-
-    .title__container {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      width: fit-content;
-      margin: auto;
-
-      .title {
-        margin: 10px auto;
-        backdrop-filter: blur(24px);
-        font-size: 2.5rem;
-        border-radius: 20px;
-        padding: 0.75rem 1.5rem;
-        width: fit-content;
-        text-align: center;
-        background: radial-gradient(
-          51.72% 61.73% at 50% 50%,
-          #4358ff 0%,
-          #1f2656 63.85%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        mix-blend-mode: normal;
-
-        &.dark {
-          background: radial-gradient(
-            50% 50% at 50% 50%,
-            #ffffff 0%,
-            #ffb13e 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-          mix-blend-mode: normal;
-        }
-      }
-    }
   }
 
   .contactForm {

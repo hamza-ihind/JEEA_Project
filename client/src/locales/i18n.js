@@ -13,11 +13,11 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      english: { translations: enLocales },
-      français: { translations: frLocales },
+      EN: { translations: enLocales },
+      FR: { translations: frLocales },
     },
-    lng: "english",
-    fallbackLng: "english",
+    lng: "EN",
+    fallbackLng: "FR",
     debug: false,
     ns: ["translations"],
     defaultNS: "translations",
@@ -26,5 +26,4 @@ i18n
     },
   });
 
-// ** i18next Instance.
 export default i18n;

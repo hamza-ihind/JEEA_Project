@@ -1,12 +1,28 @@
-.light {
-  background-color: var(--primary-color);
-}
-
-.dark {
-  background-color: var(--secondary-color);
+.App {
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
   color: white;
-}
 
-body {
-  overflow-x: hidden;
+  .orange__blob,
+  .blue__blob {
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    opacity: 50%;
+    filter: blur(175px);
+  }
+
+  .orange__blob {
+    background-color: var(--primary-color);
+    top: 200px;
+    left: -275px;
+  }
+
+  .blue__blob {
+    background-color: #2f49ff;
+    top: 200px;
+    right: -275px;
+  }
 }

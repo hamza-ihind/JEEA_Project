@@ -11,7 +11,7 @@
   },
 
   "hero": {
-    "slogan": "FOR EVERY PROBLEM, WE ENGINEER A SOLUTION",
+    "slogan": "FOR EVERY PROBLEM,<br/>WE ENGINEER<br/> <span>A SOLUTION</span>",
     "text": "Teaming up with Junior Enterprise ENSA Agadir is your way to get hold of a wide range of skills provided by future engineers in different fields.",
     "contact": "Contact us!",
     "video": "Watch a video"
@@ -24,7 +24,7 @@
 
   "jeea": {
     "title": "WHO ARE WE",
-    "text": "The JEEA (Junior Enterprise ENSA Agadir) is a branch of the JE (Junior Enterprise), whose primary goal is to refine the skills of young entrepreneurs in order to enrich their profiles before integrating the professional world. It is a consulting firm that was founded by the students of ENSA-A, in order to help students to integrate entrepreneurship by offering them the possibility to test their skills and put them to work according to the business standards. JEEA thus offers a unique opportunity for new junior-entrepreneurs to enter the job market and start their professional career. On the other hand, it provides aquality service to companies in order to meet the needs of clients in different fields."
+    "text": "The JEEA (Junior Enterprise ENSA Agadir) is a branch of the JE (Junior Enterprise) that aims to enhance young entrepreneurs' skills before they enter the professional world. Founded by ENSA-A students, it offers a unique opportunity for junior entrepreneurs to enter the job market. Additionally, it provides quality services to clients in various fields."
   },
 
   "services": {
@@ -48,3 +48,4 @@
     "link": "Click here to redirect to the form"
   }
 }
+
