@@ -22,7 +22,7 @@
       line-height: 7.5rem;
 
       span {
-        background: linear-gradient(90deg, #ffbd5b -1.3%, #fff 65.63%);
+        background: linear-gradient(90deg, #ffbd5b 10%, #fff 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -47,6 +47,10 @@
 
       a > img {
         width: 2.5rem;
+      }
+
+      &:hover {
+        fill: #ffbd5b;
       }
     }
   }

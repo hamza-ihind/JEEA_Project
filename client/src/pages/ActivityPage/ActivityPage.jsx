@@ -4,7 +4,6 @@ import { Activities } from "../../database/Activities";
 
 // Styles
 import "./ActivityPage.scss";
-import star from "../../assets/star.svg";
 
 import { useTranslation } from "react-i18next";
 

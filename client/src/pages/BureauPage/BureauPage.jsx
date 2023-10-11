@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import "./BureauPage.scss";
-import star from "../../assets/star.svg";
-import { motion } from "framer-motion";
-import Tooltip from "@mui/material/Tooltip";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Bureau } from "../../database/Bureau";
 
@@ -34,15 +31,6 @@ const BureauPage = () => {
   return (
     <div className={`bureau-page ${isDarkModeActive ? "dark" : ""}`}>
       <div className="bureau">
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={`title ${isDarkModeActive ? "dark" : ""}`}>
-              MEET THE TEAM!
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
-
         {bureauPositions.map((positions, index) => (
           <div className={`bureau__line${index === 0 ? "2" : "3"}`} key={index}>
             {renderBureauMembers(

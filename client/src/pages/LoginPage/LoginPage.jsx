@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.scss";
-//assets
-import star from "../../assets/star.svg";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { useTranslation } from "react-i18next";
@@ -37,15 +35,6 @@ const LoginPage = () => {
 
   return (
     <div className={isDarkModeActive ? "login-page dark" : "login-page"}>
-      <div className="Title">
-        <div className="title__container">
-          <h1 className={isDarkModeActive ? "title dark" : "title"}>
-            Welcome back
-          </h1>
-          <img src={star} alt="star" className="starImg" />
-        </div>
-      </div>
-
       <div className="form__container">
         <form name="contactForm" className="signup" onSubmit={onSubmit}>
           <div className="input">

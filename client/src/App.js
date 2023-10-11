@@ -15,6 +15,7 @@ import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 
 import "./App.scss";
 import assets from "./constants/assets";
@@ -34,6 +35,8 @@ function App() {
     <>
       <Navbar />
       <div className="App">
+        <img src={assets.pattern} alt="pattern" className="pattern" />
+
         <div className="blue__blob"></div>
         <div className="orange__blob"></div>
         <ScrollToTop />
@@ -42,13 +45,14 @@ function App() {
           <Route path="/Services" element={<ServicesPage />} />
           <Route path="/Teams" element={<TeamsPage />} />
           <Route path="/Bureau" element={<BureauPage />} />
-          <Route path="/Admin" element={<AdminPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          {/* <Route path="/Admin" element={<AdminPage />} /> */}
           <Route path="/Activities" element={<ActivitiesPage />} />
           <Route path="/Activities/:id" element={<ActivityPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/Recrutement" element={<RecrutePage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          {/* <Route path="/signup" element={<SignupPage />} /> */}
+          {/* <Route path="/login" element={<LoginPage />} /> */}
         </Routes>
         <Footer />
       </div>

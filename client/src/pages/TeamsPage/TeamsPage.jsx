@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import "./TeamsPage.scss";
-//assets
-import star from "../../assets/star.svg";
-import back from "../../assets/hmzt.mp4";
 
 import hamza from "../../assets/Members/ihind.jpg";
 import aqnouch from "../../assets/Members/aqnouch.jpeg";
@@ -17,6 +14,8 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { info, design, rtc, dessin, mecanique } from "../../database/Members";
+import Title from "../../components/Title/Title";
+import assets from "../../constants/assets";
 
 const TeamsPage = () => {
   const { scrollYProgress } = useScroll();
@@ -56,25 +55,11 @@ const TeamsPage = () => {
           style={{ scaleX }}
         />
         {/* Services title: Teams */}
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={isDarkModeActive ? "title dark" : "title"}>
-              DISCOVER THE TEAMS!
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
+        <Title img={assets.chess1} text="DISCOVER THE TEAM" />
         {/* Pole Informatique */}
         <div className="teams__side">
           {/* Title */}
-          <div className="Title">
-            <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Informatique
-              </h1>
-              <img src={star} alt="star" className="starImg" />
-            </div>
-          </div>
+          <Title img={assets.chess1} text="PÔLE INFORMATIQUE" />
 
           {/* Container */}
           <div className="teams__side-container">
@@ -122,14 +107,7 @@ const TeamsPage = () => {
         {/*Pole Design */}
         <div className="teams__side">
           {/* Title */}
-          <div className="Title">
-            <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Média
-              </h1>
-              <img src={star} alt="star" className="starImg" />
-            </div>
-          </div>
+          <Title img={assets.chess1} text="PÔLE INFORMATIQUE" />
 
           {/* Container */}
           <div className="teams__side-container">
@@ -192,14 +170,7 @@ const TeamsPage = () => {
         {/* Pole RTC */}
         <div className="teams__side">
           {/* Title */}
-          <div className="Title">
-            <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole RTC
-              </h1>
-              <img src={star} alt="star" className="starImg" />
-            </div>
-          </div>
+          <Title img={assets.chess1} text="PÔLE INFORMATIQUE" />
 
           {/* Container */}
           <div className="teams__side-container">
@@ -263,14 +234,7 @@ const TeamsPage = () => {
         {/* Pole Artistic */}
         <div className="teams__side">
           {/* Title */}
-          <div className="Title">
-            <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Artistique
-              </h1>
-              <img src={star} alt="star" className="starImg" />
-            </div>
-          </div>
+          <Title img={assets.chess1} text="PÔLE INFORMATIQUE" />
 
           {/* Container */}
           <div className="teams__side-container">
@@ -318,14 +282,7 @@ const TeamsPage = () => {
         {/* Pole Mecanique */}
         <div className="teams__side">
           {/* Title */}
-          <div className="Title">
-            <div className="title__container">
-              <h1 className={isDarkModeActive ? "title dark" : "title"}>
-                Pole Mécanique
-              </h1>
-              <img src={star} alt="star" className="starImg" />
-            </div>
-          </div>
+          <Title img={assets.chess1} text="PÔLE INFORMATIQUE" />
 
           {/* Container */}
           <div className="teams__side-container">

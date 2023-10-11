@@ -2,10 +2,6 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./ActivitiesPage.scss";
 
-//assets
-import star from "../../assets/star.svg";
-import back from "../../assets/hmzt.mp4";
-
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Activities } from "../../database/Activities";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -66,14 +62,6 @@ const ActivitiesPage = () => {
           style={{ scaleX }}
         />
         {/* Activities title: Browse Activities */}
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={isDarkModeActive ? "title dark" : "title"}>
-              Browse Activities
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
 
         {/* Container Cards  */}
         <div

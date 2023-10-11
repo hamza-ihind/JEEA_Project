@@ -1,10 +1,12 @@
 import React, { useContext, useRef } from "react";
 import "./RecrutePage.scss";
-import star from "../../assets/star.svg";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import Countdown from "../../components/Countdown/Countdown";
+
+import Title from "../../components/Title/Title";
+import assets from "../../constants/assets";
 
 const RecrutePage = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
@@ -36,12 +38,7 @@ const RecrutePage = () => {
   return (
     <div className={`recrute-page ${isDarkModeActive ? "dark" : ""}`}>
       <div className="recrutement">
-        <div className="title__container">
-          <h1 className={`title ${isDarkModeActive ? "dark" : ""}`}>
-            {t("recrute.title")}
-          </h1>
-          <img src={star} alt="star" className="starImg" />
-        </div>
+        <Title img={assets.chess1} text={t("recrute.title")} />
 
         <div className="counter">
           <div className={`title__container ${isDarkModeActive ? "dark" : ""}`}>

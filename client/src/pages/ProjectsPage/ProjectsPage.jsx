@@ -1,10 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./ProjectsPage.scss";
 
-//assets
-import star from "../../assets/star.svg";
-import back from "../../assets/hmzt.mp4";
-
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Activities } from "../../database/Activities";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -78,26 +74,6 @@ const ProjectsPage = () => {
           style={{ scaleX }}
         />
         {/* projectsvities title: Browse projectsvities */}
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={isDarkModeActive ? "title dark" : "title"}>
-              Browse Projects
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
-
-        <div className="Title" style={{ marginTop: "10rem" }}>
-          <div className="title__container">
-            <h1
-              style={{ fontSize: 75 }}
-              className={isDarkModeActive ? "title dark" : "title"}
-            >
-              COMING SOON...
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
 
         {/* Container Cards  */}
         {/* <div

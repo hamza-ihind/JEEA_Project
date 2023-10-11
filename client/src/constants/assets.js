@@ -1,8 +1,9 @@
 // SVG
-import chess1 from "../assets/svg/Chess1.svg";
+import chess1 from "../assets/svg/chess/Chess1.svg";
 import jeea_logo from "../assets/svg/jeea_logo.svg";
-// import orange__blob from "../assets/svg/orange_blob.svg";
-// import blue__blob from "../assets/svg/blue_blob.svg";
+import cjem from "../assets/svg/cjem.svg";
+import jeea from "../assets/svg/jeea.svg";
+import pattern from "../assets/pattern.png";
 
 // icons
 import linkedin from "../assets/icons/linkedin.png";
@@ -10,12 +11,16 @@ import facebook from "../assets/icons/facebook.png";
 import instagram from "../assets/icons/instagram.png";
 
 export default {
+  // RANDOM
+  pattern,
+
   //  CHESS PIECES
   chess1,
 
+  // SVG
   jeea_logo,
-  // orange__blob,
-  // blue__blob,
+  cjem,
+  jeea,
 
   // ICONS
   linkedin,

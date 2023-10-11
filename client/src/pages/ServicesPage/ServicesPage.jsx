@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import "./ServicesPage.scss";
-import star from "../../assets/star.svg";
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { Services } from "../../database/Services";
 
@@ -34,7 +33,6 @@ const ServicesPage = () => {
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
             Browse Services
           </h1>
-          <img src={star} alt="star" className="starImg" />
         </div>
       </div>
       <div className="navbar__services">

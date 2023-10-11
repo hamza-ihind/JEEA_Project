@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import "./SignupPage.scss";
-//assets
-import star from "../../assets/star.svg";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import { useTranslation } from "react-i18next";
@@ -39,7 +37,6 @@ const SignupPage = () => {
           <h1 className={isDarkModeActive ? "title dark" : "title"}>
             We'll be happy if you joined us
           </h1>
-          <img src={star} alt="star" className="starImg" />
         </div>
       </div>
 

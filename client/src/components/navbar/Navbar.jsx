@@ -45,7 +45,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="/#hero">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
         </ul>
 

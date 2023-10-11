@@ -1,0 +1,28 @@
+.portfolio-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+
+  padding: 0 13rem;
+  height: 100vh;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__img {
+    img {
+      width: 400px;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+}

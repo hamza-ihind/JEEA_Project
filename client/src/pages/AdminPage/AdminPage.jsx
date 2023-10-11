@@ -1,11 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./AdminPage.scss";
-//assets
-import star from "../../assets/star.svg";
-import back from "../../assets/hmzt.mp4";
 
 import { motion, useScroll, useSpring } from "framer-motion";
-import Tooltip from "@mui/material/Tooltip";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
 import ModalAdminProject from "../../components/modals/ModalAdminProject";
@@ -44,41 +40,12 @@ const AdminPage = () => {
 
   return (
     <div className="admin-page">
-      <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "admin-page__back1 dark" : "admin-page__back1"
-        }
-      />
-      <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "admin-page__back2 dark" : "admin-page__back2"
-        }
-      />
-      <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "admin-page__back3 dark" : "admin-page__back3"
-        }
-      />
       <div className="admin">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
           style={{ scaleX }}
         />
         {/* Greeting the admin*/}
-        <div className="Title">
-          <div className="title__container">
-            <h1 className={isDarkModeActive ? "title dark" : "title"}>
-              Welcome Hamza Ihind
-            </h1>
-            <img src={star} alt="star" className="starImg" />
-          </div>
-        </div>
 
         {/* Cards for adding Data */}
         <div className="admin__cards">

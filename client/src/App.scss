@@ -1,7 +1,7 @@
 .App {
+  background-repeat: no-repeat;
   background-color: var(--bg-color);
   position: relative;
-  overflow: hidden;
   color: white;
 
   .orange__blob,
@@ -24,5 +24,11 @@
     background-color: #2f49ff;
     top: 200px;
     right: -275px;
+  }
+
+  .pattern {
+    position: fixed;
+    width: 100vw;
+    opacity: 7.5%;
   }
 }
