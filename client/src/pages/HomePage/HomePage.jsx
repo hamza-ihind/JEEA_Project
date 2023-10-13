@@ -1,9 +1,11 @@
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+
+// PARTS
 import Hero from "../../components/Hero/Hero";
-import Contact from "../../components/Contact/Contact";
 import About from "../../components/About/About";
 import Activities from "../../components/Activities/Activities";
+import Poles from "../../components/Poles/Poles";
 
 import "./HomePage.scss";
 
@@ -22,6 +24,7 @@ const HomePage = () => {
         <Hero />
         <About />
         <Activities />
+        <Poles />
         {/* <Contact /> */}
       </div>
     </>

@@ -29,10 +29,6 @@ const Navbar = () => {
 
         <ul className="navbar__links">
           <li>
-            <a href="/#hero">{t("labels.Home")}</a>
-          </li>
-
-          <li>
             <a href="/#hero">Blogs</a>
           </li>
 
@@ -46,6 +42,10 @@ const Navbar = () => {
 
           <li>
             <Link to="/portfolio">Portfolio</Link>
+          </li>
+
+          <li>
+            <a href="/#hero">Services</a>
           </li>
         </ul>
 

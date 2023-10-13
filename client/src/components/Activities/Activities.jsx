@@ -15,8 +15,7 @@ const Activities = () => {
 
   return (
     <div id="activities" className="activities">
-      <Title img={assets.chess1} text="NEWS AND ACTIVITIES" />
-
+      <Title text="NEWS AND ACTIVITIES" img={assets.chess1} />
       <div className="activities__container">
         {News.map((element) => {
           return (

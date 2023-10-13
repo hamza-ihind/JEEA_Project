@@ -28,27 +28,6 @@ const TeamsPage = () => {
 
   return (
     <div className="teams-page">
-      {/* <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "teams-page__back1 dark" : "teams-page__back1"
-        }
-      />
-      <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "teams-page__back2 dark" : "teams-page__back2"
-        }
-      />
-      <img
-        src={back}
-        alt="back"
-        className={
-          isDarkModeActive ? "teams-page__back3 dark" : "teams-page__back3"
-        }
-      /> */}
       <div className="teams">
         <motion.div
           className={isDarkModeActive ? "progress-bar dark" : "progress-bar"}
