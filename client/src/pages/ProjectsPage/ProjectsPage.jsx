@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import "./ProjectsPage.scss";
 
 import { ThemeModeContext } from "../../contexts/ThemeModeContext";
-import { Activities } from "../../database/Activities";
+import { News } from "../../database/News";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const ProjectsPage = () => {
@@ -15,7 +15,7 @@ const ProjectsPage = () => {
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
-      const updatedPole = Activities.filter((currentPole) => {
+      const updatedPole = News.filter((currentPole) => {
         return currentPole.pole === pole;
       });
 

@@ -5,7 +5,8 @@
   color: white;
 
   .orange__blob,
-  .blue__blob {
+  .blue__blob,
+  .white__blob {
     position: fixed;
     height: 500px;
     width: 500px;
@@ -24,6 +25,15 @@
     background-color: #2f49ff;
     top: 200px;
     right: -275px;
+  }
+
+  .white__blob {
+    background-color: white;
+    width: 1000px;
+    height: 1000px;
+    right: 500px;
+    bottom: -700px;
+    opacity: 20%;
   }
 
   .pattern {

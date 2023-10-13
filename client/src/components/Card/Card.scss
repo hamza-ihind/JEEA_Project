@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  &__img {
+    flex: 1;
+
+    img {
+      object-fit: fill;
+      width: 100%;
+    }
+  }
+
+  &__container {
+    flex: 1.5;
+    background-color: green;
+  }
+}

@@ -6,8 +6,6 @@ import Footer from "./components/footer/Footer";
 
 import HomePage from "./pages/HomePage/HomePage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
-import ActivitiesPage from "./pages/ActivitiesPage/ActivitiesPage";
-import ActivityPage from "./pages/ActivityPage/ActivityPage";
 import TeamsPage from "./pages/TeamsPage/TeamsPage";
 import BureauPage from "./pages/BureauPage/BureauPage";
 import RecrutePage from "./pages/RecrutePage/RecrutePage";
@@ -39,6 +37,7 @@ function App() {
 
         <div className="blue__blob"></div>
         <div className="orange__blob"></div>
+        <div className="white__blob"></div>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -47,14 +46,12 @@ function App() {
           <Route path="/Bureau" element={<BureauPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           {/* <Route path="/Admin" element={<AdminPage />} /> */}
-          <Route path="/Activities" element={<ActivitiesPage />} />
-          <Route path="/Activities/:id" element={<ActivityPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/Recrutement" element={<RecrutePage />} />
           {/* <Route path="/signup" element={<SignupPage />} /> */}
           {/* <Route path="/login" element={<LoginPage />} /> */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

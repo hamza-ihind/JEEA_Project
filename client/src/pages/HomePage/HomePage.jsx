@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Hero from "../../components/Hero/Hero";
 import Contact from "../../components/Contact/Contact";
 import About from "../../components/About/About";
-import Services from "../../components/Services/Services";
+import Activities from "../../components/Activities/Activities";
 
 import "./HomePage.scss";
 
@@ -21,8 +21,8 @@ const HomePage = () => {
       <div className="homepage">
         <Hero />
         <About />
-        {/* <Services /> */}
-        <Contact />
+        <Activities />
+        {/* <Contact /> */}
       </div>
     </>
   );

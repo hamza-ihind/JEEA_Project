@@ -28,4 +28,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(MotionWrap(About, "about"), "about");
+export default AppWrap(MotionWrap(About, "about"));

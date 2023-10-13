@@ -1,0 +1,11 @@
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
