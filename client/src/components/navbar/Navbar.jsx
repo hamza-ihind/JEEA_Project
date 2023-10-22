@@ -51,7 +51,11 @@ const Navbar = () => {
 
         <ul className="navbar__features">
           <li>
-            <button className="navbar__button fr_eng_icon"> CONTACT US </button>
+            <a href="/#contact">
+              <button className="navbar__button fr_eng_icon">
+                {t("contact.title")}{" "}
+              </button>
+            </a>
           </li>
           <li>
             <button

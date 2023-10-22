@@ -6,6 +6,7 @@ import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import Activities from "../../components/Activities/Activities";
 import Poles from "../../components/Poles/Poles";
+import Contact from "../../components/Contact/Contact";
 
 import "./HomePage.scss";
 
@@ -25,7 +26,7 @@ const HomePage = () => {
         <About />
         <Activities />
         <Poles />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </>
   );

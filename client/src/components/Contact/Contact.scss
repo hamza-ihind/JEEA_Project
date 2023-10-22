@@ -1,97 +1,142 @@
 .contact {
-  position: relative;
-  height: 100%;
-}
-
-.container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  box-shadow: 0px 1px 7px 4px rgba(0, 0, 0, 0.15);
-  justify-content: center;
-  padding: 2rem;
-  margin-bottom: 5rem;
-  border-radius: 10px;
+  gap: 5rem;
 
-  .content {
-    width: 90%;
-  }
-
-  .contact-text {
-    text-align: center;
-    margin: 15px;
-  }
-
-  .contactForm {
+  &__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-    .Name_Area {
+    &-info {
+      padding: 3rem 4.5rem;
+      width: 50%;
+      fill: rgba(5, 4, 26, 0.1);
+      backdrop-filter: blur(80px);
+
+      &-list {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+          width: 2.5rem;
+          height: 100%;
+        }
+      }
+    }
+
+    &-form {
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 10px;
-
-      .name_input {
-        width: 100%;
-      }
-    }
-
-    .input {
-      width: 100%;
-      margin: 8px;
-
-      input {
-        height: 3rem;
-        border-radius: 10px;
-        background-color: rgb(237, 237, 237);
-      }
-
-      textarea {
-        background-color: rgb(237, 237, 237);
-        max-height: 10rem;
-        min-height: 10rem;
-        border-radius: 10px;
-        white-space: pre;
-        resize: none;
-      }
-    }
-  }
-}
-
-@media (max-width: 764px) {
-  .container {
-    padding: 1rem;
-
-    .content {
-      width: 76%;
-    }
-  }
-
-  .button-main {
-    margin: auto;
-    width: 15rem;
-  }
-
-  .container .contact-text .title__container .title {
-    font-size: 1.5rem;
-  }
-
-  .contactForm {
-    .Name_Area {
       flex-direction: column;
-    }
+      padding: 3rem 4.5rem;
+      width: 50%;
+      height: 100%;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(56px);
 
-    textarea {
-      height: 100px;
+      &-names {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
 
-@media (max-width: 390px) {
-  .container .contact-text .title__container .title {
-    font-size: 1.2rem;
+// CONTACT FORM STYLE
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 45%;
+
+  &-email,
+  &-text {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__text {
+  margin-top: 1rem;
+  font-family: inherit;
+  width: 100%;
+  border: 2px solid gray;
+  outline: 0;
+  font-size: 1.2rem;
+  color: white;
+  padding: 1rem;
+  background: transparent;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, gray, var(--primary-color));
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
   }
 }

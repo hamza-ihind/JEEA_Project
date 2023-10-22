@@ -6,11 +6,7 @@
   height: 10px;
   transform-origin: 0%;
   z-index: 7;
-  background-color: var(--secondary-color);
-
-  &.dark {
-    background-color: var(--primary-color);
-  }
+  background-color: var(--primary-color);
 }
 
 .homepage {

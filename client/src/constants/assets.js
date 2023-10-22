@@ -12,6 +12,9 @@ import rtc from "../assets/svg/rtc.svg";
 import linkedin from "../assets/icons/linkedin.png";
 import facebook from "../assets/icons/facebook.png";
 import instagram from "../assets/icons/instagram.png";
+import phone from "../assets/icons/phone.png";
+import mail from "../assets/icons/mail.png";
+import location from "../assets/icons/location.png";
 
 export default {
   // RANDOM
@@ -34,4 +37,7 @@ export default {
   linkedin,
   facebook,
   instagram,
+  phone,
+  mail,
+  location,
 };

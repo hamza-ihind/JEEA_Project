@@ -6,66 +6,24 @@ const Footer = () => {
   const { isDarkModeActive } = useContext(ThemeModeContext);
 
   return (
-    <div
-      className={isDarkModeActive ? "footer-clean dark" : "footer-clean light"}
-    >
-      <div className="content ">
-        <div className="content_flex">
-          <div className="left_side">
-            <ul className="footer_nav top">
-              <li>
-                <a href="/#hero">Home</a>
-              </li>
-              <li>
-                <a href="/#Services">Services</a>
-              </li>
-              <li>
-                <a href="/#About">About</a>
-              </li>
-              <li>
-                <a href="/teams">Team</a>
-              </li>
-            </ul>
-
-            <div className="footer_nav middle">
-              <div className="logo">
-                <h1>JEEA</h1>
-              </div>
-              <div className=" item_social">
-                <a href="https://www.facebook.com/JEEA.ENSAA">
-                  <i className="fa fa-facebook"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/jeea-ensaa/">
-                  <i className="fa fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/jeea.ensaa/">
-                  <i className="fa fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-
-            <ul className="footer_nav bottom">
-              <li>
-                <a href="#">Terms of service</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Report</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="right_side ">
-            <p>JEEA, Votre compagnon de confiance! </p>
-            <span>jeea.contact@gmail.com</span>
-            <span>+212 621-07 5329</span>
-          </div>
-        </div>
+    <div className="footer" id="footer">
+      <div className="footer__elements">
+        <ul>
+          <li>
+            <a href="#">JE Contract</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Report</a>
+          </li>
+        </ul>
+        <p>JEEA, Votre compagnon de confiance! </p>
       </div>
-      <p className={isDarkModeActive ? "copyright dark" : "copyright"}>
-        Copyright © JEEA | ENSA AGADIR{" "}
+      <hr />
+      <p className="footer__copyright">
+        Copyright © JEEA | Created by ZEUS & E11even
       </p>
     </div>
   );
