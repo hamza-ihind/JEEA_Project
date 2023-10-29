@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { MotionWrap, AppWrap } from "../../wrapper";
 import assets from "../../constants/assets";

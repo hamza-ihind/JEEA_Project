@@ -11,7 +11,7 @@
   },
 
   "hero": {
-    "slogan": "POUR CHAQUE PROBLEME,<br/>NOUS INGENIONS <br/>UNE SOLUTION",
+    "slogan": "POUR CHAQUE PROBLEME,<br/>NOUS INGENIONS <br/><span>UNE SOLUTION</span>",
     "text": "S'associer à la Junior-Entreprise ENSA Agadir, c'est accéder à un large éventail de compétences apportées par de futurs ingénieurs dans différents domaines.",
     "contact": "Contactez-nous!",
     "video": "Regardez Une video"

@@ -25,7 +25,7 @@ const HomePage = () => {
         <Hero />
         <About />
         <Activities />
-        <Poles />
+        {/* <Poles /> */}
         <Contact />
       </div>
     </>

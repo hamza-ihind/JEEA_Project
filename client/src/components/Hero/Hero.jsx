@@ -8,7 +8,7 @@ import VideoPlayer from "../VideoPlayer";
 
 const Hero = () => {
   const [show, setShow] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const toggle = () => {
     setShow(!show);
@@ -16,18 +16,15 @@ const Hero = () => {
   const sloganHTML = { __html: t("hero.slogan") };
   return (
     <div className="hero" id="hero">
-      {/* {show && (
-        <motion.div className="video-player">
-          <button className="close-btn" onClick={toggle}>
-            X
-          </button>
-          <VideoPlayer />
-        </motion.div>
-      )} */}
       <div className="hero__content">
         <div
           className="hero__content-slogan"
           dangerouslySetInnerHTML={sloganHTML}
+          style={
+            i18n.resolvedLanguage === "FR"
+              ? { fontSize: "4.5rem", lineHeight: "6rem" }
+              : { fontSize: "5.5rem" }
+          }
         ></div>
         <p className="hero__content-text">{t("hero.text")}</p>
         <div className="hero__content-buttons">

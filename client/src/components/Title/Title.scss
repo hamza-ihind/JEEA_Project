@@ -16,3 +16,26 @@
     backdrop-filter: blur(36px);
   }
 }
+
+// SMALL title
+@media screen and (max-width: 700px) {
+  .title__container {
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 60px;
+      top: -40%;
+      left: -15%;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.04);
+      backdrop-filter: blur(36px);
+    }
+  }
+}

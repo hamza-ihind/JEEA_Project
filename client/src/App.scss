@@ -37,8 +37,10 @@
   }
 
   .pattern {
+    object-fit: cover;
     position: fixed;
     width: 100vw;
-    opacity: 7.5%;
+    height: 100vh;
+    opacity: 4%;
   }
 }

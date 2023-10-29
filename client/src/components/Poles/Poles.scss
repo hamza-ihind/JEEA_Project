@@ -34,3 +34,44 @@
     }
   }
 }
+
+@media screen and (max-width: 1500px) {
+  .poles {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    margin: 2.5rem 0;
+
+    &__container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      &-unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: 0px 0px 165px 17px rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(59px);
+        flex: 1;
+      }
+
+      &-name {
+        font-size: 2.75rem;
+      }
+
+      &-desc {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

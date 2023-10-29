@@ -1,11 +1,12 @@
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 
   &__chess {
     img {
+      width: 100%;
       filter: drop-shadow(0 0 100px rgba(255, 178, 63, 0.7));
     }
   }
@@ -17,9 +18,10 @@
     width: 100%;
 
     &-slogan {
-      font-size: 5.5rem;
+      font-size: 5vw !important;
+      text-wrap: nowrap;
       font-weight: 800;
-      line-height: 7.5rem;
+      line-height: 13vh;
 
       span {
         background: linear-gradient(90deg, #ffbd5b 10%, #fff 100%);
@@ -31,7 +33,7 @@
 
     &-text {
       font-size: 1.35rem;
-      width: 75%;
+      width: 80%;
     }
 
     &-buttons {
@@ -51,6 +53,148 @@
 
       &:hover {
         fill: #ffbd5b;
+      }
+    }
+  }
+}
+
+// Medium Screen (Tablet)
+@media screen and (max-width: 1300px) {
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__chess {
+      img {
+        display: none;
+        filter: drop-shadow(0 0 100px rgba(255, 178, 63, 0.7));
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+
+      &-slogan {
+        text-align: center;
+        font-size: 8vw !important;
+        text-wrap: nowrap;
+        font-weight: 600;
+        line-height: 12vh;
+
+        span {
+          background: linear-gradient(90deg, #ffbd5b 10%, #fff 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &-text {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+      }
+
+      &-buttons {
+        width: 100%;
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      &-socials {
+        margin-top: 2rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a > img {
+          width: 2.5rem;
+        }
+
+        &:hover {
+          fill: #ffbd5b;
+        }
+      }
+    }
+  }
+}
+
+// Small Screen (Phone)
+@media screen and (max-width: 700px) {
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__chess {
+      img {
+        display: none;
+        filter: drop-shadow(0 0 100px rgba(255, 178, 63, 0.7));
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+
+      &-slogan {
+        text-align: center;
+        font-size: 8vw;
+        text-wrap: nowrap;
+        font-weight: 600;
+        line-height: 6vh;
+
+        span {
+          background: linear-gradient(90deg, #ffbd5b 10%, #fff 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &-text {
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      &-buttons {
+        width: 100%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      &-socials {
+        margin-top: 2rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a > img {
+          width: 2rem;
+        }
+
+        &:hover {
+          fill: #ffbd5b;
+        }
       }
     }
   }

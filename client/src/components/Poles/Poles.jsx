@@ -33,7 +33,7 @@ const Poles = () => {
             <div
               className="poles__container-unit"
               key={index}
-              style={{ padding: index === 1 ? "4rem 5rem" : "3rem 4rem" }}
+              style={{ padding: index === 1 ? "3rem 4rem" : "2rem 3rem" }}
             >
               <img
                 src={pole.img}
