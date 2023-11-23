@@ -31,7 +31,7 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="App">
         <img src={assets.pattern} alt="pattern" className="pattern" />
 
